@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://muyangit.github.io/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2021/11/11/ckzvc7y6v001vhcbh3vk11h6i/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://muyangit.github.io">
+<meta name="author" content="MuyanGit">
+
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+
+<!-- 
+<link rel="stylesheet" href="/css/loading.css">
+ -->
+
+<link rel="stylesheet" href="/css/xiaomai.css">
+
+
+<link rel="stylesheet" href="/css/share.min.css">
+
+
+<link rel="stylesheet" href="/css/zoom.css">
+
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico">
+
+
+<title>bat批处理实现守护进程 windows使用bat批处理实现守护进程脚本分享 - MuyanGit</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="尽小者大，慎微者著">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2021/11/11/ckzvc7y6v001vhcbh3vk11h6i/",
+        "appid": "1594654793276567",
+        "title": "bat批处理实现守护进程 Windows使用bat批处理实现守护进程脚本分享",
+        "images": ["https://gitee.com/muyangit/blog-img/raw/master/img/image-20211111033706808.png"],
+        "pubDate": "2021-11-11T03:34:10"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="Muyan">Muyan</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <!-- 签到 -->
+        <!-- <a href="/2018/08/06/言念君子，温其如玉/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a> -->
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" target="_blank" rel="noopener" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about/MuyanGit.html"><img title="言念君子，温其如玉" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/剑来大小抠图/bitbug_favicon大.ico" alt="avatar" /></a>
+        <h1>MuyanGit</h1>
+        <h3>hello ，stranger</h3>
+        <p>言念君子，温其如玉</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/MuyanGit.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>MuyanGit</span>
+                    <span title="最后编辑于2021-11-11">2021-11-11</span>
+                </p>
+                <p>尽小者大，慎微者著</p>
+            </div>
+            <h2 class="post-title">bat批处理实现守护进程 Windows使用bat批处理实现守护进程脚本分享</h2>
+            <div class="post-meta">
+                本文总共5055个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>想了解Windows使用bat批处理实现守护进程脚本讲解的相关内容吗，在本文为您仔细讲解bat批处理实现守护进程的相关知识和一些Code实例，欢迎阅读和指正，我们先划重点：Windows,bat,批处理,守护进程,脚本，下面大家一起来学习吧。</p>
+<p>本文转自网络，由于找不到原作者，因而无法知道出处。如果有幸让原作者看到，请联系我加上。先转载至此。</p>
+<p>最近几天加班加疯掉了，天天晚上没法睡。开发部的一个核心程序总是会自己宕机，然后需要手工去起，而这个服务的安全级别又很高，只有我可以操作，搞得我晚上老没法睡，昨晚实在受不了了，想起以前在hp-ux下写的shell守护进程，这回搞个windows下的bat版守护程序吧，当时晚上思路已经很迟钝了，就叫了个兄弟让他写了，上去后运行效果不错，至少昨晚我安心睡了7小时。</p>
+<p>早上来把程序改完善一些，增加了记录等功能。</p>
+<p>实现：</p>
+<p>检查是否有notepad，要用的话就算成自己的进程名，如果进程宕了就过会自动重启（会在当前目录下生成一个start.bat）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">set _task=notepad.exe</span><br><span class="line">set _svr=c:\windows\notepad.exe</span><br><span class="line">set _des=start.bat</span><br><span class="line"></span><br><span class="line">:checkstart</span><br><span class="line">for /f &quot;tokens=5&quot; %%n in (&#x27;qprocess.exe ^| find &quot;%_task%&quot; &#x27;) do (</span><br><span class="line"> if %%n==%_task% (goto checkag) else goto startsvr</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">:startsvr</span><br><span class="line">echo %time% </span><br><span class="line">echo ********程序开始启动********</span><br><span class="line">echo 程序重新启动于 %time% ,请检查系统日志 &gt;&gt; restart_service.txt</span><br><span class="line">echo start %_svr% &gt; %_des%</span><br><span class="line">echo exit &gt;&gt; %_des%</span><br><span class="line">start %_des%</span><br><span class="line">set/p=.&lt;nul</span><br><span class="line">for /L %%i in (1 1 10) do set /p a=.&lt;nul&amp;ping.exe /n 2 127.0.0.1&gt;nul</span><br><span class="line">echo .</span><br><span class="line">echo Wscript.Sleep WScript.Arguments(0) &gt;%tmp%\delay.vbs </span><br><span class="line">cscript //b //nologo %tmp%\delay.vbs 10000 </span><br><span class="line">del %_des% /Q</span><br><span class="line">echo ********程序启动完成********</span><br><span class="line">goto checkstart</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:checkag</span><br><span class="line">echo %time% 程序运行正常,10秒后继续检查.. </span><br><span class="line">echo Wscript.Sleep WScript.Arguments(0) &gt;%tmp%\delay.vbs </span><br><span class="line">cscript //b //nologo %tmp%\delay.vbs 10000 </span><br><span class="line">goto checkstart</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>set 限制解除 </p>
+<p><a target="_blank" rel="noopener" href="https://mall.csdn.net/vip?utm_source=vip_1111_toolbar_logo"><img src="https://gitee.com/muyangit/blog-img/raw/master/img/20211108111828.gif" alt="CSDN会员"></a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.csdn.net/">首页</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/">博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://download.csdn.net/">下载</a></li>
+<li><a target="_blank" rel="noopener" href="https://ask.csdn.net/">问答</a></li>
+<li><a target="_blank" rel="noopener" href="https://bbs.csdn.net/">社区</a></li>
+</ul>
+<p> 搜索</p>
+<p><a target="_blank" rel="noopener" href="https://passport.csdn.net/account/login">登入</a></p>
+<h1 id="Windwos-bat进程守护-解决-kafka2-8-0-Failed-to-clean-up-log-for-consumer-offsets"><a href="#Windwos-bat进程守护-解决-kafka2-8-0-Failed-to-clean-up-log-for-consumer-offsets" class="headerlink" title="Windwos bat进程守护 解决 kafka2.8.0 Failed to clean up log for __consumer_offsets"></a>Windwos bat进程守护 解决 kafka2.8.0 Failed to clean up log for __consumer_offsets</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323">Don’t Look Down</a> 2021-10-23 23:36:03 <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="img"> 77 <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="img"> 收藏</p>
+<p>分类专栏： <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323/category_11432370.html">kafka</a> 文章标签： <a target="_blank" rel="noopener" href="https://www.csdn.net/tags/OtTacg0sODc5OC1ibG9n.html">kafka</a> <a target="_blank" rel="noopener" href="https://www.csdn.net/tags/MtTaEg0sMDIyMDYtYmxvZwO0O0OO0O0O.html">window</a> <a target="_blank" rel="noopener" href="https://www.csdn.net/tags/Mtzacg2sNTQ2NjctYmxvZwO0O0OO0O0O.html">1024程序员节</a></p>
+<h3 id="windwos环境下使用kafka2-8-0，出现-ERROR-Failed-to-clean-up-log-for-consumer-offsets-）"><a href="#windwos环境下使用kafka2-8-0，出现-ERROR-Failed-to-clean-up-log-for-consumer-offsets-）" class="headerlink" title="windwos环境下使用kafka2.8.0，出现 ERROR Failed to clean up log for __consumer_offsets-）"></a>windwos环境下使用kafka2.8.0，出现 ERROR Failed to clean up log for __consumer_offsets-）</h3><ul>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323/article/details/120927703#_2">问题参考</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323/article/details/120927703#_13">原因</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323/article/details/120927703#_bat__21">解决： bat 进程守护运行</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32698323/article/details/120927703#_105">无黑窗口运行模式</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="问题参考"><a href="#问题参考" class="headerlink" title="问题参考"></a>问题参考</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ERROR Failed to clean up <span class="built_in">log</span> <span class="keyword">for</span> __consumer_offsets-42 <span class="keyword">in</span> dir C:\tmp\kafka-logs due to IOException (kafka.server.LogDirFailureChannel)</span><br><span class="line">java.nio.file.FileSystemException: C:\tmp\kafka-logs\__consumer_offsets-42\00000000000000000000.timeindex.cleaned -&gt;</span><br><span class="line">C:\tmp\kafka-logs\__consumer_offsets-42\00000000000000000000.timeindex.swap: 另一个程序正在使用此文件，进程无法访问。</span><br><span class="line">....</span><br><span class="line">java.nio.file.FileSystemException</span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.itsvse.com/thread-9980-1-1.html">Windows Kafka ERROR Failed to clean up log for __consumer_offsets</a><br>[<a target="_blank" rel="noopener" href="https://blog.csdn.net/chengtanyong4777/article/details/102542326">Kafka错误]—–kafka在window下出现另一个程序正在使用此文件,进程无法访问的错误</a></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>kafka日志清理策略触发，在window环境下，在打开需要清理的日志的同时，对该文件进行重命名操作是不被允许的（linux环境下可以），从而导致kafka宕机。</p>
+<blockquote>
+<p>方案一：修改日志清理策略，将日志清理时间修改为无穷（-1），使kafka数据日志永久存储 缺点：（1）磁盘空间会不断增大<br>方案二：在window上搭建虚拟机（docker同理，且更麻烦），然后在虚拟机中部署kafka 缺点：（1）运维人员需要懂点linux运维知识（2）增加内存消耗<br>方案三：上面文章中有写到重新打补丁包，我试过在2.8.0-2.13.0版本中重新打包，结果还是不行。</p>
+</blockquote>
+<h2 id="解决：-bat-进程守护运行"><a href="#解决：-bat-进程守护运行" class="headerlink" title="解决： bat 进程守护运行"></a>解决： bat 进程守护运行</h2><p>用bat脚本对kafka的运行 进行守护，每10秒检查端口运行状态，运行异常时，重新启动 <strong>2.注意：重启时 会清空kafka的日志文件</strong></p>
+<blockquote>
+<p>kafka_run_daemon.bat</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line">:: 执行的命令</span><br><span class="line"><span class="built_in">set</span> _startBat=D:\software\kafka\start.bat</span><br><span class="line">:: 日志所在位置</span><br><span class="line"><span class="built_in">set</span> _kafkaLogs=D:\software\kafka\tmp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:checkstart</span><br><span class="line">:: 端口方式进行检查</span><br><span class="line">netstat -ano | findstr 0.0.0.0 | findstr :19092 | findstr LISTENING &gt; nul</span><br><span class="line"><span class="keyword">if</span> %ERRORLEVEL% EQU 0 ( </span><br><span class="line"><span class="built_in">echo</span> 运行正常</span><br><span class="line">GOTO checkag ) <span class="keyword">else</span> ( </span><br><span class="line"><span class="built_in">echo</span> 没有运行</span><br><span class="line">GOTO startsvr  )</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">:startsvr</span><br><span class="line"><span class="built_in">echo</span> %time% kafka运行状态异常、正在重新启动</span><br><span class="line"></span><br><span class="line">:: 检查 zookeeper</span><br><span class="line"><span class="built_in">echo</span> %time% 检查zookeeper状态</span><br><span class="line">netstat -ano | findstr 0.0.0.0 | findstr :12181 | findstr LISTENING &gt; nul</span><br><span class="line"><span class="keyword">if</span> %ERRORLEVEL% EQU 0 ( </span><br><span class="line"><span class="built_in">echo</span> %time% zookeeper正在运行</span><br><span class="line">FOR /F <span class="string">&quot;tokens=5&quot;</span> %%P IN (<span class="string">&#x27;netstat -a -n -o ^| findstr :12181&#x27;</span>) DO TaskKill.exe  /PID %%P  -t -f </span><br><span class="line"><span class="built_in">echo</span> %time% zookeeper结束完成</span><br><span class="line"> ) <span class="keyword">else</span> ( </span><br><span class="line"><span class="built_in">echo</span> %time% zookeeper没有运行</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:: 删除tmp zookeepr和kafka的运行日志</span><br><span class="line"><span class="built_in">echo</span> %time% 删除tmp zookeepr和kafka的运行日志</span><br><span class="line">rd/s/q %_kafkaLogs%</span><br><span class="line"><span class="built_in">echo</span> %time% 日志清理完成</span><br><span class="line"></span><br><span class="line">:: 开始启动</span><br><span class="line"><span class="built_in">echo</span> %time% 开始启动</span><br><span class="line">start %_startBat%</span><br><span class="line"><span class="built_in">set</span>/p=.&lt;nul</span><br><span class="line"><span class="keyword">for</span> /L %%i <span class="keyword">in</span> (1 1 10) <span class="keyword">do</span> <span class="built_in">set</span> /p a=.&lt;nul&amp;ping.exe /n 2 127.0.0.1&gt;nul</span><br><span class="line"><span class="built_in">echo</span> .</span><br><span class="line"><span class="built_in">echo</span> Wscript.Sleep WScript.Arguments(0) &gt;%tmp%\delay.vbs </span><br><span class="line">cscript //b //nologo %tmp%\delay.vbs 40000 </span><br><span class="line">::计划40秒完成启动</span><br><span class="line"><span class="built_in">echo</span> %time%  启动操作完成，检查存活状态</span><br><span class="line">GOTO checkstart</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">:checkag</span><br><span class="line"><span class="built_in">echo</span> %time% 程序运行正常,10秒后继续检查...</span><br><span class="line"><span class="built_in">echo</span> Wscript.Sleep WScript.Arguments(0) &gt;%tmp%\delay.vbs </span><br><span class="line">cscript //b //nologo %tmp%\delay.vbs 10000 </span><br><span class="line">GOTO checkstart</span><br><span class="line">1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>start.bat 卡夫卡启动脚本</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">start .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties</span><br><span class="line">timeout 10</span><br><span class="line">start .\bin\windows\kafka-server-start.bat .\config\server.properties</span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用方法 ，将两个bat复制到kafka根目录，配置好bat 里面的日志位置（此处将kafka和zookeeper都放在同一tem文件夹），<br>直接运行 kafka_run_daemon.bat，也可添加到系统服务中去</strong></p>
+<p>本地测试，挂掉后可以正常重启：</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/09bcc09859134c428f5decb17b40890b.png" alt="在这里插入图片描述"></p>
+<h2 id="无黑窗口运行模式"><a href="#无黑窗口运行模式" class="headerlink" title="无黑窗口运行模式"></a>无黑窗口运行模式</h2><p><strong>在上面的进程守护基础之上</strong></p>
+<p>run_zookeeper.vbs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Dim WinScriptHost</span><br><span class="line">Set WinScriptHost = CreateObject(<span class="string">&quot;WScript.Shell&quot;</span>) </span><br><span class="line">WinScriptHost.Run <span class="string">&quot;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties&quot;</span>, 0, True </span><br><span class="line">Set WinScriptHost = Nothing</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+
+<p>run_kafka.vbs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Dim WinScriptHost</span><br><span class="line">Set WinScriptHost = CreateObject(<span class="string">&quot;WScript.Shell&quot;</span>) </span><br><span class="line">WinScriptHost.Run <span class="string">&quot;.\bin\windows\kafka-server-start.bat .\config\server.properties&quot;</span>, 0, True </span><br><span class="line">Set WinScriptHost = Nothing</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+
+<p>start_vbs.bat</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">start wscript runZookeeper.vbs</span><br><span class="line">timeout 10</span><br><span class="line">start wscript runKafka.vbs</span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>run_zookeeper.vbs和run_kafka.vbs复制到kafka根目录</strong>， **修改 *<em>kafka_run_daemon.bat*<em>脚本中的_startBat=start_vbs.bat<br>运行kafka_run_daemon.bat后 kafka和zookeeper不会出现黑窗口。</em></em></p>
+</blockquote>
+<p>这不是好的解决办法 ~~有其他解决办法的话，望看到的大哥们告知一下。</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/11/ckzvc7y6u001shcbh6kssfbcp/" >Windows上使用bat实现备份一个月内的数据库数据到文件<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/10/ckzvc7y5l0017hcbhcyhn64cr/" >Typora使用了0号显卡，怀疑是导致其卡顿的原因Typora启动加速<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windwos-bat%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4-%E8%A7%A3%E5%86%B3-kafka2-8-0-Failed-to-clean-up-log-for-consumer-offsets"><span class="toc-text">Windwos bat进程守护 解决 kafka2.8.0 Failed to clean up log for __consumer_offsets</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#windwos%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8kafka2-8-0%EF%BC%8C%E5%87%BA%E7%8E%B0-ERROR-Failed-to-clean-up-log-for-consumer-offsets-%EF%BC%89"><span class="toc-text">windwos环境下使用kafka2.8.0，出现 ERROR Failed to clean up log for __consumer_offsets-）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%8F%82%E8%80%83"><span class="toc-text">问题参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%EF%BC%9A-bat-%E8%BF%9B%E7%A8%8B%E5%AE%88%E6%8A%A4%E8%BF%90%E8%A1%8C"><span class="toc-text">解决： bat 进程守护运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E9%BB%91%E7%AA%97%E5%8F%A3%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text">无黑窗口运行模式</span></a></li></ol></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2021/11/11/ckzvc7y6v001vhcbh3vk11h6i/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/MuyanGit.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于" >关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a target="_blank" rel="noopener" href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a target="_blank" rel="noopener" href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/lozad.js"></script>
+
+
+<script src="/js/jquery.share.min.js"></script>
+
+
+<script src="/js/CodeLineHeight.js"></script>
+
+
+<script src="/js/activate-power-mode.js"></script>
+
+
+<script src="/js/xiaomai.js"></script>
+
+
+<script src="/js/zoom.min.js"></script>
+
+
+<script src="/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+<!-- 
+<script src="/js/loading.js"></script>
+ -->
+<!-- 
+<script src="/js/APlayer.js"></script>
+ -->
+<!-- 
+<script src="/js/aplayerdemo.js"></script>
+ -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-言念君子，温其如玉！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
