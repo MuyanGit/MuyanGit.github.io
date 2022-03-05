@@ -1,0 +1,765 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://muyangit.github.io/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2021/11/10/cl0d7936y001mesbhbwnzam19/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://muyangit.github.io">
+<meta name="author" content="MuyanGit">
+
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+
+<!-- 
+<link rel="stylesheet" href="/css/loading.css">
+ -->
+
+<link rel="stylesheet" href="/css/xiaomai.css">
+
+
+<link rel="stylesheet" href="/css/share.min.css">
+
+
+<link rel="stylesheet" href="/css/zoom.css">
+
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico">
+
+
+<title>windows terminal 完美配置 powershell 7.1 - 知乎 - MuyanGit</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="尽小者大，慎微者著">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2021/11/10/cl0d7936y001mesbhbwnzam19/",
+        "appid": "1594654793276567",
+        "title": "Windows Terminal 完美配置 PowerShell 7.1 - 知乎",
+        "pubDate": "2021-11-10T08:24:13"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="Muyan">Muyan</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <!-- 签到 -->
+        <!-- <a href="/2018/08/06/言念君子，温其如玉/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a> -->
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" target="_blank" rel="noopener" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about/MuyanGit.html"><img title="言念君子，温其如玉" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/剑来大小抠图/bitbug_favicon大.ico" alt="avatar" /></a>
+        <h1>MuyanGit</h1>
+        <h3>hello ，stranger</h3>
+        <p>言念君子，温其如玉</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/MuyanGit.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>MuyanGit</span>
+                    <span title="最后编辑于2021-11-10">2021-11-10</span>
+                </p>
+                <p>尽小者大，慎微者著</p>
+            </div>
+            <h2 class="post-title">Windows Terminal 完美配置 PowerShell 7.1 - 知乎</h2>
+            <div class="post-meta">
+                本文总共31894个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>首发于<a target="_blank" rel="noopener" href="https://www.zhihu.com/column/c_1099361984826499072">修辞与编程</a></p>
+<h1 id="Windows-Terminal-完美配置-PowerShell-7-1"><a href="#Windows-Terminal-完美配置-PowerShell-7-1" class="headerlink" title="Windows Terminal 完美配置 PowerShell 7.1"></a>Windows Terminal 完美配置 PowerShell 7.1</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/littleNewton"><img src="https://pic2.zhimg.com/v2-6f2475da64a7302f15a5c2bea51d2ee8_xs.jpg?source=172ae18b" alt="littleNewton"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/littleNewton">littleNewton</a></p>
+<p>700 人赞同了该文章</p>
+<blockquote>
+<p><strong>坑边闲话</strong>：忆往昔岁月，不堪回首，伟大的 Windows 竟然拿不出一个像样的终端模拟器。mintty.exe 和 封装后的 cmder 之流，总是有各种问题，而且不兼容 emoji 字符。后来，全网 Windows 用户随着一个华丽的广告沸腾了，微软宣布了终端软件 Windows Terminal 的开发进程，而且开源！如今，Windows Terminal 正式版已经陪伴我们走过了很长一段时间，其稳定性和易用性已经非常不错，关键是颜值相当高。<strong>如果你是一个追求完美与和谐的 User，那么请跟上我的步伐，我们重新起航！</strong></p>
+</blockquote>
+<p><strong>重要提醒</strong>：本文的所有配置经过无数网友的多重考验，<strong>请勿在配置过程中突发奇想</strong>而走弯路，一定要认真阅读每一个段落、每一个句子！</p>
+<p><img src="https://pic2.zhimg.com/80/v2-59db8c16ee82335a0f6229b1f01f5481_720w.jpg" alt="img">图 1：常规展示</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/v2-f25122805f8f8ab76ffc979238fc2444_720w.jpg" alt="img">图 2：在 git 目录下的效果。</p>
+<h2 id="1-安装-Windows-Terminal"><a href="#1-安装-Windows-Terminal" class="headerlink" title="1. 安装 Windows Terminal"></a>1. 安装 Windows Terminal</h2><p>相信这一步对大多数人不构成任何困难，去 <strong>Microsoft Store</strong> 搜索下载就是了。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">代理打开后，可能无法安装</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>配置</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110204016221.png" alt="image-20211110204016221"></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">NICE! 安装成功，问题主要集中在两点：</span><br><span class="line"><span class="number">1</span>。字体选择时，字体Fira Code NF中间加了空格，导致程序配置识别不了，改FiraCode NF正常了；</span><br><span class="line"><span class="number">2</span>。最后的配置时，按下面的评论一切ok</span><br><span class="line"># 设置 PowerShell 主题</span><br><span class="line"><span class="built_in">Set</span>-Theme Paradox</span><br><span class="line">由于oh-my-push已经更新，这个语句不识别了。需要换成</span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span>-PoshPrompt -Theme Paradox</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改后的配置文件：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line"> * Author: 刘鹏</span><br><span class="line"> * Email: littleNewton6@gmail.com</span><br><span class="line"> * <span class="built_in">Date</span>: <span class="number">2020</span>, Nov. <span class="number">30</span></span><br><span class="line"> * &lt;Alt&gt; + Settings，打开默认设置</span><br><span class="line"> * 参考文档：https://aka.ms/terminal-documentation</span><br><span class="line"> * DESCRIPTION: 配置 Windows Terminal 的选项文件</span><br><span class="line"> * TAB_SIZE = <span class="number">8</span></span><br><span class="line"> *字体空格，已经修改</span><br><span class="line"> *显示<span class="built_in">cmd</span>，方便<span class="built_in">cmd</span>的管理员操作--&gt; 该p7终端会多线程并发执行 命令&amp;命令</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"> &#123;</span><br><span class="line">	&quot;$schema&quot;: &quot;https://aka.ms/terminal-profiles-schema&quot;,</span><br><span class="line">	&quot;defaultProfile&quot;: &quot;&#123;<span class="number">574</span>e775e-<span class="number">4</span>f2a-<span class="number">5</span>b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">	// 全局主题</span><br><span class="line">	&quot;theme&quot;: &quot;system&quot;,</span><br><span class="line">	&quot;alwaysShowTabs&quot;: true,</span><br><span class="line">	&quot;tabWidthMode&quot;: &quot;equal&quot;,</span><br><span class="line">	&quot;confirmCloseAllTabs&quot;: false,</span><br><span class="line"></span><br><span class="line">	// 位置</span><br><span class="line">	// (<span class="number">1</span>) <span class="number">1920</span>x1080 - (<span class="number">320</span>, <span class="number">65</span>)</span><br><span class="line">	// (<span class="number">2</span>) <span class="number">5120</span>x2880 - (<span class="number">1275</span>,<span class="number">692</span>)</span><br><span class="line">	&quot;initialPosition&quot;: &quot;<span class="number">135</span>,<span class="number">140</span>&quot;,</span><br><span class="line">	&quot;initialCols&quot;: <span class="number">135</span>,</span><br><span class="line">	&quot;initialRows&quot;: <span class="number">45</span>,</span><br><span class="line"></span><br><span class="line">	// 禁止自动生成</span><br><span class="line">	&quot;disabledProfileSources&quot;: [</span><br><span class="line">		&quot;Windows.Terminal.Azure&quot;</span><br><span class="line">	],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	// ======================== PROFILES 配置 BEGIN ========================</span><br><span class="line">	&quot;profiles&quot;: [</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== PWSH7 配置 BEGIN ========================</span><br><span class="line">		&#123;</span><br><span class="line">			// 键标记</span><br><span class="line">			&quot;guid&quot;:			&quot;&#123;<span class="number">574</span>e775e-<span class="number">4</span>f2a-<span class="number">5</span>b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">			&quot;name&quot;:			&quot;PowerShell Core <span class="number">7</span>.<span class="number">1</span>.<span class="number">0</span>&quot;,</span><br><span class="line">			&quot;source&quot;:		&quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">			// 行为</span><br><span class="line">			&quot;closeOnExit&quot;:		true,</span><br><span class="line">			&quot;commandline&quot;:		&quot;C:/Program Files/PowerShell/<span class="number">7</span>/pwsh.exe -nologo&quot;,</span><br><span class="line">			&quot;hidden&quot;:		false,</span><br><span class="line">			&quot;historySize&quot;:		<span class="number">9001</span>,</span><br><span class="line">			&quot;snapOnInput&quot;:		true,</span><br><span class="line">			&quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">			// 外观</span><br><span class="line">			&quot;icon&quot;:			&quot;D:/Users/newton/Software/develop/shell/pwsh-<span class="number">7</span>.<span class="number">1</span>.ico&quot;,</span><br><span class="line">			&quot;acrylicOpacity&quot;:	<span class="number">0</span>.<span class="number">5</span>,</span><br><span class="line">			&quot;cursorColor&quot;:		&quot;#FFFFFF&quot;,</span><br><span class="line">			&quot;cursorShape&quot;:		&quot;bar&quot;,</span><br><span class="line">			&quot;fontFace&quot;:		&quot;FiraCode NF&quot;,</span><br><span class="line">			&quot;fontSize&quot;:		<span class="number">11</span>,</span><br><span class="line">			&quot;padding&quot;:		&quot;<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>, <span class="number">25</span>&quot;,</span><br><span class="line">			&quot;useAcrylic&quot;:		false,</span><br><span class="line">			// 颜色主题</span><br><span class="line">			&quot;colorScheme&quot;:		&quot;Homebrew&quot;</span><br><span class="line">		&#125;,</span><br><span class="line">		// ======================== PWSH7 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== WSL 配置 BEGIN ========================</span><br><span class="line">		&#123;</span><br><span class="line">			// 键标记</span><br><span class="line">			&quot;guid&quot;:			&quot;&#123;<span class="number">07</span>b52e3e-de2c-<span class="number">5</span>db4-bd2d-ba144ed6c273&#125;&quot;,</span><br><span class="line">			&quot;name&quot;:			&quot;Ubuntu-<span class="number">20</span>.<span class="number">04</span>&quot;,</span><br><span class="line">			&quot;source&quot;:		&quot;Windows.Terminal.Wsl&quot;,</span><br><span class="line">			// 行为</span><br><span class="line">			&quot;closeOnExit&quot;:		true,</span><br><span class="line">			&quot;commandline&quot;:		&quot;wsl.exe -d Ubuntu-<span class="number">20</span>.<span class="number">04</span>&quot;,</span><br><span class="line">			&quot;hidden&quot;:		false,</span><br><span class="line">			&quot;historySize&quot;:		<span class="number">9001</span>,</span><br><span class="line">			&quot;snapOnInput&quot;:		true,</span><br><span class="line">			&quot;startingDirectory&quot;:	&quot;.&quot;,</span><br><span class="line">			// 外观</span><br><span class="line">			&quot;acrylicOpacity&quot;:	<span class="number">0</span>.<span class="number">5</span>,</span><br><span class="line">			&quot;cursorColor&quot;:		&quot;#FFFFFF&quot;,</span><br><span class="line">			&quot;cursorShape&quot;:		&quot;bar&quot;,</span><br><span class="line">			&quot;fontFace&quot;:		&quot;FiraCode NF&quot;,</span><br><span class="line">			&quot;fontSize&quot;:		<span class="number">11</span>,</span><br><span class="line">			&quot;padding&quot;:		&quot;<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>, <span class="number">25</span>&quot;,</span><br><span class="line">			&quot;useAcrylic&quot;:		false,</span><br><span class="line">			// 颜色主题</span><br><span class="line">			&quot;colorScheme&quot;:		&quot;Homebrew&quot;</span><br><span class="line">		&#125;,</span><br><span class="line">		// ======================== WSL 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== PWSH5 配置 BEGIN ========================</span><br><span class="line">		&#123;</span><br><span class="line">			// 键标记</span><br><span class="line">			&quot;guid&quot;:			&quot;&#123;<span class="number">61</span>c54bbd-c2c6-<span class="number">5271</span>-<span class="number">96</span>e7-<span class="number">009</span>a87ff44bf&#125;&quot;,</span><br><span class="line">			&quot;name&quot;:			&quot;Windows PowerShell&quot;,</span><br><span class="line">			// 行为</span><br><span class="line">			&quot;closeOnExit&quot;:		true,</span><br><span class="line">			&quot;commandline&quot;:		&quot;powershell.exe&quot;,</span><br><span class="line">			&quot;hidden&quot;: true,</span><br><span class="line">			&quot;historySize&quot;:		<span class="number">9001</span>,</span><br><span class="line">			&quot;snapOnInput&quot;:		true,</span><br><span class="line">			&quot;startingDirectory&quot;:	&quot;.&quot;,</span><br><span class="line">			// 外观</span><br><span class="line">			&quot;acrylicOpacity&quot;:	<span class="number">0</span>.<span class="number">5</span>,</span><br><span class="line">			&quot;cursorColor&quot;:		&quot;#FFFFFF&quot;,</span><br><span class="line">			&quot;cursorShape&quot;:		&quot;bar&quot;,</span><br><span class="line">			&quot;fontFace&quot;:		&quot;FiraCode NF&quot;,</span><br><span class="line">			&quot;fontSize&quot;:		<span class="number">11</span>,</span><br><span class="line">			&quot;padding&quot;:		&quot;<span class="number">5</span>, <span class="number">5</span>, <span class="number">20</span>, <span class="number">25</span>&quot;,</span><br><span class="line">			&quot;useAcrylic&quot;:		false,</span><br><span class="line">			// 颜色主题</span><br><span class="line">			&quot;colorScheme&quot;:		&quot;Homebrew&quot;</span><br><span class="line">		&#125;,</span><br><span class="line">		// ======================== PWSH5 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== <span class="built_in">CMD</span> 配置 BEGIN ========================</span><br><span class="line">		&#123;</span><br><span class="line">			// 键标记</span><br><span class="line">			&quot;guid&quot;:		&quot;&#123;<span class="number">0</span>caa0dad-<span class="number">35</span>be-<span class="number">5</span>f56-a8ff-afceeeaa6101&#125;&quot;,</span><br><span class="line">			&quot;name&quot;:		&quot;<span class="built_in">cmd</span>&quot;,</span><br><span class="line">			// 行为</span><br><span class="line">			&quot;commandline&quot;:	&quot;<span class="built_in">cmd</span>.exe&quot;,</span><br><span class="line">			//不隐藏<span class="built_in">CMD</span></span><br><span class="line">			&quot;hidden&quot;:	false,</span><br><span class="line">			// 字体</span><br><span class="line">			&quot;fontFace&quot;:	&quot;FiraCode NF&quot;,</span><br><span class="line">			&quot;fontSize&quot;:	<span class="number">11</span></span><br><span class="line">		&#125;,</span><br><span class="line">		// ======================== <span class="built_in">CMD</span> 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== AZURE 配置 BEGIN ========================</span><br><span class="line">		&#123;</span><br><span class="line">			&quot;guid&quot;:		&quot;&#123;b453ae62-<span class="number">4</span>e3d-<span class="number">5</span>e58-b989-<span class="number">0</span>a998ec441b8&#125;&quot;,</span><br><span class="line">			&quot;name&quot;:		&quot;Azure Cloud Shell&quot;,</span><br><span class="line">			&quot;hidden&quot;:	true,</span><br><span class="line">			&quot;source&quot;:	&quot;Windows.Terminal.Azure&quot;</span><br><span class="line">		&#125;</span><br><span class="line">		// ======================== AZURE 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	],</span><br><span class="line">	// ======================== PROFILES 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	// ======================== <span class="built_in">COLOR</span> SCHEME 配置 BEGIN ========================</span><br><span class="line">	&quot;schemes&quot;: [</span><br><span class="line">		&#123;</span><br><span class="line">			&quot;name&quot;:		&quot;Homebrew&quot;,</span><br><span class="line">			&quot;black&quot;:	&quot;#<span class="number">000000</span>&quot;,</span><br><span class="line">			&quot;red&quot;:		&quot;#FC5275&quot;,</span><br><span class="line">			&quot;green&quot;:	&quot;#<span class="number">00</span>a600&quot;,</span><br><span class="line">			&quot;yellow&quot;:	&quot;#ffff00&quot;,</span><br><span class="line">			&quot;blue&quot;:		&quot;#<span class="number">6666</span>e9&quot;,</span><br><span class="line">			&quot;purple&quot;:	&quot;#ff00ff&quot;,</span><br><span class="line">			&quot;cyan&quot;:		&quot;#<span class="number">00</span>a6b2&quot;,</span><br><span class="line">			&quot;white&quot;:	&quot;#bfbfbf&quot;,</span><br><span class="line">			&quot;brightBlack&quot;:	&quot;#<span class="number">666666</span>&quot;,</span><br><span class="line">			&quot;brightRed&quot;:	&quot;#ff6060&quot;,</span><br><span class="line">			&quot;brightGreen&quot;:	&quot;#<span class="number">00</span>d900&quot;,</span><br><span class="line">			&quot;brightYellow&quot;:	&quot;#fdff73&quot;,</span><br><span class="line">			&quot;brightBlue&quot;:	&quot;#<span class="number">00</span>a2ff&quot;,</span><br><span class="line">			&quot;brightPurple&quot;:	&quot;#ff08ff&quot;,</span><br><span class="line">			&quot;brightCyan&quot;:	&quot;#<span class="number">53</span>ffff&quot;,</span><br><span class="line">			&quot;brightWhite&quot;:	&quot;#e5e5e5&quot;,</span><br><span class="line">			&quot;background&quot;:	&quot;#<span class="number">283033</span>&quot;,</span><br><span class="line">			&quot;foreground&quot;:	&quot;#<span class="number">00</span>ff00&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	],</span><br><span class="line">	// ======================== <span class="built_in">COLOR</span> SCHEME 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	// ======================== HOTKEY 配置 BEGIN ========================</span><br><span class="line">	&quot;keybindings&quot;: [</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== <span class="number">1</span>. 界面视图 配置 BEGIN ========================</span><br><span class="line">		// <span class="number">1</span>.<span class="number">1</span> 调节字体大小</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;adjustFontSize&quot;, &quot;delta&quot;:  <span class="number">1</span> &#125;, &quot;keys&quot;: &quot;ctrl+=&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;adjustFontSize&quot;, &quot;delta&quot;: -<span class="number">1</span> &#125;, &quot;keys&quot;: &quot;ctrl+-&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;:             &quot;resetFontSize&quot;,                 &quot;keys&quot;: &quot;ctrl+<span class="number">0</span>&quot; &#125;,</span><br><span class="line">		// ======================== <span class="number">1</span>. 界面视图 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== <span class="number">2</span>. PANE 分割 配置 BEGIN ========================</span><br><span class="line">		// <span class="number">2</span>.<span class="number">1</span> 水平、竖直分割</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;horizontal&quot; &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+-&quot;    &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;vertical&quot;   &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+plus&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;auto&quot;       &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+|&quot;    &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;auto&quot;, &quot;splitMode&quot;: &quot;duplicate&quot; &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+d&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;splitPane&quot;, &quot;split&quot;: &quot;horizontal&quot;, &quot;profile&quot;: &quot;Ubuntu-<span class="number">20</span>.<span class="number">04</span>&quot; &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+u&quot; &#125;,</span><br><span class="line">		// <span class="number">2</span>.<span class="number">2</span> 按下 Alt 键，同时按下方向键，在多个 pane 之间切换</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;moveFocus&quot;,  &quot;direction&quot;: &quot;down&quot;  &#125;, &quot;keys&quot;: &quot;alt+down&quot;  &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;moveFocus&quot;,  &quot;direction&quot;: &quot;left&quot;  &#125;, &quot;keys&quot;: &quot;alt+left&quot;  &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;moveFocus&quot;,  &quot;direction&quot;: &quot;right&quot; &#125;, &quot;keys&quot;: &quot;alt+right&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;moveFocus&quot;,  &quot;direction&quot;: &quot;up&quot;    &#125;, &quot;keys&quot;: &quot;alt+up&quot;    &#125;,</span><br><span class="line">		// <span class="number">2</span>.<span class="number">3</span> 按下 Alt + <span class="built_in">Shift</span>，同时按下方向键，调整当前 pane 的大小</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;down&quot;  &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+down&quot;  &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;left&quot;  &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+left&quot;  &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;right&quot; &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+right&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;resizePane&quot;, &quot;direction&quot;: &quot;up&quot;    &#125;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+up&quot;    &#125;,</span><br><span class="line">		// <span class="number">2</span>.<span class="number">4</span> 关闭 pane</span><br><span class="line">		&#123; &quot;command&quot;: &quot;closePane&quot;, &quot;keys&quot;: &quot;alt+<span class="built_in">shift</span>+w&quot; &#125;,</span><br><span class="line">		// ======================== <span class="number">2</span>. PANE 分割 配置 BEGIN ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== <span class="number">3</span>. 关于标签 配置 BEGIN ========================</span><br><span class="line">		// <span class="number">3</span>.<span class="number">1</span> 新建默认标签页</span><br><span class="line">		&#123; &quot;command&quot;: &quot;newTab&quot;, &quot;keys&quot;: [&quot;ctrl+n&quot;]&#125;,</span><br><span class="line">		// <span class="number">3</span>.<span class="number">2</span> 新建 N 号 profile 的标签</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">0</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">1</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">1</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">2</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">2</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">3</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">3</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">4</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">4</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">5</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">5</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">6</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">6</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">7</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">7</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">8</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;newTab&quot;, &quot;index&quot;: <span class="number">8</span> &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+<span class="number">9</span>&quot; &#125;,</span><br><span class="line">		// <span class="number">3</span>.<span class="number">3</span> 切换到第 N 个标签页</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">0</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">1</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">1</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">2</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">2</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">3</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">3</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">4</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">4</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">5</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">5</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">6</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">6</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">7</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">7</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">8</span>&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;switchToTab&quot;, &quot;index&quot;: <span class="number">8</span> &#125;, &quot;keys&quot;: &quot;ctrl+alt+<span class="number">9</span>&quot; &#125;,</span><br><span class="line">		// <span class="number">3</span>.<span class="number">4</span> -&gt; &lt;- 标签页间切换</span><br><span class="line">		&#123; &quot;command&quot;: &quot;nextTab&quot;,      &quot;keys&quot;: &quot;ctrl+tab&quot;       &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;prevTab&quot;,      &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+tab&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;duplicateTab&quot;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+d&quot;   &#125;,</span><br><span class="line">		// <span class="number">3</span>.<span class="number">5</span> 关闭标签页</span><br><span class="line">		&#123; &quot;command&quot;: &quot;closeTab&quot;, &quot;keys&quot;: &quot;ctrl+w&quot;&#125;,</span><br><span class="line">		// ======================== <span class="number">3</span>. 关于标签 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		// ======================== <span class="number">4</span>. 杂项热键 配置 BEGIN ========================</span><br><span class="line">		// <span class="number">4</span>.<span class="number">1</span> 搜索</span><br><span class="line">		&#123; &quot;command&quot;: &quot;<span class="built_in">find</span>&quot;, &quot;keys&quot;: &quot;ctrl+f&quot; &#125;,</span><br><span class="line">		// <span class="number">4</span>.<span class="number">2</span> 打开 settings.json </span><br><span class="line">		&#123; &quot;command&quot;: &quot;openSettings&quot;, &quot;keys&quot;: &quot;ctrl+;&quot; &#125;,</span><br><span class="line">		// <span class="number">4</span>.<span class="number">3</span> 复制、粘贴</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;<span class="built_in">copy</span>&quot;, &quot;singleLine&quot;: false &#125;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+c&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &#123; &quot;action&quot;: &quot;<span class="built_in">copy</span>&quot;, &quot;singleLine&quot;: false &#125;, &quot;keys&quot;: &quot;ctrl+insert&quot;  &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;paste&quot;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+v&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;paste&quot;, &quot;keys&quot;: &quot;<span class="built_in">shift</span>+insert&quot; &#125;,</span><br><span class="line">		// <span class="number">4</span>.<span class="number">4</span> 上下滚动、上下整页滚动</span><br><span class="line">		&#123; &quot;command&quot;: &quot;scrollDown&quot;,     &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+down&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;scrollUp&quot;  ,     &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+up&quot;   &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;scrollDownPage&quot;, &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+pgdn&quot; &#125;,</span><br><span class="line">		&#123; &quot;command&quot;: &quot;scrollUpPage&quot;,   &quot;keys&quot;: &quot;ctrl+<span class="built_in">shift</span>+pgup&quot; &#125;</span><br><span class="line">		// ======================== <span class="number">4</span>. 杂项热键 配置 END   ========================</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	]</span><br><span class="line">	// ======================== HOTKEY 配置 END   ========================</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>该项难度系数：0</p>
+</blockquote>
+<h2 id="2-安装字体"><a href="#2-安装字体" class="headerlink" title="2. 安装字体"></a>2. 安装字体</h2><p>这里仅推荐一款字体：<strong>Fira Code Nerd Font</strong>。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体，该字体也支持很多有趣的特殊字符，非常适合在终端里使用。该字体开源，广受海内外程序员好评！</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip">单击此处从 GitHub 下载。</a></p>
+<p>装上该字体，即可进入下一步。</p>
+<p>需要的字体如图：</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110212454724.png" alt="image-20211110212454724"></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如上图若不行：</span><br><span class="line">解压下图全部放置文件夹--&gt;  C:\Windows\Fonts\</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110212317050.png" alt="image-20211110212317050"></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如上图若不行：</span><br><span class="line">解压后全部放置文件夹--&gt;  C:\Windows\Fonts\</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110203703368.png" alt="image-20211110203703368"></p>
+<blockquote>
+<p>该项难度系数：1</p>
+</blockquote>
+<p>（或许有人登 Github 有网络问题，请自行解决。）</p>
+<h2 id="3-1安装新款-Powershell-Core"><a href="#3-1安装新款-Powershell-Core" class="headerlink" title="3. 1安装新款 Powershell Core"></a>3. 1安装新款 Powershell Core</h2><p>首先声明，我们这儿用的 Powershell 与 Windows 自带的 Powershell 是完全不同的两个东西，除了功能相似和名字相同，两者内在已经天差地别。</p>
+<p>现阶段 Windows 10 自带的 Powershell <strong>错误提示冗长</strong>，<strong>颜值低</strong>，<strong>速度慢</strong>，总之就是不太值得去用了。</p>
+<p>那么 Powershell Core 是什么呢？这是伟大的 <strong>.Net Core 跨平台战略</strong>的一个重要组成部分，微软设想，要让强大的 .Net 在所有平台上通用，让这么强大的 Powershell 在所有平台上都能用，古老的 bash 可以退休了！</p>
+<p>基于以上愿景，微软开始了漫长而辉煌的征程。</p>
+<p>在 <a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell/releases">https://github.com/PowerShell/PowerShell/releases</a> 这个GitHub 链接里，有目前 Powershell 的最新版，我建议你从 release 里选个最新的 preview 版本。<strong>经过测试，这些预览版都相当稳定。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/PowerShell-7.1.4-win-x64.msi">直接单击此处下载 x86-64 Windows 64 位 .msi 安装包。</a></p>
+<blockquote>
+<p>该项难度系数：1</p>
+</blockquote>
+<p>难度同样来自于访问 Github。</p>
+<h2 id="3-2-添加-Powershell-启动参数"><a href="#3-2-添加-Powershell-启动参数" class="headerlink" title="3.2. 添加 Powershell 启动参数"></a>3.2. 添加 Powershell 启动参数</h2><p>在 powershell 中输入</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad.exe <span class="variable">$Profile</span></span><br></pre></td></tr></table></figure>
+
+<p>紧接着在弹出的页面中输入下面这一长串代码，保存并关闭。这个 Profile 配置文件与 .zshrc / .bashrc 文件一样，都是控制启动前参数的。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">打开PowerShell <span class="number">7</span> （X64）</span><br><span class="line">打开配置文件--&gt; ：</span><br><span class="line">notepad.exe $Profile</span><br><span class="line">或者</span><br><span class="line">code $Profile   </span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110210521539.png" alt="image-20211110210521539"></p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110210450637.png" alt="image-20211110210450637"></p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110210741797.png" alt="image-20211110210741797"></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;#</span></span><br><span class="line"><span class="comment"> * FileName: Microsoft.PowerShell_profile.ps1</span></span><br><span class="line"><span class="comment"> * Author: 刘 鹏</span></span><br><span class="line"><span class="comment"> * Email: littleNewton6@outlook.com</span></span><br><span class="line"><span class="comment"> * Date: 2021, Aug. 21</span></span><br><span class="line"><span class="comment"> * Copyright: No copyright. You can use this code for anything with no warranty.</span></span><br><span class="line"><span class="comment">#&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#------------------------------- Import Modules BEGIN -------------------------------</span></span><br><span class="line"><span class="comment"># 引入 posh-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 引入 oh-my-posh</span></span><br><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 引入 ps-read-line</span></span><br><span class="line"><span class="built_in">Import-Module</span> PSReadLine</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 PowerShell 主题</span></span><br><span class="line"><span class="comment"># Set-PoshPrompt ys</span></span><br><span class="line"><span class="built_in">Set-PoshPrompt</span> paradox</span><br><span class="line"><span class="comment">#------------------------------- Import Modules END   -------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span></span><br><span class="line"><span class="comment"># 设置预测文本来源为历史记录</span></span><br><span class="line"><span class="built_in">Set-PSReadLineOption</span> <span class="literal">-PredictionSource</span> <span class="built_in">History</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 每次回溯输入历史，光标定位于输入内容末尾</span></span><br><span class="line"><span class="built_in">Set-PSReadLineOption</span> <span class="literal">-HistorySearchCursorMovesToEnd</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 Tab 为菜单补全和 Intellisense</span></span><br><span class="line"><span class="built_in">Set-PSReadLineKeyHandler</span> <span class="literal">-Key</span> <span class="string">&quot;Tab&quot;</span> <span class="literal">-Function</span> MenuComplete</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 Ctrl+d 为退出 PowerShell</span></span><br><span class="line"><span class="built_in">Set-PSReadlineKeyHandler</span> <span class="literal">-Key</span> <span class="string">&quot;Ctrl+d&quot;</span> <span class="literal">-Function</span> ViExit</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 Ctrl+z 为撤销</span></span><br><span class="line"><span class="built_in">Set-PSReadLineKeyHandler</span> <span class="literal">-Key</span> <span class="string">&quot;Ctrl+z&quot;</span> <span class="literal">-Function</span> Undo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置向上键为后向搜索历史记录</span></span><br><span class="line"><span class="built_in">Set-PSReadLineKeyHandler</span> <span class="literal">-Key</span> UpArrow <span class="literal">-Function</span> HistorySearchBackward</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置向下键为前向搜索历史纪录</span></span><br><span class="line"><span class="built_in">Set-PSReadLineKeyHandler</span> <span class="literal">-Key</span> DownArrow <span class="literal">-Function</span> HistorySearchForward</span><br><span class="line"><span class="comment">#-------------------------------  Set Hot-keys END    -------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#-------------------------------    Functions BEGIN   -------------------------------</span></span><br><span class="line"><span class="comment"># Python 直接执行</span></span><br><span class="line"><span class="variable">$env:PATHEXT</span> += <span class="string">&quot;;.py&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新系统组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Update-Packages</span></span> &#123;</span><br><span class="line">	<span class="comment"># update pip</span></span><br><span class="line">	<span class="built_in">Write-Host</span> <span class="string">&quot;Step 1: 更新 pip&quot;</span> <span class="literal">-ForegroundColor</span> Magenta <span class="literal">-BackgroundColor</span> Cyan</span><br><span class="line">	<span class="variable">$a</span> = pip list -<span class="literal">-outdated</span></span><br><span class="line">	<span class="variable">$num_package</span> = <span class="variable">$a</span>.Length - <span class="number">2</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> <span class="operator">-lt</span> <span class="variable">$num_package</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">		<span class="variable">$tmp</span> = (<span class="variable">$a</span>[<span class="number">2</span> + <span class="variable">$i</span>].Split(<span class="string">&quot; &quot;</span>))[<span class="number">0</span>]</span><br><span class="line">		pip install <span class="literal">-U</span> <span class="variable">$tmp</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment"># update TeX Live</span></span><br><span class="line">	<span class="variable">$CurrentYear</span> = <span class="built_in">Get-Date</span> <span class="literal">-Format</span> yyyy</span><br><span class="line">	<span class="built_in">Write-Host</span> <span class="string">&quot;Step 2: 更新 TeX Live&quot;</span> <span class="variable">$CurrentYear</span> <span class="literal">-ForegroundColor</span> Magenta <span class="literal">-BackgroundColor</span> Cyan</span><br><span class="line">	tlmgr update -<span class="literal">-self</span></span><br><span class="line">	tlmgr update -<span class="literal">-all</span></span><br><span class="line"></span><br><span class="line">	<span class="comment"># update Chocolotey</span></span><br><span class="line">	<span class="built_in">Write-Host</span> <span class="string">&quot;Step 3: 更新 Chocolatey&quot;</span> <span class="literal">-ForegroundColor</span> Magenta <span class="literal">-BackgroundColor</span> Cyan</span><br><span class="line">	choco outdated</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#-------------------------------    Functions END     -------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#-------------------------------   Set Alias BEGIN    -------------------------------</span></span><br><span class="line"><span class="comment"># 1. 编译函数 make</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MakeThings</span></span> &#123;</span><br><span class="line">	nmake.exe <span class="variable">$args</span> <span class="literal">-nologo</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> make <span class="literal">-Value</span> MakeThings</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 更新系统 os-update</span></span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> os<span class="literal">-update</span> <span class="literal">-Value</span> <span class="built_in">Update-Packages</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 查看目录 ls &amp; ll</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ListDirectory</span></span> &#123;</span><br><span class="line">	(<span class="built_in">Get-ChildItem</span>).Name</span><br><span class="line">	<span class="built_in">Write-Host</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> <span class="built_in">ls</span> <span class="literal">-Value</span> ListDirectory</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> ll <span class="literal">-Value</span> <span class="built_in">Get-ChildItem</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 打开当前工作目录</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">OpenCurrentFolder</span></span> &#123;</span><br><span class="line">	<span class="keyword">param</span></span><br><span class="line">	(</span><br><span class="line">		<span class="comment"># 输入要打开的路径</span></span><br><span class="line">		<span class="comment"># 用法示例：open C:\</span></span><br><span class="line">		<span class="comment"># 默认路径：当前工作文件夹</span></span><br><span class="line">		<span class="variable">$Path</span> = <span class="string">&#x27;.&#x27;</span></span><br><span class="line">	)</span><br><span class="line">	<span class="built_in">Invoke-Item</span> <span class="variable">$Path</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> open <span class="literal">-Value</span> OpenCurrentFolder</span><br><span class="line"><span class="comment">#-------------------------------    Set Alias END     -------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#-------------------------------   Set Network BEGIN    -------------------------------</span></span><br><span class="line"><span class="comment"># 1. 获取所有 Network Interface</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Get-AllNic</span></span> &#123;</span><br><span class="line">	<span class="built_in">Get-NetAdapter</span> | <span class="built_in">Sort-Object</span> <span class="literal">-Property</span> MacAddress</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> getnic <span class="literal">-Value</span> <span class="built_in">Get-AllNic</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 获取 IPv4 关键路由</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Get-IPv4Routes</span></span> &#123;</span><br><span class="line">	<span class="built_in">Get-NetRoute</span> <span class="literal">-AddressFamily</span> IPv4 | <span class="built_in">Where-Object</span> <span class="literal">-FilterScript</span> &#123;<span class="variable">$_</span>.NextHop <span class="operator">-ne</span> <span class="string">&#x27;0.0.0.0&#x27;</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> getip <span class="literal">-Value</span> <span class="built_in">Get-IPv4Routes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 获取 IPv6 关键路由</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Get-IPv6Routes</span></span> &#123;</span><br><span class="line">	<span class="built_in">Get-NetRoute</span> <span class="literal">-AddressFamily</span> IPv6 | <span class="built_in">Where-Object</span> <span class="literal">-FilterScript</span> &#123;<span class="variable">$_</span>.NextHop <span class="operator">-ne</span> <span class="string">&#x27;::&#x27;</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Set-Alias</span> <span class="literal">-Name</span> getip6 <span class="literal">-Value</span> <span class="built_in">Get-IPv6Routes</span></span><br><span class="line"><span class="comment">#-------------------------------    Set Network END     -------------------------------</span></span><br></pre></td></tr></table></figure>
+
+<p>另外，如果你喜欢我的主题，可以用 Everything.exe 搜索 paradox.omp.json 这个文件，把它替换为这个<a target="_blank" rel="noopener" href="https://gist.github.com/LittleNewton/e60df543481d495af65ede37734c69e4">链接</a>里的文件。</p>
+<h2 id="4-安装-Powershell-插件"><a href="#4-安装-Powershell-插件" class="headerlink" title="4. 安装 Powershell 插件"></a>4. 安装 Powershell 插件</h2><p>这一步是灵魂。</p>
+<p>直接上代码：管理员打开刚装好的新版 powershell，逐行输入命令。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span></span><br><span class="line"><span class="built_in">Install-Module</span> <span class="literal">-Name</span> PSReadLine  <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 安装 posh-git 包，让你的 git 更好用</span></span><br><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span>  <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span></span><br><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+
+<p>安装过程可能有点慢，<strong>好像卡住了一样</strong>，但是请耐心等待几分钟。等不及的同学自行搜索科学方法访问 GitHub.</p>
+<p><strong>win键盘 –&gt; pwsh–&gt; 如图</strong></p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110211552201.png" alt="image-20211110211552201"></p>
+<p>安装时系统会提问是否继续，不用管它直接输入 <code>A</code> 并回车即可。</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211110211431062.png" alt="image-20211110211431062"></p>
+<blockquote>
+<p>该项难度系数：0</p>
+</blockquote>
+<h2 id="5-配置-Windows-Terminal"><a href="#5-配置-Windows-Terminal" class="headerlink" title="5. 配置 Windows Terminal"></a>5. 配置 Windows Terminal</h2><p>这一项是灵魂。</p>
+<p>只有新款 Powershell 而没有 Windows Terminal，好比吃肉不放盐。</p>
+<p>简单点，直接上配置代码，遇到不懂的地方，自己读注释。记得将此设置默认配置（代码已经给出）。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认的配置就是我们的新 powershell（重要！！！）</span></span><br><span class="line"><span class="string">&quot;defaultProfile&quot;</span>: <span class="string">&quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;</span>,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 键标记</span></span><br><span class="line">    <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;PowerShell Core 7.1.0.5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;source&quot;</span>: <span class="string">&quot;Windows.Terminal.PowershellCore&quot;</span>,</span><br><span class="line">    <span class="comment">// 行为</span></span><br><span class="line">    <span class="attr">&quot;closeOnExit&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;commandline&quot;</span>: <span class="string">&quot;C:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">&quot;historySize&quot;</span>: <span class="number">9001</span>,</span><br><span class="line">    <span class="attr">&quot;snapOnInput&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;startingDirectory&quot;</span>: <span class="string">&quot;.&quot;</span>,</span><br><span class="line">    <span class="comment">// 外观</span></span><br><span class="line">    <span class="attr">&quot;icon&quot;</span>: <span class="string">&quot;D:/Users/newton/Documents/Softwares/software_windows/develop/shell/pwsh.ico&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;acrylicOpacity&quot;</span>: <span class="number">0.5</span>,</span><br><span class="line">    <span class="attr">&quot;cursorColor&quot;</span>: <span class="string">&quot;#FFFFFF&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;cursorShape&quot;</span>: <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;fontFace&quot;</span>: <span class="string">&quot;Fira Code&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;fontSize&quot;</span>: <span class="number">11</span>,</span><br><span class="line">    <span class="attr">&quot;padding&quot;</span>: <span class="string">&quot;5, 5, 20, 25&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;useAcrylic&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="comment">// 颜色主题</span></span><br><span class="line">    <span class="attr">&quot;colorScheme&quot;</span>: <span class="string">&quot;Homebrew&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>同时附上 Homebrew 配色，该配色经过我改良。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Homebrew&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#000000&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#FC5275&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#00a600&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#999900&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#6666e9&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#b200b2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#00a6b2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#bfbfbf&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#666666&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#e50000&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#00d900&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#e5e500&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#0000ff&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#e500e5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#00e5e5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#e5e5e5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;background&quot;</span>: <span class="string">&quot;#283033&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#00ff00&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>特别注意，用其他配色可能<strong>降低颜值</strong>。</p>
+<blockquote>
+<p>Note: 由于 Windows Terminal 的配置<strong>非常复杂，整个文件很长</strong>，可直接参考这个<a target="_blank" rel="noopener" href="https://gist.github.com/LittleNewton/b37d5182292c314df55decde56711075">链接</a>。</p>
+<p>该项难度系数：0</p>
+</blockquote>
+<p>需要懂点 json，还<strong>需要会配置 Windows Terminal</strong>。</p>
+<h2 id="6-添加右键菜单"><a href="#6-添加右键菜单" class="headerlink" title="6. 添加右键菜单"></a>6. 添加右键菜单</h2><p>这一步是<strong>灵魂中的灵魂</strong>。</p>
+<blockquote>
+<p><strong>这里涉及修改注册表，小白请勿手残改坏注册表，强烈建议事前建立系统还原点！</strong></p>
+</blockquote>
+<p>Github 上面已经有 powershell 脚本了，可以用管理员身份运行该脚本 + 某些参数以实现配置右键菜单。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/lextm/windowsterminal-shell/">原版 Github 仓库</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/LittleNewton/windows_terminal_here">我修改后的脚本仓库</a> （建议用这个）</p>
+<p>建议下载我这个，然后在管理员模式的 powershell 7 里运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\install.ps1 mini</span><br></pre></td></tr></table></figure>
+
+<p>记住一定要以<strong>管理员身份</strong>在 powershell 7 里面运行该脚本。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='0' height='0'></svg>)图 3： 用我修改后的脚本安装之后的效果如图</p>
+<p><strong>目前发现问题</strong>：该脚本会读取 Windows Terminal 的 profile，然后把其中的非隐藏项目添加到右键菜单（默认视图），这之后如果你修改了 profile，那么需要用 <code>uninstall.ps1</code> 脚本先清除右键菜单，然后重新 install 一遍。</p>
+<hr>
+<h1 id="后续字体需要修改哦"><a href="#后续字体需要修改哦" class="headerlink" title="后续字体需要修改哦"></a>后续字体需要修改哦</h1><p><img src="https://pic1.zhimg.com/v2-693e52e1f96b18c645a8bd5019b75413_1440w.jpg?source=172ae18b" alt="PowerShell、CMD 和 Windows Terminal 的美化配置方法"></p>
+<h3 id="PowerShell、CMD-和-Windows-Terminal-的美化配置方法"><a href="#PowerShell、CMD-和-Windows-Terminal-的美化配置方法" class="headerlink" title="PowerShell、CMD 和 Windows Terminal 的美化配置方法"></a>PowerShell、CMD 和 Windows Terminal 的美化配置方法</h3><p>[<img src="https://pic2.zhimg.com/v2-dace501ea3554d1b188350e00eda0bdf_xs.jpg?source=172ae18b" alt="孤单魂随风荡"></p>
+<h2 id="1-安装字体"><a href="#1-安装字体" class="headerlink" title="1. 安装字体"></a>1. 安装字体</h2><p>（附件中有所需要的字体文件）</p>
+<p>推荐使用 FiraCode NF 和更纱黑体。</p>
+<p>FiraCode NF 下载地址：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases">Github - FiraCode NFgithub.com/ryanoasis/nerd-fonts/releases</a></p>
+<p><img src="https://pic4.zhimg.com/80/v2-f2ddf8bcc5de57ea20dfdaa161a9737f_720w.jpg" alt="img">下载 FiraCode NF Retina 字体</p>
+<p>将.zip 文件下载到本地，然后打开该压缩文件，将“Fira Code Regular Nerd Font Complete Mono Windows Compatible.otf”文件解压到本地并重命名为“FiraCode NF.OTF”，右击后选择“为所有用户安装”。</p>
+<p>更纱黑体下载地址：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/be5invis/Sarasa-Gothic/releases">Github - 更纱黑体github.com/be5invis/Sarasa-Gothic/releases<img src="https://pic1.zhimg.com/v2-931b0bcdb51a4508229f7717b8b804d4_ipico.jpg" alt="img"></a></p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/v2-336c5a7cff7b6cd5a202b32133c27c6f_720w.jpg" alt="img">下载更纱黑体</p>
+<p>将 .7z 文件下载到本地，然后打开该压缩文件，将“sarasa-mono-sc-regular.ttf”文件解压到本地并重命名为“Sarasa Mono SC.TTF”，右击后选择“为所有用户安装”。</p>
+<h2 id="2-设置默认字体"><a href="#2-设置默认字体" class="headerlink" title="2. 设置默认字体"></a>2. 设置默认字体</h2><p>设置默认字体是设置的 PowerShell 和 CMD 的默认字体。</p>
+<h3 id="2-1-设置-CMD-的默认字体"><a href="#2-1-设置-CMD-的默认字体" class="headerlink" title="2.1 设置 CMD 的默认字体"></a>2.1 设置 CMD 的默认字体</h3><p>（附件中有注册表.reg 文件，可以直接导入）</p>
+<p>按快捷键 Win+R 打开“运行”窗口，输入“regedit”后回车打开“注册表编辑器”，然后进入目录[HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe]，在右侧空白处鼠标右击–&gt;新建–&gt;字符串值，并重命名为“FaceName”，双击打开后输入“Sarasa Mono SC”并“确定”。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-15ef8c2d90ead64031354233e13686a5_720w.jpg" alt="img">设置 CMD 的默认字体</p>
+<h3 id="2-2-设置-PowerShell-的默认字体（System32）"><a href="#2-2-设置-PowerShell-的默认字体（System32）" class="headerlink" title="2.2 设置 PowerShell 的默认字体（System32）"></a>2.2 设置 PowerShell 的默认字体（System32）</h3><p>进入目录[HKEY_CURRENT_USER\Console%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe]，在右侧空白处鼠标右击–&gt;新建–&gt;字符串值，并重命名为“FaceName”，双击打开后输入“Sarasa Mono SC”并“确定”。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-63dd66b39ccf8b1106be10d942387db8_720w.jpg" alt="img">设置 PowerShell 的默认字体</p>
+<h3 id="2-3-设置-PowerShell-的默认字体（SysWOW64）"><a href="#2-3-设置-PowerShell-的默认字体（SysWOW64）" class="headerlink" title="2.3 设置 PowerShell 的默认字体（SysWOW64）"></a>2.3 设置 PowerShell 的默认字体（SysWOW64）</h3><p>进入目录[HKEY_CURRENT_USER\Console%SystemRoot%_SysWOW64_WindowsPowerShell_v1.0_powershell.exe]，在右侧空白处鼠标右击–&gt;新建–&gt;字符串值，并重命名为“FaceName”，双击打开后输入“Sarasa Mono SC”并“确定”。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-b33cdd7bcb90a8da534927b201c2ede2_720w.jpg" alt="img">设置 PowerShell 的默认字体</p>
+<h2 id="3-注册字体"><a href="#3-注册字体" class="headerlink" title="3. 注册字体"></a>3. 注册字体</h2><p>注册字体的作用当 PowerShell 设置 Sarasa Mono SC 字体后支持显示 Emoji。</p>
+<p>进入目录[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]，在右侧空白处鼠标右击–&gt;新建–&gt;字符串值，并重命名为“Sarasa Mono SC”，双击打开后输入如下值（最后一行需要留一个空段落）：</p>
+<p>BSSYM7.ttf,Bookshelf Symbol 7</p>
+<p>HOLOMDL2.ttf,HoloLens MDL2 Assets</p>
+<p>MARLETT.ttf,Marlett</p>
+<p>REFSPCL.ttf,MS Reference Specialty</p>
+<p>MTEXTRA.ttf,MT Extra</p>
+<p>SEGMDL2.ttf,Segoe MDL2 Assets</p>
+<p>SEGUIEMJ.ttf,Segoe UI Emoji</p>
+<p>SEGUIHIS.ttf,Segoe UI Historic</p>
+<p>SEGUISYM.ttf,Segoe UI Symbol</p>
+<p>SYMBOL.ttf,Symbol</p>
+<p>WEBDINGS.ttf,Webdings</p>
+<p>WINGDING.ttf,Wingdings</p>
+<p>WINGDNG2.ttf,Wingdings 2</p>
+<p>WINGDNG3.ttf,Wingdings 3</p>
+<p>[请删掉此行文字保留空段落]</p>
+<p>并“确定”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='720' height='536'></svg>)注册字体</p>
+<p>重启电脑。</p>
+<h2 id="4-设置-PowerShell"><a href="#4-设置-PowerShell" class="headerlink" title="4. 设置 PowerShell"></a>4. 设置 PowerShell</h2><p>按快捷键 Win+R 打开“运行”窗口，输入“PowerShell”后回车打开“Windows PowerShell”，在标题栏右击，选择“属性”。</p>
+<h3 id="4-1-字体"><a href="#4-1-字体" class="headerlink" title="4.1 字体"></a>4.1 字体</h3><p>切换到“字体”，找到“等距更纱黑体 SC”并选中，然后“大小”设置成“20”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='720' height='562'></svg>)设置 PowerShell 字体</p>
+<h3 id="4-2-颜色"><a href="#4-2-颜色" class="headerlink" title="4.2 颜色"></a>4.2 颜色</h3><p>（附件中有完整的设置截图，可以对照截图来挨个设置各个颜色块的颜色值）</p>
+<p>切换到“颜色”。</p>
+<p><strong>4.2.1 屏幕文字</strong></p>
+<p>选中“屏幕文字”，然后点击下方选中的颜色块，再在“选定的颜色值”的“红(R) 蓝(H) 绿(L)”中依次输入“147，161，161”，“不透明度”选择“90”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='579' height='737'></svg>)设置 PowerShell 颜色-屏幕文字</p>
+<p><strong>4.2.2 屏幕背景</strong></p>
+<p>选中“屏幕背景”，然后点击下方选中的颜色块，再在“选定的颜色值”的“红(R) 蓝(H) 绿(L)”中依次输入“253，246，227”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='579' height='737'></svg>)设置 PowerShell 颜色-屏幕背景</p>
+<p>注：为了能在后面的操作中看清 PowerShell 命令，请单独设置一下这个颜色块的颜色值，设置后“屏幕背景”仍然选择第一个颜色块。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='579' height='737'></svg>)单独设置此颜色块</p>
+<h3 id="4-3-终端"><a href="#4-3-终端" class="headerlink" title="4.3 终端"></a>4.3 终端</h3><p>切换到“终端”，“光标形状”选中“竖条”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='579' height='737'></svg>)设置 PowerShell 终端</p>
+<p>点击“确定”，然后关闭 PowerShell 再重新打开，设置生效。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='996' height='667'></svg>)PowerShell 设置生效</p>
+<h2 id="5-设置-CMD"><a href="#5-设置-CMD" class="headerlink" title="5. 设置 CMD"></a>5. 设置 CMD</h2><p>方法跟上方大致相同，不再赘述。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1007' height='789'></svg>)CMD 设置生效</p>
+<h2 id="6-安装-Windows-Terminal"><a href="#6-安装-Windows-Terminal" class="headerlink" title="6. 安装 Windows Terminal"></a>6. 安装 Windows Terminal</h2><p>看到这里您可能会感觉到，怎么美化了 PowerShell 还是达不到心理的预期值（还是丑），这里向大家推荐使用微软官方出品的 Windows 终端工具——Windows Terminal。</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701">Windows Terminal</a>（会调用本地的 Windows 10 应用商店进行安装）</p>
+<p>喜欢尝鲜可以安装预览版（已支持图形化设置界面），下载地址：</p>
+<h3 id="6-1-配置-Windows-Terminal"><a href="#6-1-配置-Windows-Terminal" class="headerlink" title="6.1 配置 Windows Terminal"></a>6.1 配置 Windows Terminal</h3><p><strong>6.1.1 安装 Git</strong></p>
+<p>（附件中有 Git 的安装包）</p>
+<p>下载地址：</p>
+<p>安装步骤没有什么特殊的，基本默认然后点下一步就可以了，实在不放心可以看这个教程：</p>
+<p><strong>6.1.2 配置 Git 环境变量</strong></p>
+<p>依次进入开始菜单–&gt;控制面板–&gt;系统–&gt;高级系统设置–&gt;高级–&gt;环境变量，在“系统变量”中找到“Path”并双击打开，点击“新建”，输入你的 Git 安装目录，比如我的是“C:\Program Files\Git”，回车，一直点击“确定”。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='677' height='664'></svg>)配置 Git 环境变量</p>
+<p><strong>6.1.3 配置 Git 的用户名和邮箱</strong></p>
+<p>打开 Git Bash，依次执行以下命令进行用户名和邮箱的配置（注意有无引号）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config -<span class="literal">-global</span> user.name <span class="string">&quot;你的用户名&quot;</span></span><br><span class="line">git config -<span class="literal">-global</span> user.email 你的邮箱</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='825' height='545'></svg>)配置 Git 的用户名和邮箱</p>
+<p>配置完成后可以执行以下命令进行查看：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -<span class="literal">-list</span></span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='825' height='545'></svg>)查看 Git 配置的用户名和邮箱</p>
+<p>如果你不嫌烦的话呢，也可以对 Git Bash 的界面进行美化设置，而且可以设置成中文，右击标题栏，选择“Options”，切换到“Window”，在“UI Language”里选择“zn_CH”，这里不再赘述。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='450' height='435'></svg>)设置 Git Bash 界面语言</p>
+<p><strong>6.1.4 修改执行策略权限</strong></p>
+<p>按快捷键 Win+X+A，以管理员身份运行“Windows PowerShell”，先查看执行策略权限状态，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy -List</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)查看执行策略权限状态</p>
+<p>可以看到“CurrentUser”和“LocalMachine”的执行策略权限无法运行未签名的脚本。</p>
+<p>① 修改 CurrentUser 的执行策略权限，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)修改 CurrentUser 的执行策略权限</p>
+<p>输入“A”，回车。</p>
+<p>② 修改 LocalMachine 的执行策略权限，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)修改 LocalMachine 的执行策略权限</p>
+<p>输入“A”，回车。</p>
+<p>再次查看执行策略权限状态，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy -List</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)查看执行策略权限状态</p>
+<p>现在 PowerShell 可以运行未签名的脚本了。</p>
+<p><strong>6.1.5 安装 oh-my-posh</strong></p>
+<p>① 安装 posh-git，执行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span></span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)安装 oh-my-posh</p>
+<p>输入“Y”，回车。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)安装 oh-my-posh</p>
+<p>输入“A”，回车。</p>
+<p>② 安装 oh-my-posh，执行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)</p>
+<p>输入“A”，回车。</p>
+<p><strong>6.1.6 导入 oh-my-posh</strong></p>
+<p>依次执行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-PoshPrompt</span> <span class="literal">-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
+
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1473' height='789'></svg>)</p>
+<p><strong>6.1.7 新建配置文件</strong></p>
+<p>（附件中有已经编辑好了的 Microsoft.PowerShell_profile.ps1 文件）</p>
+<p>打开文件资源管理器，进入文件夹 C:\Users[你的用户名]\Documents\WindowsPowerShell，没有“WindowsPowerShell”文件夹就新建一个，然后在此文件夹内新建文本文档，编辑以下内容：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-PoshPrompt</span> <span class="literal">-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
+
+<p>另存为“Microsoft.PowerShell_profile.ps1”文件。</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='977' height='384'></svg>)主题加载配置文件</p>
+<p><strong>6.1.8 美化配置</strong></p>
+<p>（附件中有已经配置好了的 settings.json 文件，直接覆盖源文件即可。背景图片和图标也在其内，配置时请注意文件所在路径）</p>
+<p>打开文件资源管理器，进入文件夹 C:\Users[你的用户名]\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState（预览版的配置文件所在目录 C:\Users[你的用户名]\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState），然后右击“settings.json”文件，“打开方式”选择“记事本”，以下摘选的是会影响外观的配置项（请根据自己需要进行增删改）。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;defaults&quot;</span>: <span class="comment">//默认配置</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Put settings here that you want to apply to all profiles.</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span> : <span class="string">&quot;Ubuntu&quot;</span>, <span class="comment">// 主题</span></span><br><span class="line">        <span class="attr">&quot;useAcrylic&quot;</span> : <span class="literal">true</span>, <span class="comment">// 毛玻璃特效</span></span><br><span class="line">        <span class="attr">&quot;acrylicOpacity&quot;</span>: <span class="number">0.5</span>, <span class="comment">// 不透明度</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span> : <span class="string">&quot;#E6FF00&quot;</span>, <span class="comment">// 光标颜色</span></span><br><span class="line">        <span class="attr">&quot;cursorShape&quot;</span> : <span class="string">&quot;bar&quot;</span>, <span class="comment">// 光标类型</span></span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span> : <span class="string">&quot;FiraCode NF Retina&quot;</span>, <span class="comment">// 字体名称</span></span><br><span class="line">        <span class="attr">&quot;fontSize&quot;</span> : <span class="number">12</span>, <span class="comment">// 字体大小</span></span><br><span class="line">        <span class="attr">&quot;icon&quot;</span> : <span class="string">&quot;C:\\Users\\Pictures\\Java.png&quot;</span>, <span class="comment">// 图标</span></span><br><span class="line">        <span class="attr">&quot;backgroundImage&quot;</span>: <span class="string">&quot;C:\\Users\\Pictures\\colorful.jpg&quot;</span>, <span class="comment">// 背景图片</span></span><br><span class="line">        <span class="attr">&quot;backgroundImageOpacity&quot;</span>: <span class="number">0.25</span>, <span class="comment">// 背景图片的不透明度</span></span><br><span class="line">        <span class="attr">&quot;tabTitle&quot;</span> : <span class="string">&quot;开始学习啦&quot;</span>, <span class="comment">//标签名称</span></span><br><span class="line">        <span class="attr">&quot;startingDirectory&quot;</span> : <span class="string">&quot;C:\\Users\\JavaLearning&quot;</span>, <span class="comment">// 起始文件夹路径</span></span><br><span class="line">        <span class="attr">&quot;closeOnExit&quot;</span> : <span class="literal">true</span>, <span class="comment">// 输入exit退出命令窗口</span></span><br><span class="line">        <span class="attr">&quot;padding&quot;</span> : <span class="string">&quot;10, 10, 10, 10&quot;</span>, <span class="comment">// 内容距离界面的内部距离</span></span><br><span class="line">        <span class="attr">&quot;snapOnInput&quot;</span> : <span class="literal">true</span>, <span class="comment">// 嗅探输入</span></span><br><span class="line">        <span class="attr">&quot;historySize&quot;</span> : <span class="number">8001</span> <span class="comment">// 历史大小</span></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;schemes&quot;</span>: [ <span class="comment">// 主题（此处设置的主题是“Ubuntu”）</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Ubuntu&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#2e3436&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#cc0000&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#4e9a06&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#c4a000&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#3465a4&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#75507b&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#06989a&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#d3d7cf&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#555753&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#ef2929&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#8ae234&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#fce94f&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#729fcf&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#ad7fa8&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#34e2e2&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#eeeeec&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;background&quot;</span>: <span class="string">&quot;#300a24&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#eeeeec&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p>想预览其它主题，请访问：</p>
+<p>想下载其它主题，请访问：<a target="_blank" rel="noopener" href="https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal">主题下载</a>（请不要直接覆盖 settings.json 文件，请编辑俩 .json 将内容复制到 settings.json 内的指定位置即可）</p>
+<h3 id="6-2-查看效果"><a href="#6-2-查看效果" class="headerlink" title="6.2 查看效果"></a>6.2 查看效果</h3><p>附上效果图：</p>
+<p>![img](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1483' height='787'></svg>)</p>
+<h2 id="7-附件下载"><a href="#7-附件下载" class="headerlink" title="7. 附件下载"></a>7. 附件下载</h2><p>链接：<a target="_blank" rel="noopener" href="https://dustinwinvip.lanzoui.com/b01oqqcej">https://dustinwinvip.lanzoui.com/b01oqqcej</a></p>
+<p>密码：mhzd</p>
+<p>编辑于 10-29</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/Terminal/">Terminal</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/10/cl0d7937f002fesbh06cff39j/" >python安装教程（windows） - 知乎<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/10/cl0d79385003desbhdvps1z49/" >新电脑还原hexo博客<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-Terminal-%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE-PowerShell-7-1"><span class="toc-text">Windows Terminal 完美配置 PowerShell 7.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Windows-Terminal"><span class="toc-text">1. 安装 Windows Terminal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="toc-text">2. 安装字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E5%AE%89%E8%A3%85%E6%96%B0%E6%AC%BE-Powershell-Core"><span class="toc-text">3. 1安装新款 Powershell Core</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E6%B7%BB%E5%8A%A0-Powershell-%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0"><span class="toc-text">3.2. 添加 Powershell 启动参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85-Powershell-%E6%8F%92%E4%BB%B6"><span class="toc-text">4. 安装 Powershell 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%85%8D%E7%BD%AE-Windows-Terminal"><span class="toc-text">5. 配置 Windows Terminal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95"><span class="toc-text">6. 添加右键菜单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E5%AD%97%E4%BD%93%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E5%93%A6"><span class="toc-text">后续字体需要修改哦</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PowerShell%E3%80%81CMD-%E5%92%8C-Windows-Terminal-%E7%9A%84%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">PowerShell、CMD 和 Windows Terminal 的美化配置方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="toc-text">1. 安装字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93"><span class="toc-text">2. 设置默认字体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%AE%BE%E7%BD%AE-CMD-%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93"><span class="toc-text">2.1 设置 CMD 的默认字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%AE%BE%E7%BD%AE-PowerShell-%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93%EF%BC%88System32%EF%BC%89"><span class="toc-text">2.2 设置 PowerShell 的默认字体（System32）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E8%AE%BE%E7%BD%AE-PowerShell-%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AD%97%E4%BD%93%EF%BC%88SysWOW64%EF%BC%89"><span class="toc-text">2.3 设置 PowerShell 的默认字体（SysWOW64）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B3%A8%E5%86%8C%E5%AD%97%E4%BD%93"><span class="toc-text">3. 注册字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%AE%BE%E7%BD%AE-PowerShell"><span class="toc-text">4. 设置 PowerShell</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%AD%97%E4%BD%93"><span class="toc-text">4.1 字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E9%A2%9C%E8%89%B2"><span class="toc-text">4.2 颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E7%BB%88%E7%AB%AF"><span class="toc-text">4.3 终端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%AE%BE%E7%BD%AE-CMD"><span class="toc-text">5. 设置 CMD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%AE%89%E8%A3%85-Windows-Terminal"><span class="toc-text">6. 安装 Windows Terminal</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E9%85%8D%E7%BD%AE-Windows-Terminal"><span class="toc-text">6.1 配置 Windows Terminal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E6%9F%A5%E7%9C%8B%E6%95%88%E6%9E%9C"><span class="toc-text">6.2 查看效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%99%84%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">7. 附件下载</span></a></li></ol></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2021/11/10/cl0d7936y001mesbhbwnzam19/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/MuyanGit.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于" >关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a target="_blank" rel="noopener" href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a target="_blank" rel="noopener" href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/lozad.js"></script>
+
+
+<script src="/js/jquery.share.min.js"></script>
+
+
+<script src="/js/CodeLineHeight.js"></script>
+
+
+<script src="/js/activate-power-mode.js"></script>
+
+
+<script src="/js/xiaomai.js"></script>
+
+
+<script src="/js/zoom.min.js"></script>
+
+
+<script src="/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+<!-- 
+<script src="/js/loading.js"></script>
+ -->
+<!-- 
+<script src="/js/APlayer.js"></script>
+ -->
+<!-- 
+<script src="/js/aplayerdemo.js"></script>
+ -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-言念君子，温其如玉！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
