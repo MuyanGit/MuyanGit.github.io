@@ -1,0 +1,629 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://muyangit.github.io/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2021/11/16/cl0gd5f9d000pw4bhd3928izu/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://muyangit.github.io">
+<meta name="author" content="MuyanGit">
+
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+
+<!-- 
+<link rel="stylesheet" href="/css/loading.css">
+ -->
+
+<link rel="stylesheet" href="/css/xiaomai.css">
+
+
+<link rel="stylesheet" href="/css/share.min.css">
+
+
+<link rel="stylesheet" href="/css/zoom.css">
+
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico">
+
+
+<title>net.core在vscode配置 - MuyanGit</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="尽小者大，慎微者著">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2021/11/16/cl0gd5f9d000pw4bhd3928izu/",
+        "appid": "1594654793276567",
+        "title": "NET.core在vscode配置",
+        "pubDate": "2021-11-16T10:01:12"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="Muyan">Muyan</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <!-- 签到 -->
+        <!-- <a href="/2018/08/06/言念君子，温其如玉/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a> -->
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" target="_blank" rel="noopener" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about/MuyanGit.html"><img title="言念君子，温其如玉" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/剑来大小抠图/bitbug_favicon大.ico" alt="avatar" /></a>
+        <h1>MuyanGit</h1>
+        <h3>hello ，stranger</h3>
+        <p>言念君子，温其如玉</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/MuyanGit.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>MuyanGit</span>
+                    <span title="最后编辑于2021-11-16">2021-11-16</span>
+                </p>
+                <p>尽小者大，慎微者著</p>
+            </div>
+            <h2 class="post-title">NET.core在vscode配置</h2>
+            <div class="post-meta">
+                本文总共4210个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>如何在多个.NET Core SDK 版本之间进行切换(global.json) _ The Will Will Web</p>
+<h2 id="如何在多個-NET-Core-SDK-版本之間進行切換-global-json-分享"><a href="#如何在多個-NET-Core-SDK-版本之間進行切換-global-json-分享" class="headerlink" title="如何在多個 .NET Core SDK 版本之間進行切換 (global.json)分享"></a><a target="_blank" rel="noopener" href="https://blog.miniasp.com/post/2018/04/19/How-to-switch-between-DotNet-SDK-versions">如何在多個 .NET Core SDK 版本之間進行切換 (global.json)</a>分享</h2><p>2018/04/20 05:41 <a target="_blank" rel="noopener" href="https://blog.miniasp.com/author/will">Will 保哥</a> <a target="_blank" rel="noopener" href="https://blog.miniasp.com/category/NET-Core">.NET Core</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.duotify.com/contact.html"><img src="https://blog.miniasp.com/Custom/Themes/Standard-2015/images/choose_the_right_partner3.png" alt="img"></a></p>
+<p>由於同一台電腦可以安裝多個版本的 .NET Core SDK，每個版本的 SDK 都會包含完整的工具組、執行環境、組件庫與編譯器等等，所以蠻多人詢問過我這個問題：「當安裝了許多不同版本的 .NET Core SDK 之後，要如何才能使用舊版 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/core/tools/dotnet?tabs=netcore2x&WT.mc_id=DT-MVP-4015686">dotnet</a> 命令，執行 <strong>dotnet new</strong> 或 <strong>dotnet build</strong> 之類的命令。」這部分其實並不困難，只要設定 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/core/tools/global-json?WT.mc_id=DT-MVP-4015686">global.json</a> 即可。</p>
+<p>在 .NET Core 2.0 版以前，要查詢目前電腦所有安裝過的 SDK 版本，如果在 Windows 作業系統，可以透過控制台的「應用程式與功能」查看安裝過的 .NET Core SDK 版本，或是透過檔案總管開啟 C:\Program Files\dotnet\sdk 資料夾，查看有哪些版本。如果在 Linux 作業系統下，路徑則在 /usr/share/dotnet/sdk 目錄下。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.miniasp.com/image.axd?picture=image_3110.png"><img src="https://blog.miniasp.com/image.axd?picture=image_thumb_242.png" alt="image"></a></p>
+<p>但是從 .NET Core SDK 2.1 開始，預設的 <strong>dotnet</strong> 命令就包含了 <strong>dotnet –list-sdks</strong> 命令，直接可以列出所有已安裝過的版本。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.miniasp.com/image.axd?picture=image_3111.png"><img src="https://blog.miniasp.com/image.axd?picture=image_thumb_243.png" alt="img"></a></p>
+<p>查詢已經安裝過 SDK 版本號是非常重要的，當你想透過 <strong>global.json</strong> 切換 SDK 版本的時候，必須手動輸入這些已安裝的版本號。</p>
+<p>首先，我們先來示範如何快速建立 <strong>global.json</strong> 檔案：</p>
+<p>\1. 先利用 <strong>dotnet new globaljson</strong> 快速建立這個檔案</p>
+<ul>
+<li>預設這個檔案會記錄當前目錄要使用的 .NET Core SDK 版本</li>
+<li>預設的 SDK 會等同於目前執行 dotnet 命令時所用的 SDK 版本一致<br><a target="_blank" rel="noopener" href="https://blog.miniasp.com/image.axd?picture=image_3112.png"><img src="https://blog.miniasp.com/image.axd?picture=image_thumb_244.png" alt="img"></a></li>
+</ul>
+<p>\2. 然後將 <strong>global.json</strong> 檔案內的 “version” 修改為特定 SDK 版本即可</p>
+<ul>
+<li>如下圖示<br><a target="_blank" rel="noopener" href="https://blog.miniasp.com/image.axd?picture=image_3113.png"><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image.axd" alt="img"></a></li>
+</ul>
+<p>或者是你也可以利用 <strong>–sdk-version</strong> 參數，直接給定 SDK 版本，如下圖示：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.miniasp.com/image.axd?picture=image_3114.png"><img src="https://blog.miniasp.com/image.axd?picture=image_thumb_246.png" alt="img"></a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet new globaljson --sdk-version 2.1.805</span><br></pre></td></tr></table></figure>
+
+<p><strong>請注意：</strong>在執行 <strong>dotnet</strong> 命令的時候，它會自動找尋<strong>當前目錄</strong>與<strong>上層目錄</strong>的 <strong>global.json</strong> 檔案，這裡的<strong>上層目錄</strong>會一直往上找，找到<strong>根目錄</strong>為止！如果都找不到 <strong>global.json</strong> 就會預設選用目前所有已安裝 .NET Core SDK 的最新版。</p>
+<p>一般來說，每一個透過 .NET Core 開發的專案，都不太需要 <strong>global.json</strong> 檔案的存在，因為隨著每次 .NET Core 版本升級，可以讓該專案永遠以「最新版 SDK」進行建置或發行。但是如果你還是擔心會有破壞性更新出現的話，這時你就可以建立一個 <strong>global.json</strong> 定義檔，將使用的 .NET Core SDK 鎖定在特定版本，以確保應用系統的穩定。</p>
+<p><strong>相關連結</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-json?WT.mc_id=DT-MVP-4015686">global.json reference | Microsoft Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/core/tools/global-json?WT.mc_id=DT-MVP-4015686">global.json 參考 | Microsoft Docs</a></li>
+</ul>
+<p>set 限制解除 </p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/"><img src="https://www.cnblogs.com/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/">首页</a><a target="_blank" rel="noopener" href="https://news.cnblogs.com/">新闻</a><a target="_blank" rel="noopener" href="https://q.cnblogs.com/">博问</a><a target="_blank" rel="noopener" href="https://brands.cnblogs.com/">专区</a><a target="_blank" rel="noopener" href="https://ing.cnblogs.com/">闪存</a><a target="_blank" rel="noopener" href="https://edu.cnblogs.com/">班级</a><img src="https://www.cnblogs.com/images/aggsite/search.svg" alt="搜索"><a target="_blank" rel="noopener" href="https://account.cnblogs.com/signup/">注册</a>登录</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linezero/"><img src="https://gitee.com/muyangit/blog-img/raw/master/img/logo.gif" alt="返回主页"></a></p>
+<h1 id="LineZero’s-Blog"><a href="#LineZero’s-Blog" class="headerlink" title="LineZero’s Blog"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linezero/">LineZero’s Blog</a></h1><h2 id="做自己！简单即幸福即快乐。"><a href="#做自己！简单即幸福即快乐。" class="headerlink" title="做自己！简单即幸福即快乐。"></a>做自己！简单即幸福即快乐。</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linezero/">首页</a></li>
+<li></li>
+<li></li>
+<li>订阅</li>
+<li><a target="_blank" rel="noopener" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+<p>随笔 - 100 文章 - 0 评论 - 1036 阅读 - 110万</p>
+<h1 id="使用VS-Code从零开始开发调试-NET-5"><a href="#使用VS-Code从零开始开发调试-NET-5" class="headerlink" title="使用VS Code从零开始开发调试.NET 5"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linezero/p/14300097.html">使用VS Code从零开始开发调试.NET 5</a></h1><p>使用VS Code 从零开始开发调试.NET 5。无需安装VS 2019即可开发调试.NET 5应用。</p>
+<p>VS Code 全称是 Visual Studio Code，Visual Studio Code是一个轻量级的跨平台Web集成开发环境，可以运行在 Linux，Mac 和Windows下！</p>
+<p>本篇为VS Code 开发调试.NET 5教程，在Windows下做实际操作，但同样适用于其它系统。</p>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><p>本文演示开发环境: WIN10 x64 Visual Studio Code 1.55.1</p>
+<p>.NET 5.0 SDK Windows x64 Installer:</p>
+<p><a target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.202-windows-x64-installer">https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.202-windows-x64-installer</a></p>
+<p>更多系统版本下载：<a target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download">https://dotnet.microsoft.com/download</a></p>
+<p>VSCode :</p>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>VSCode C#插件：</p>
+<p>打开扩展搜索C#， 选择C# 安装。</p>
+<p> <img src="https://img2020.cnblogs.com/blog/443844/202101/443844-20210119210634558-2041137445.png" alt="img"></p>
+<p>安装好插件以后重启VS Code。</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>首先确保 .NET Core SDK 安装成功。</p>
+<p>dotnet –version</p>
+<p>输出如下：</p>
+<p>5.0.202</p>
+<p>然后就可以创建项目。</p>
+<blockquote>
+<p>dotnet new console -o myapp</p>
+<p>cd myapp</p>
+<p>dotnet run</p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/blog/443844/202101/443844-20210119211155824-156662802.png" alt="img"></p>
+<p>整个命令执行完成，项目就创建好了。 dotnet new会默认执行 dotnet restore ，只需要dotnet run即可。</p>
+<h2 id="使用-VS-Code-开发"><a href="#使用-VS-Code-开发" class="headerlink" title="使用 VS Code 开发"></a>使用 VS Code 开发</h2><p>使用 VS Code 打开myapp文件夹，打开Program.cs 文件</p>
+<p>如果是首次打开需耐心等待插件的安装。安装成功如下图：</p>
+<p> <img src="https://img2020.cnblogs.com/blog/443844/202101/443844-20210119211410010-338956512.png" alt="img"></p>
+<p>然后稍微等待一下，会出现如上图所示，提示 Required assets to build and debug are missing from ‘myapp’. Add them?，选择Yes 即可。</p>
+<p>插件会自动生成.vscode文件夹，并为我们配置好 launch.json 。</p>
+<h2 id="使用-VS-Code-调试"><a href="#使用-VS-Code-调试" class="headerlink" title="使用 VS Code 调试"></a>使用 VS Code 调试</h2><p>接下来切换到调试窗口就可以进行调试，点击调试按钮</p>
+<p>下断点成功断下。</p>
+<p> <img src="https://gitee.com/muyangit/blog-img/raw/master/img/443844-20210119212646090-1244043507.png" alt="img"></p>
+<p><strong>F10 单步跳过 F11 单步调试 F5 执行.</strong></p>
+<p>也可以选择附加调试，如下：</p>
+<p>代码加入 Console.ReadKey();</p>
+<p>然后在终端中执行 <strong>dotnet .\bin\Debug\net5.0\myapp.dll</strong></p>
+<p>接着在调试中切换为 <strong>.NET Core Attach</strong> 点击调试按钮，选择 dotnet.exe</p>
+<p><img src="https://img2020.cnblogs.com/blog/443844/202104/443844-20210411155511487-787270754.png" alt="img"></p>
+<p>在VS Code中插入断点，然后终端输入任意键既可继续，程序也能正常走到调试状态。</p>
+<p><img src="https://img2020.cnblogs.com/blog/443844/202104/443844-20210411155627704-506106542.png" alt="img"></p>
+<p>可以很方便的编写代码，C#插件为开发提供智能提示功能。这样不用安装VS 2019 也可以开发 .NET 5。</p>
+<h2 id="VS-Code插件"><a href="#VS-Code插件" class="headerlink" title="VS Code插件"></a>VS Code插件</h2><h3 id="外观类插件"><a href="#外观类插件" class="headerlink" title="外观类插件"></a>外观类插件</h3><p>主题插件 GitHub Theme</p>
+<p><img src="https://img2020.cnblogs.com/blog/443844/202104/443844-20210411144834533-1622839391.png" alt="img"></p>
+<p> 更多主题可以搜索Theme</p>
+<p>Icon 图标插件： vscode-icons</p>
+<h3 id="开发类插件"><a href="#开发类插件" class="headerlink" title="开发类插件"></a>开发类插件</h3><p>Visual Studio IntelliCode 编码智能提示</p>
+<p>REST Client 接口请求神器</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>　　<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><br>POST https:<code>//example</code>.com<code>/comments` `HTTP</code>/1<code>.1</code>content-<code>type</code>: application<code>/json` `&#123;</code>  <code>&quot;name&quot;</code>: <code>&quot;sample linezero&quot;</code>,<code>  </code>“time”<code>: </code>“Wed, 21 Oct 2020 18:27:50 GMT”``}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Thunder Client 像PostMan 一样请求接口</span><br><span class="line"></span><br><span class="line">![img](https://img2020.cnblogs.com/blog/443844/202104/443844-20210411154311106-1437423367.png)</span><br><span class="line"></span><br><span class="line">vscode-solution-explorer 像VS一样操作项目</span><br><span class="line"></span><br><span class="line">![img](https://img2020.cnblogs.com/blog/443844/202104/443844-20210411160530623-1597839623.png)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">ASP.NET Core 3.1 新书发布 《[ASP.NET Core项目开发实战入门](https://item.jd.com/12961032.html)》 [京东](https://item.jd.com/12961032.html) [当当](http://product.dangdang.com/29122210.html) [淘宝](https://s.taobao.com/search?q=9787121393846)</span><br><span class="line"></span><br><span class="line">GitHub：https://github.com/linezero</span><br><span class="line"></span><br><span class="line">博客示例代码GitHub：https://github.com/linezero/Blog</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="项目名字-name-里有-python-的"><a href="#项目名字-name-里有-python-的" class="headerlink" title="项目名字(name)里有 python 的"></a>项目名字(name)里有 python 的</h1><p>in:name python</p>
+<h1 id="名字-name-里有-python-的并且-stars-大于-3000-的"><a href="#名字-name-里有-python-的并且-stars-大于-3000-的" class="headerlink" title="名字(name)里有 python 的并且 stars 大于 3000 的"></a>名字(name)里有 python 的并且 stars 大于 3000 的</h1><p>in:name python starts:&gt;3000</p>
+<h1 id="名字-name-里有-python-的并且-stars-大于-3000-、forks-大于-200-的"><a href="#名字-name-里有-python-的并且-stars-大于-3000-、forks-大于-200-的" class="headerlink" title="名字(name)里有 python 的并且 stars 大于 3000 、forks 大于 200 的"></a>名字(name)里有 python 的并且 stars 大于 3000 、forks 大于 200 的</h1><p>in:name python starts:&gt;3000 forks:&gt;200</p>
+<h1 id="详情-readme-里面有-python-的并且-stars-大于-3000-的"><a href="#详情-readme-里面有-python-的并且-stars-大于-3000-的" class="headerlink" title="详情(readme)里面有 python 的并且 stars 大于 3000 的"></a>详情(readme)里面有 python 的并且 stars 大于 3000 的</h1><p>in:readme python starts:&gt;3000</p>
+<h1 id="描述-description-里面有-python-的并且-stars-大于-3000-的"><a href="#描述-description-里面有-python-的并且-stars-大于-3000-的" class="headerlink" title="描述(description)里面有 python 的并且 stars 大于 3000 的"></a>描述(description)里面有 python 的并且 stars 大于 3000 的</h1><p>in:description python starts:&gt;3000</p>
+<h1 id="描述-description-里面有-python-的并且是-python-语言的"><a href="#描述-description-里面有-python-的并且是-python-语言的" class="headerlink" title="描述(description)里面有 python 的并且是 python 语言的"></a>描述(description)里面有 python 的并且是 python 语言的</h1><p>in:description python language:python</p>
+<h1 id="描述-description-里面有-python-的并且-2019-12-20-号之后有更新过的"><a href="#描述-description-里面有-python-的并且-2019-12-20-号之后有更新过的" class="headerlink" title="描述(description)里面有 python 的并且 2019-12-20 号之后有更新过的"></a>描述(description)里面有 python 的并且 2019-12-20 号之后有更新过的</h1><p>in:description python pushed:&gt;2019-12-20</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">```cmd</span><br><span class="line">注意重启</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>查看源码-版本-项目还原</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211117171052405.png" alt="image-20211117171052405"></p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/NET-Core/">.NET Core</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/18/cl0gd5fbt0042w4bh8u9v2x2e/" >英文文本分词之工具NLTK<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/13/cl0gd5fay002lw4bhf3o74739/" >redis入门<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E5%A4%9A%E5%80%8B-NET-Core-SDK-%E7%89%88%E6%9C%AC%E4%B9%8B%E9%96%93%E9%80%B2%E8%A1%8C%E5%88%87%E6%8F%9B-global-json-%E5%88%86%E4%BA%AB"><span class="toc-text">如何在多個 .NET Core SDK 版本之間進行切換 (global.json)分享</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LineZero%E2%80%99s-Blog"><span class="toc-text">LineZero’s Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E8%87%AA%E5%B7%B1%EF%BC%81%E7%AE%80%E5%8D%95%E5%8D%B3%E5%B9%B8%E7%A6%8F%E5%8D%B3%E5%BF%AB%E4%B9%90%E3%80%82"><span class="toc-text">做自己！简单即幸福即快乐。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8VS-Code%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95-NET-5"><span class="toc-text">使用VS Code从零开始开发调试.NET 5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-text">环境安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-VS-Code-%E5%BC%80%E5%8F%91"><span class="toc-text">使用 VS Code 开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-VS-Code-%E8%B0%83%E8%AF%95"><span class="toc-text">使用 VS Code 调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VS-Code%E6%8F%92%E4%BB%B6"><span class="toc-text">VS Code插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E8%A7%82%E7%B1%BB%E6%8F%92%E4%BB%B6"><span class="toc-text">外观类插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E7%B1%BB%E6%8F%92%E4%BB%B6"><span class="toc-text">开发类插件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%90%8D%E5%AD%97-name-%E9%87%8C%E6%9C%89-python-%E7%9A%84"><span class="toc-text">项目名字(name)里有 python 的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E5%AD%97-name-%E9%87%8C%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94-stars-%E5%A4%A7%E4%BA%8E-3000-%E7%9A%84"><span class="toc-text">名字(name)里有 python 的并且 stars 大于 3000 的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E5%AD%97-name-%E9%87%8C%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94-stars-%E5%A4%A7%E4%BA%8E-3000-%E3%80%81forks-%E5%A4%A7%E4%BA%8E-200-%E7%9A%84"><span class="toc-text">名字(name)里有 python 的并且 stars 大于 3000 、forks 大于 200 的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%A6%E6%83%85-readme-%E9%87%8C%E9%9D%A2%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94-stars-%E5%A4%A7%E4%BA%8E-3000-%E7%9A%84"><span class="toc-text">详情(readme)里面有 python 的并且 stars 大于 3000 的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-description-%E9%87%8C%E9%9D%A2%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94-stars-%E5%A4%A7%E4%BA%8E-3000-%E7%9A%84"><span class="toc-text">描述(description)里面有 python 的并且 stars 大于 3000 的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-description-%E9%87%8C%E9%9D%A2%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94%E6%98%AF-python-%E8%AF%AD%E8%A8%80%E7%9A%84"><span class="toc-text">描述(description)里面有 python 的并且是 python 语言的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-description-%E9%87%8C%E9%9D%A2%E6%9C%89-python-%E7%9A%84%E5%B9%B6%E4%B8%94-2019-12-20-%E5%8F%B7%E4%B9%8B%E5%90%8E%E6%9C%89%E6%9B%B4%E6%96%B0%E8%BF%87%E7%9A%84"><span class="toc-text">描述(description)里面有 python 的并且 2019-12-20 号之后有更新过的</span></a>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2021/11/16/cl0gd5f9d000pw4bhd3928izu/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/MuyanGit.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于" >关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a target="_blank" rel="noopener" href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a target="_blank" rel="noopener" href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/lozad.js"></script>
+
+
+<script src="/js/jquery.share.min.js"></script>
+
+
+<script src="/js/CodeLineHeight.js"></script>
+
+
+<script src="/js/activate-power-mode.js"></script>
+
+
+<script src="/js/xiaomai.js"></script>
+
+
+<script src="/js/zoom.min.js"></script>
+
+
+<script src="/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+<!-- 
+<script src="/js/loading.js"></script>
+ -->
+<!-- 
+<script src="/js/APlayer.js"></script>
+ -->
+<!-- 
+<script src="/js/aplayerdemo.js"></script>
+ -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-言念君子，温其如玉！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
