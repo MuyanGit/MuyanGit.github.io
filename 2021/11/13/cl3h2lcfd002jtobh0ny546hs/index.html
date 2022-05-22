@@ -1,0 +1,621 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://muyangit.github.io/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2021/11/13/cl3h2lcfd002jtobh0ny546hs/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://muyangit.github.io">
+<meta name="author" content="MuyanGit">
+
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+
+<!-- 
+<link rel="stylesheet" href="/css/loading.css">
+ -->
+
+<link rel="stylesheet" href="/css/xiaomai.css">
+
+
+<link rel="stylesheet" href="/css/share.min.css">
+
+
+<link rel="stylesheet" href="/css/zoom.css">
+
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico">
+
+
+<title>redis入门 - MuyanGit</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="尽小者大，慎微者著">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2021/11/13/cl3h2lcfd002jtobh0ny546hs/",
+        "appid": "1594654793276567",
+        "title": "redis入门",
+        "pubDate": "2021-11-13T04:10:13"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="Muyan">Muyan</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <!-- 签到 -->
+        <!-- <a href="/2018/08/06/言念君子，温其如玉/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a> -->
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" target="_blank" rel="noopener" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about/MuyanGit.html"><img title="言念君子，温其如玉" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/剑来大小抠图/bitbug_favicon大.ico" alt="avatar" /></a>
+        <h1>MuyanGit</h1>
+        <h3>hello ，stranger</h3>
+        <p>言念君子，温其如玉</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/MuyanGit.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/images/favicon.ico" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>MuyanGit</span>
+                    <span title="最后编辑于2021-11-13">2021-11-13</span>
+                </p>
+                <p>尽小者大，慎微者著</p>
+            </div>
+            <h2 class="post-title">redis入门</h2>
+            <div class="post-meta">
+                本文总共3492个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">方法二：给Redis服务端设置密码</span><br><span class="line">第二种是给Redis Server设置密码，并且客户端配置正确的密码。</span><br><span class="line">可以通过命令行修改密码：</span><br><span class="line"></span><br><span class="line">进入安装目录</span><br><span class="line"><span class="function">D:\<span class="title">MySoftware</span>\<span class="title">DEV</span>\<span class="title">Dev_env</span>\<span class="title">Redis</span>-<span class="title">x64</span>-3.2.100&gt;<span class="title">redis</span>-<span class="title">cli.exe</span></span></span><br><span class="line"><span class="function">修改密码为1</span></span><br><span class="line"><span class="function">127.0.0.1:6379&gt; <span class="title">config</span> <span class="title">set</span> <span class="title">requirepass</span> 1</span></span><br><span class="line"><span class="function"><span class="title">OK</span></span></span><br><span class="line"><span class="function">127.0.0.1:6379&gt; <span class="title">Ctrl</span> + <span class="title">c</span></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">MySoftware</span>\<span class="title">DEV</span>\<span class="title">Dev_env</span>\<span class="title">Redis</span>-<span class="title">x64</span>-3.2.100&gt;<span class="title">redis</span>-<span class="title">cli.exe</span></span></span><br><span class="line"><span class="function">127.0.0.1:6379&gt; <span class="title">auth</span> 123456#测试错误密码</span></span><br><span class="line"><span class="function">(<span class="title">error</span>) <span class="title">ERR</span> <span class="title">invalid</span> <span class="title">password</span></span></span><br><span class="line"><span class="function">127.0.0.1:6379&gt; <span class="title">auth</span> 1</span></span><br><span class="line"><span class="function"><span class="title">OK</span></span></span><br><span class="line"><span class="function">也可以通过修改配置文件来修改密码，<span class="title">redis.windows.conf</span>配置文件，搜索<span class="title">requirepass</span>，找到注释密码行，去掉注释，设置密码：</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">requirepass</span> <span class="title">tenny</span>     //注意，行前不能有空格</span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改密码</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/image-20211113161411214.png" alt="image-20211113161411214"></p>
+<h1 id="Redis下载和安装（Windows系统）"><a href="#Redis下载和安装（Windows系统）" class="headerlink" title="Redis下载和安装（Windows系统）"></a>Redis下载和安装（Windows系统）</h1><p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/131Ga535-0.gif" alt="Redis安装"><br>图1：Redis 安装</p>
+<p>下载完成后，打开相应的文件夹，您会看到如下图所示的文件目录：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G91346-1.gif" alt="redis安装"><br>图2：Window 安装 Redis</p>
+<h2 id="创建Redis临时服务"><a href="#创建Redis临时服务" class="headerlink" title="创建Redis临时服务"></a>创建Redis临时服务</h2><h4 id="1-启动服务端程序"><a href="#1-启动服务端程序" class="headerlink" title="1) 启动服务端程序"></a>1) 启动服务端程序</h4><p>如上图所示，双击 </p>
+<p>Redis</p>
+<p> 服务端启动程序 </p>
+<p>redis</p>
+<p>-server.exe，您会看到以下界面：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G94961-2.png" alt="Redis服务端启动"><br>图3：启动 Redis 服务端程序</p>
+<p>上图中显示一些 </p>
+<p>Redis</p>
+<p> 的相关信息，比如 </p>
+<p>Redis</p>
+<p> 的版本号以及默认端口号(6379)。注意，为了实现后续操作，请您保持服务端开启状态，否则客户端无法正常工作。 </p>
+<h4 id="2-启动客户端程序"><a href="#2-启动客户端程序" class="headerlink" title="2) 启动客户端程序"></a>2) 启动客户端程序</h4><p>启动服务端后，双击客户端启动程序 </p>
+<p>redis</p>
+<p>-cli.exe，得到如下界面：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G93507-3.gif" alt="redis客户端启动"><br>图4：Redis客户端启动</p>
+<p>得到如上界面，说明 </p>
+<p>Redis</p>
+<p> 本地客户端与服务端连接成功。</p>
+<h2 id="命令创建Redis服务"><a href="#命令创建Redis服务" class="headerlink" title="命令创建Redis服务"></a>命令创建Redis服务</h2><p>上述方式虽然简单快捷，但是显然不是程序员的操作，下面介绍，通过命令启动 </p>
+<p>Redis</p>
+<p> 服务端，并将 </p>
+<p>Redis</p>
+<p> 服务添加到 </p>
+<p>Windows</p>
+<p> 资源管理器，实现开机后自动启动。</p>
+<h4 id="1-注册Redis服务"><a href="#1-注册Redis服务" class="headerlink" title="1) 注册Redis服务"></a>1) 注册Redis服务</h4><p>通过 CMD 命令行工具进入 </p>
+<p>Redis</p>
+<p> 安装目录，将 </p>
+<p>Redis</p>
+<p> 服务注册到 </p>
+<p>Windows</p>
+<p> 服务中，执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe --service-install redis.windows.conf --loglevel verbose</span><br></pre></td></tr></table></figure>
+
+<p>执行完后，得到以下输出，说明注册成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1868] 07 Jan 15:00:08.223 # Granting read/write access to &#x27;NT AUTHORITY\NetworkService&#x27; on: &quot;D:\Redis-x64-5.0.10&quot; &quot;D:\Redis-x64-5.0.10\&quot;</span><br><span class="line">[1868] 07 Jan 15:00:08.230 # Redis successfully installed as a service.</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-启动Redis服务"><a href="#2-启动Redis服务" class="headerlink" title="2) 启动Redis服务"></a>2) 启动Redis服务</h4><p>执行以下命令启动 </p>
+<p>Redis</p>
+<p> 服务，命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server --service-start</span><br></pre></td></tr></table></figure>
+
+<p>如下图所示：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G91059-4.gif" alt="redis命令起动"><br>图5：命令启动 Redis 服务</p>
+<p>注意：此时 </p>
+<p>Redis</p>
+<p> 已经被添加到 </p>
+<p>Windows</p>
+<p> 服务中，因此不会再显示 </p>
+<p>Redis</p>
+<p> 服务端的相应的信息，如下图所示：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G922W-5.gif" alt="Redis注册Window服务"><br>图6：Windows 服务管理界面</p>
+<h4 id="3-启动Redis客户端"><a href="#3-启动Redis客户端" class="headerlink" title="3) 启动Redis客户端"></a>3) 启动Redis客户端</h4><p>在 CMD 命令行输出 </p>
+<p>redis</p>
+<p>-cli 命令启动客户端，如下所示：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G92131-6.gif" alt="Redis客户端启动"><br>图7：启动 Redis 客户端</p>
+<h4 id="4-检查是否连接成功"><a href="#4-检查是否连接成功" class="headerlink" title="4) 检查是否连接成功"></a>4) 检查是否连接成功</h4><p>测试客户端和服务端是否成功连接。输出<code>PING</code>命令，若返回<code>PONG</code>则证明成功连接。如下所示：</p>
+<p><img src="http://c.biancheng.net/uploads/allimg/210913/131G940b-7.gif" alt="检查Redis是否成功连接"><br>图8：测试客户端是否连接</p>
+<p>通过上面的操作，我们完成了 </p>
+<p>Redis</p>
+<p> 的安装。当然，您也可以将 </p>
+<p>Redis</p>
+<p> 加入到环境变量中，如下所示：</p>
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/131G95226-8.gif" alt="环境变量配置"><br>图9：环境变量配置</p>
+<p>注意：根据自己的安装路径添加环境变量。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>下面对安装过程中涉及到的命令进行总结，主要包括以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">安装服务：redis-server --service-install</span><br><span class="line">卸载服务：redis-server --service-uninstall</span><br><span class="line">开启服务：redis-server --service-start</span><br><span class="line">停止服务：redis-server --service-stop</span><br><span class="line">服务端启动时重命名：redis-server --service-start --service-name Redis1</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20211122210534669.png" alt="image-20211122210534669"></p>
+<h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><p>今天在启动项目时，用到了Redis缓存数据库，但是却出现了报错信息：ERR Client sent AUTH, but no password is set。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Caused by: io.lettuce.core.RedisCommandExecutionException: ERR Client sent AUTH, but no password is set</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200426140629148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQwMjYwODQ=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>产生这个问题的原因异常信息里已经说明，就是Redis服务器没有设置密码，但客户端向其发送了AUTH（authentication，身份验证）请求携带着密码，导致报错。既然是没有设置密码导致的报错，那我们就把Redis服务器给设置上密码就好了。一共有2种方式设置密码：</p>
+<h2 id="一、命令行方式"><a href="#一、命令行方式" class="headerlink" title="一、命令行方式"></a>一、命令行方式</h2><p>1、先进入Redis服务器</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\<span class="function">Program <span class="title">Files</span> (<span class="params">x86</span>)\Redis-x64-3.2.100&gt;redis-cli.exe</span></span><br><span class="line"><span class="function">1</span></span><br></pre></td></tr></table></figure>
+
+<p>2、查看是否设置了密码</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; auth <span class="number">123456</span></span><br><span class="line">(error) ERR Client sent AUTH, but no password <span class="keyword">is</span> <span class="keyword">set</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>3、报错，说明没有设置密码，然后再执行配置命令</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; config <span class="keyword">set</span> requirepass root</span><br><span class="line"></span><br><span class="line">OK</span><br><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+
+<p>4、返回OK后即代表配置成功，这个时候再执行查看密码命令</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">redis <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">6379</span>&gt; AUTH <span class="number">123456</span></span><br><span class="line">Ok</span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>返回OK，就说明已经配置成功了。<br><strong>这种配置方式存在一个很严重的问题，就是当我们将Redis服务器关掉之后，这些配置就会失效，下次再启动服务器，需要重新设置！</strong></p>
+<h2 id="二、修改配置文件"><a href="#二、修改配置文件" class="headerlink" title="二、修改配置文件"></a>二、修改配置文件</h2><p>还有一种方式就是一劳永逸的方式，就是直接修改配置文件里的参数。在redis.windows.conf（我的是这个配置文件）或者redis.conf（我看网上有说是这个配置文件的）的配置文件中找到requirepass这个参数，设置参数密码，然后保存配置文件，重启Redis。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># requirepass foobared</span></span><br><span class="line">requirepass <span class="number">123456</span> <span class="comment">//123456是设置的密码</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>本来这种方式非常简单，但是在实际过程中，却遇见了一些问题，那就是配置不生效，明明配置文件里都已经配置了密码，但是还会报错，后来在Redis启动时发现，Redis报错了：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> Warning: no config file specified, <span class="keyword">using</span> the <span class="literal">default</span> config. </span><br><span class="line"> In order to specify a config file use C:\<span class="function">Program <span class="title">Files</span> (<span class="params">x86</span>)\Redis-x64-3.2.100\redis-server.exe</span></span><br><span class="line"><span class="function"> /path/to/redis.conf</span></span><br><span class="line"><span class="function">123</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/2020042614443476.png" alt="在这里插入图片描述"><br>后来查阅之后才知道，<strong>原来Redis启动时需要指定配置文件，否则还会使用默认配置</strong>，而我在Windows里启动.exe应用程序时，还是习惯性的双击应用程序启动，导致Redis一直使用的是默认配置。<br>这样我们就需要在命令行窗口通过命令行的方式来启动并指定配置文件：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\<span class="function">Program <span class="title">Files</span> (<span class="params">x86</span>)\Redis-x64-3.2.100&gt;redis-server.exe redis.windows.conf</span></span><br><span class="line"><span class="function">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/muyangit/blog-img/raw/master/img/20200426144822606.png" alt="在这里插入图片描述"><br>这样，我们的Redis服务器的密码就正式配置完成了。</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2021/11/16/cl3h2lccl0014tobhf36k0ltg/" >NET.core在vscode配置<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2021/11/12/cl3h2lcjb004ctobhbays8c04/" >用python写个颜值评分器筛选最美主播<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%EF%BC%88Windows%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="toc-text">Redis下载和安装（Windows系统）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BARedis%E4%B8%B4%E6%97%B6%E6%9C%8D%E5%8A%A1"><span class="toc-text">创建Redis临时服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%A8%8B%E5%BA%8F"><span class="toc-text">1) 启动服务端程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%90%AF%E5%8A%A8%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%A8%8B%E5%BA%8F"><span class="toc-text">2) 启动客户端程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BARedis%E6%9C%8D%E5%8A%A1"><span class="toc-text">命令创建Redis服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%B3%A8%E5%86%8CRedis%E6%9C%8D%E5%8A%A1"><span class="toc-text">1) 注册Redis服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%90%AF%E5%8A%A8Redis%E6%9C%8D%E5%8A%A1"><span class="toc-text">2) 启动Redis服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8Redis%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">3) 启动Redis客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F"><span class="toc-text">4) 检查是否连接成功</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-text">修改密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-text">一、命令行方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">二、修改配置文件</span></a></li></ol></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2021/11/13/cl3h2lcfd002jtobh0ny546hs/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/MuyanGit.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于" >关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a target="_blank" rel="noopener" href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a target="_blank" rel="noopener" href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a target="_blank" rel="noopener" href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/lozad.js"></script>
+
+
+<script src="/js/jquery.share.min.js"></script>
+
+
+<script src="/js/CodeLineHeight.js"></script>
+
+
+<script src="/js/activate-power-mode.js"></script>
+
+
+<script src="/js/xiaomai.js"></script>
+
+
+<script src="/js/zoom.min.js"></script>
+
+
+<script src="/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+
+<!-- 
+<script src="/js/loading.js"></script>
+ -->
+<!-- 
+<script src="/js/APlayer.js"></script>
+ -->
+<!-- 
+<script src="/js/aplayerdemo.js"></script>
+ -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/MuyanGit/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-言念君子，温其如玉！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
