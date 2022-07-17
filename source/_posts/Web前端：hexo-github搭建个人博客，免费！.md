@@ -325,6 +325,78 @@ hexo clean&&hexo g&&hexo d
 最后一项拓展：
 如果你有自己购买的域名，可以在第三个箭头处的位置输入保存。这样就能用自己自定义的域名来访问博客了。
 
+
+
+备份：
+
+# 如何使用Hexo-Git-Backup 插件备份的Hexo博客
+
+发布时间：2022-01-06 18:16:41 来源：亿速云 阅读：159 作者：柒染 栏目：[大数据](https://www.yisu.com/zixun/hlwkj_dsj/)
+
+[活动：亿速云新用户活动，云服务器、香港服务器等云产品大降价，快来看看吧！](https://www.yisu.com/huodong/newuser.html?f=nature&type=zixun&plan=text)
+
+本篇文章为大家展示了如何使用Hexo-Git-Backup 插件备份的Hexo博客，内容简明扼要并且容易理解，绝对能使你眼前一亮，通过这篇文章的详细介绍希望你能有所收获。
+
+由于 Hexo 博客是静态托管的，所有的原始数据都保存在本地，如果哪一天电脑坏了，或者是误删了本地数据，那就是叫天天不应叫地地不灵了，此时定时备份就显得比较重要了，常见的备份方法有：打包数据保存到U盘、云盘或者其他地方，但是早就有大神开发了备份插件：hexo-git-backup ，只需要一个命令就可以将所有数据包括主题文件备份到 github 了
+
+首先进入你博客目录，输入命令 `hexo version` 查看 Hexo 版本，如图所示，我的版本是 3.7.1：
+
+
+![如何使用Hexo-Git-Backup 插件备份的Hexo博客](https://cache.yisu.com/upload/information/20210521/347/217514.png)
+
+安装备份插件，如果你的 Hexo 版本是 2.x.x，则使用以下命令安装：
+
+```
+$ npm install hexo-git-backup@0.0.91 --save
+```
+
+如果你的 Hexo 版本是 3.x.x，则使用以下命令安装：
+
+```
+$ npm install hexo-git-backup --save
+```
+
+到 Hexo 博客根目录的 `_config.yml` 配置文件里添加以下配置：
+
+```
+backup:
+ type: git
+ theme: material-x-1.2.1
+ message: Back up my www.itrhx.com blog
+ repository:
+   github: git@github.com:TRHX/TRHX.github.io.git,backup
+   coding: git@git.dev.tencent.com:TRHX/TRHX.git,backup
+```
+
+参数解释：
+
+- theme：你要备份的主题名称
+- message：自定义提交信息
+- repository：仓库名，注意仓库地址后面要添加一个分支名，比如我就创建了一个 backup 分支
+
+最后使用以下命令备份你的博客：
+
+```
+$ hexo backup
+```
+
+或者使用以下简写命令也可以：
+
+```
+$ hexo b
+```
+
+备份成功后可以在你的仓库分支下看到备份的原始文件：
+
+![image-20220717145435029](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717145435029.png)
+
+
+![image-20220717145514162](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717145514162.png)
+
+上述内容就是如何使用Hexo-Git-Backup 插件备份的Hexo博客，你们学到知识或技能了吗？如果还想学到更多技能或者丰富自己的知识储备，欢迎关注亿速云行业资讯频道。
+
+推荐阅读：[Atom 安装使用](https://www.yisu.com/zixun/50840.html)
+
 # 总结
 
 到此，整个Hexo+Github搭建个人博客的教程就完成了！有没有很开心！如果有不会的地方可以直接留言提问2333！
