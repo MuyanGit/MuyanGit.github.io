@@ -4,9 +4,9 @@ start mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.c
 :begin
 
 rem 备份代码-本地
-start D:\MyBackup\综合备份\便携版·软件\_环境变量·目录·快捷方式\bf1.lnk
+rem start D:\MyBackup\综合备份\便携版·软件\_环境变量·目录·快捷方式\bf1.lnk
 rem 备份代码-本地
-start D:\MyBackup\综合备份\便携版·软件\_环境变量·目录·快捷方式\bf2.lnk
+rem start D:\MyBackup\综合备份\便携版·软件\_环境变量·目录·快捷方式\bf2.lnk
 
 rem 签到-天翼云盘
 ping 127.0.0.1 -n 3 >nul
