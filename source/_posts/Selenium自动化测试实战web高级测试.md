@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
 ![image-20220717171740294](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717171740294.png)
 
-## 2· 常用方法
+## 2·  常用方法
 
 ![image-20220717171849644](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717171849644.png)
 
