@@ -20,3 +20,5 @@ git@github.com:yaorongke/yaorongke.github.io.git
 从分支克隆仓库文件
 git clone -b backup git@PonyTown2020:PonyTown2020/PonyTown2020.github.io.git
 git clone -b backup git@github.com:MuyanGit/MuyanGit.github.io.git
+
+cmd /k "cd /d G:\MuyanGitBlog\MuyanGit\杂项\博客备份\ && start D:\MySoftware\DEV\VersionCtrl\Git\git-bash.exe -c "bash bolg_backup.sh"
