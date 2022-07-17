@@ -1,0 +1,119 @@
+调试DNYS-1D电脑钥匙通讯规约
+
+解锁器版本更新，测试兼容
+
+1·调用的刷新方法·1
+E:\项目控制\ScadaIV\JOYOJ6\五防平台\人机交互\WFInterfaceWinForm\EstKeyConfigForm.Designer.cs(114):          
+  this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+1·调用的刷新方法·2
+E:\项目控制\ScadaIV\JOYOJ6\五防平台\人机交互\WFInterfaceWinForm\EstKeyConfigForm.cs(1285):       
+private void btnRefresh_Click(object sender, EventArgs e)
+3·编写的代码
+E:\项目控制\ScadaIV\JOYOJ6\五防平台\五防规约\1D直传规约\ProtocolKey1D.cs(2519):                   
+WFServerProxyBase.CurrentServer.WriteTable(keyTable);
+4·界面刷新功能的实现与否
+ 
+需要调用的 --> E:\项目控制\ScadaIV\JOYOJ6\五防平台\人机交互\WFInterfaceWinForm\EstKeyConfigForm.cs  
+--> 刷新当前窗体
+
+窗体界面
+  private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FreshData();  // 刷新数据
+        }
+
+        private void FreshData()
+        {
+            try
+            {
+                _keyTable = null;
+                InitGridViewDatas();
+                gvKeyTB.DataSource = _keyTable; // 刷新完重载datagridview数据源 modified by clj 2018/7/25
+            }
+            catch (Exception ex)
+            {
+                ut.BaseTypes.UTMessageBase.ShowOneMessage("异常", string.Format("{0}", ex.Message), ut.BaseTypes.PopupMessageType.Info, 5000);
+            }
+        }
+
+
+
+
+
+
+
+	
+新
+
+钥匙注册ID
+0000001583C7FA0A
+
+蓝牙地址
+001583C7FA0A
+
+旧的
+#1
+机械挂锁7
+00870F11E13
+电编码锁8
+008030D25B6E
+软件更新后 =》 手动输入蓝牙ID
+1# =》 蓝牙ID =》 001B350C3E56		
+
+代码 =》 12位
+
+
+
+
+ #region  电脑钥匙向五防主机上报版本信息的帧 接收透明通道数据 ,0x67 检修模式 吕友森
+       public void ProcessKeyVersionFrame(FrameBase frame)
+        {
+            try
+            {
+                Key1DFrame RecFrame = (Key1DFrame)frame;
+                if (RecFrame.AppCmd == CommandCode.ReportKeyVersionMsg)
+                {
+                    byte[] UnlockKeyVerBytes = new byte[4]; //解锁器版本
+                    Array.Copy(RecFrame.TextBytes, 0, UnlockKeyVerBytes, 0, 4);
+                    RecevingDebugText(string.Format("解锁器版本（补零）:{0}.{1:D2}.{2:D2}.{3:D2}", UnlockKeyVerBytes[0], UnlockKeyVerBytes[1], UnlockKeyVerBytes[2], UnlockKeyVerBytes[3]));
+                    string KerVersionsMac = string.Format("{0}.{1:D2}.{2:D2}", UnlockKeyVerBytes[0], UnlockKeyVerBytes[1], UnlockKeyVerBytes[2]);
+                    byte[] BlueToothKeyIDBytes = new byte[8]; 
+                    Array.Copy(RecFrame.TextBytes, 12, BlueToothKeyIDBytes, 0, 8);
+                    string BlueToothMacKeyID = GetkeyIDString(BlueToothKeyIDBytes);
+                    RecevingDebugText("解锁器蓝牙ID:" + BlueToothMacKeyID);
+                    DataTable keyTable = WFServerProxyBase.CurrentServer.GetTableForEdit("KeyTable");
+                    foreach (DataRow r in keyTable.Rows)
+                    {
+                        //string keyID = GetkeyIDString(RecFrame.GetKeyId);
+                        string BlueToothMac = UTTableBasic.GetDataRowFieldValue(r, "BlueToothMac", "");
+                        string WirelessId = UTTableBasic.GetDataRowFieldValue(r, "WirelessId", "");
+                        if (BlueToothMacKeyID == BlueToothMac || BlueToothMacKeyID == WirelessId)
+                        {
+                            // r["KeyVersion"] = RecFrame.KeyVersionMsg;
+                            UTTableBasic.SetDataRowFieldValue(r, "KeyVersion", KerVersionsMac);
+                        }
+                    }
+                    WFServerProxyBase.CurrentServer.WriteTable(keyTable);
+                    keyTable.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                ut.BaseTypes.UTMessageBase.ShowOneMessage(ex.ToString(), ut.BaseTypes.PopupMessageType.Notice);
+            }
+        }
+        /// <summary>
+        /// 返回WID字符串
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <returns></returns>
+        private string GetkeyIDString(byte[] keyID)
+        {
+            string str = "";
+            for (int i = 0; i < keyID.Length; i++)
+            {
+                str += keyID[i].ToString("X2");
+            }
+            return str.Trim().Substring(str.Length-12);//保持与表格中的蓝牙ID格式一致
+        }
+        #endregion

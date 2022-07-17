@@ -1,0 +1,11 @@
+Host github.com-MuyanGit
+    HostName github.com
+    user crper
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+Host github.com-PonyTown2020
+    HostName github.com
+    user linqunhe
+    IdentityFile "~/.ssh/PonyTown2020"
+    IdentitiesOnly yes

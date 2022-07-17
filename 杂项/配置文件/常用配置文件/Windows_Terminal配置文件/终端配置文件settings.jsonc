@@ -1,0 +1,273 @@
+/* 
+ * Author: 刘鹏
+ * Email: littleNewton6@gmail.com
+ * Date: 2020, Nov. 30
+ * <Alt> + Settings，打开默认设置
+ * 参考文档：https://aka.ms/terminal-documentation
+ * DESCRIPTION: 配置 Windows Terminal 的选项文件
+ * TAB_SIZE = 8
+ *字体空格，已经修改
+ *显示cmd，方便cmd的管理员操作--> 该p7终端会多线程并发执行 命令&命令
+ */
+
+ {
+	"$schema": "https://aka.ms/terminal-profiles-schema",
+	"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+
+	// 全局主题
+	"theme": "system",
+	"alwaysShowTabs": true,
+	"tabWidthMode": "equal",
+	"confirmCloseAllTabs": false,
+
+	// 位置
+	// (1) 1920x1080 - (320, 65)
+	// (2) 5120x2880 - (1275,692)
+	"initialPosition": "135,140",
+	"initialCols": 135,
+	"initialRows": 45,
+
+	// 禁止自动生成
+	"disabledProfileSources": [
+		"Windows.Terminal.Azure"
+	],
+
+
+
+
+
+	// ======================== PROFILES 配置 BEGIN ========================
+	"profiles": [
+
+
+		// ======================== PWSH7 配置 BEGIN ========================
+		{
+			// 键标记
+			"guid":			"{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+			"name":			"PowerShell Core 7.1.0",
+			"source":		"Windows.Terminal.PowershellCore",
+			// 行为
+			"closeOnExit":		true,
+			"commandline":		"C:/Program Files/PowerShell/7/pwsh.exe -nologo",
+			"hidden":		false,
+			"historySize":		9001,
+			"snapOnInput":		true,
+			"startingDirectory": ".",
+			// 外观
+			"icon":			"D:/Users/newton/Software/develop/shell/pwsh-7.1.ico",
+			"acrylicOpacity":	0.5,
+			"cursorColor":		"#FFFFFF",
+			"cursorShape":		"bar",
+			"fontFace":		"FiraCode NF",
+			"fontSize":		11,
+			"padding":		"5, 5, 20, 25",
+			"useAcrylic":		false,
+			// 颜色主题
+			"colorScheme":		"Homebrew"
+		},
+		// ======================== PWSH7 配置 END   ========================
+
+
+		// ======================== WSL 配置 BEGIN ========================
+		{
+			// 键标记
+			"guid":			"{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+			"name":			"Ubuntu-20.04",
+			"source":		"Windows.Terminal.Wsl",
+			// 行为
+			"closeOnExit":		true,
+			"commandline":		"wsl.exe -d Ubuntu-20.04",
+			"hidden":		false,
+			"historySize":		9001,
+			"snapOnInput":		true,
+			"startingDirectory":	".",
+			// 外观
+			"acrylicOpacity":	0.5,
+			"cursorColor":		"#FFFFFF",
+			"cursorShape":		"bar",
+			"fontFace":		"FiraCode NF",
+			"fontSize":		11,
+			"padding":		"5, 5, 20, 25",
+			"useAcrylic":		false,
+			// 颜色主题
+			"colorScheme":		"Homebrew"
+		},
+		// ======================== WSL 配置 END   ========================
+
+
+		// ======================== PWSH5 配置 BEGIN ========================
+		{
+			// 键标记
+			"guid":			"{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+			"name":			"Windows PowerShell",
+			// 行为
+			"closeOnExit":		true,
+			"commandline":		"powershell.exe",
+			"hidden": true,
+			"historySize":		9001,
+			"snapOnInput":		true,
+			"startingDirectory":	".",
+			// 外观
+			"acrylicOpacity":	0.5,
+			"cursorColor":		"#FFFFFF",
+			"cursorShape":		"bar",
+			"fontFace":		"FiraCode NF",
+			"fontSize":		11,
+			"padding":		"5, 5, 20, 25",
+			"useAcrylic":		false,
+			// 颜色主题
+			"colorScheme":		"Homebrew"
+		},
+		// ======================== PWSH5 配置 END   ========================
+
+
+		// ======================== CMD 配置 BEGIN ========================
+		{
+			// 键标记
+			"guid":		"{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+			"name":		"cmd",
+			// 行为
+			"commandline":	"cmd.exe",
+			//不隐藏CMD
+			"hidden":	false,
+			// 字体
+			"fontFace":	"FiraCode NF",
+			"fontSize":	11
+		},
+		// ======================== CMD 配置 END   ========================
+
+
+		// ======================== AZURE 配置 BEGIN ========================
+		{
+			"guid":		"{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+			"name":		"Azure Cloud Shell",
+			"hidden":	true,
+			"source":	"Windows.Terminal.Azure"
+		}
+		// ======================== AZURE 配置 END   ========================
+
+
+	],
+	// ======================== PROFILES 配置 END   ========================
+
+
+
+
+
+	// ======================== COLOR SCHEME 配置 BEGIN ========================
+	"schemes": [
+		{
+			"name":		"Homebrew",
+			"black":	"#000000",
+			"red":		"#FC5275",
+			"green":	"#00a600",
+			"yellow":	"#ffff00",
+			"blue":		"#6666e9",
+			"purple":	"#ff00ff",
+			"cyan":		"#00a6b2",
+			"white":	"#bfbfbf",
+			"brightBlack":	"#666666",
+			"brightRed":	"#ff6060",
+			"brightGreen":	"#00d900",
+			"brightYellow":	"#fdff73",
+			"brightBlue":	"#00a2ff",
+			"brightPurple":	"#ff08ff",
+			"brightCyan":	"#53ffff",
+			"brightWhite":	"#e5e5e5",
+			"background":	"#283033",
+			"foreground":	"#00ff00"
+		}
+	],
+	// ======================== COLOR SCHEME 配置 END   ========================
+
+
+
+
+
+	// ======================== HOTKEY 配置 BEGIN ========================
+	"keybindings": [
+
+
+		// ======================== 1. 界面视图 配置 BEGIN ========================
+		// 1.1 调节字体大小
+		{ "command": { "action": "adjustFontSize", "delta":  1 }, "keys": "ctrl+=" },
+		{ "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+-" },
+		{ "command":             "resetFontSize",                 "keys": "ctrl+0" },
+		// ======================== 1. 界面视图 配置 END   ========================
+
+
+		// ======================== 2. PANE 分割 配置 BEGIN ========================
+		// 2.1 水平、竖直分割
+		{ "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-"    },
+		{ "command": { "action": "splitPane", "split": "vertical"   }, "keys": "alt+shift+plus" },
+		{ "command": { "action": "splitPane", "split": "auto"       }, "keys": "alt+shift+|"    },
+		{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+		{ "command": { "action": "splitPane", "split": "horizontal", "profile": "Ubuntu-20.04" }, "keys": "alt+shift+u" },
+		// 2.2 按下 Alt 键，同时按下方向键，在多个 pane 之间切换
+		{ "command": { "action": "moveFocus",  "direction": "down"  }, "keys": "alt+down"  },
+		{ "command": { "action": "moveFocus",  "direction": "left"  }, "keys": "alt+left"  },
+		{ "command": { "action": "moveFocus",  "direction": "right" }, "keys": "alt+right" },
+		{ "command": { "action": "moveFocus",  "direction": "up"    }, "keys": "alt+up"    },
+		// 2.3 按下 Alt + Shift，同时按下方向键，调整当前 pane 的大小
+		{ "command": { "action": "resizePane", "direction": "down"  }, "keys": "alt+shift+down"  },
+		{ "command": { "action": "resizePane", "direction": "left"  }, "keys": "alt+shift+left"  },
+		{ "command": { "action": "resizePane", "direction": "right" }, "keys": "alt+shift+right" },
+		{ "command": { "action": "resizePane", "direction": "up"    }, "keys": "alt+shift+up"    },
+		// 2.4 关闭 pane
+		{ "command": "closePane", "keys": "alt+shift+w" },
+		// ======================== 2. PANE 分割 配置 BEGIN ========================
+
+
+		// ======================== 3. 关于标签 配置 BEGIN ========================
+		// 3.1 新建默认标签页
+		{ "command": "newTab", "keys": ["ctrl+n"]},
+		// 3.2 新建 N 号 profile 的标签
+		{ "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+shift+1" },
+		{ "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+shift+2" },
+		{ "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+shift+3" },
+		{ "command": { "action": "newTab", "index": 3 }, "keys": "ctrl+shift+4" },
+		{ "command": { "action": "newTab", "index": 4 }, "keys": "ctrl+shift+5" },
+		{ "command": { "action": "newTab", "index": 5 }, "keys": "ctrl+shift+6" },
+		{ "command": { "action": "newTab", "index": 6 }, "keys": "ctrl+shift+7" },
+		{ "command": { "action": "newTab", "index": 7 }, "keys": "ctrl+shift+8" },
+		{ "command": { "action": "newTab", "index": 8 }, "keys": "ctrl+shift+9" },
+		// 3.3 切换到第 N 个标签页
+		{ "command": { "action": "switchToTab", "index": 0 }, "keys": "ctrl+alt+1" },
+		{ "command": { "action": "switchToTab", "index": 1 }, "keys": "ctrl+alt+2" },
+		{ "command": { "action": "switchToTab", "index": 2 }, "keys": "ctrl+alt+3" },
+		{ "command": { "action": "switchToTab", "index": 3 }, "keys": "ctrl+alt+4" },
+		{ "command": { "action": "switchToTab", "index": 4 }, "keys": "ctrl+alt+5" },
+		{ "command": { "action": "switchToTab", "index": 5 }, "keys": "ctrl+alt+6" },
+		{ "command": { "action": "switchToTab", "index": 6 }, "keys": "ctrl+alt+7" },
+		{ "command": { "action": "switchToTab", "index": 7 }, "keys": "ctrl+alt+8" },
+		{ "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+alt+9" },
+		// 3.4 -> <- 标签页间切换
+		{ "command": "nextTab",      "keys": "ctrl+tab"       },
+		{ "command": "prevTab",      "keys": "ctrl+shift+tab" },
+		{ "command": "duplicateTab", "keys": "ctrl+shift+d"   },
+		// 3.5 关闭标签页
+		{ "command": "closeTab", "keys": "ctrl+w"},
+		// ======================== 3. 关于标签 配置 END   ========================
+
+
+		// ======================== 4. 杂项热键 配置 BEGIN ========================
+		// 4.1 搜索
+		{ "command": "find", "keys": "ctrl+f" },
+		// 4.2 打开 settings.json 
+		{ "command": "openSettings", "keys": "ctrl+;" },
+		// 4.3 复制、粘贴
+		{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+shift+c" },
+		{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert"  },
+		{ "command": "paste", "keys": "ctrl+shift+v" },
+		{ "command": "paste", "keys": "shift+insert" },
+		// 4.4 上下滚动、上下整页滚动
+		{ "command": "scrollDown",     "keys": "ctrl+shift+down" },
+		{ "command": "scrollUp"  ,     "keys": "ctrl+shift+up"   },
+		{ "command": "scrollDownPage", "keys": "ctrl+shift+pgdn" },
+		{ "command": "scrollUpPage",   "keys": "ctrl+shift+pgup" }
+		// ======================== 4. 杂项热键 配置 END   ========================
+
+
+	]
+	// ======================== HOTKEY 配置 END   ========================
+}

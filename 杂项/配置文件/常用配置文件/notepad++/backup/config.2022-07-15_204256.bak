@@ -1,0 +1,9 @@
+Host id_rsa
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa
+	
+Host PonyTown2020
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/PonyTown2020
