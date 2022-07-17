@@ -53,7 +53,7 @@ photos: https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-2021111023
 ```cmd
 克隆backup--> 然后删除  .git文件夹
 cmd管理员中进行操作
-npm install & npm install hexo-deployer-git --save & npm install hexo-git-backup --save&npm remove hexo-renderer-stylus&npm add hexo-renderer-stylus 
+npm install & npm install hexo-deployer-git --save & npm install hexo-git-backup --save & npm remove hexo-renderer-stylus & npm add hexo-renderer-stylus & npm i hexo-deployer-git
 
 #deployer或许需要更新
 npm i hexo-deployer-git@3.0.0
