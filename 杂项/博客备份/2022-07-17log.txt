@@ -5188,3 +5188,16 @@ Branch 'master' set up to track remote branch 'master' from 'git@github.com:Muya
 To github.com:MuyanGit/MuyanGit.github.io.git
    617c6df..3ad809f  HEAD -> master
 [32mINFO [39m Deploy done: [35mgit[39m
+[32mINFO [39m Validating config
+[32mINFO [39m Start backup: git
+warning: LF will be replaced by CRLF in 杂项/博客备份/2022-07-17log.txt.
+The file will have its original line endings in your working directory
+[master 3e8ea8c] MuyanGit 的网站“ 备份 ”中······2022-07-17 20:21:17【https://MuyanGit.github.io/ 】
+ 1 file changed, 520 insertions(+)
+Branch 'master' set up to track remote branch 'backup' from 'github'.
+To github.com:MuyanGit/MuyanGit.github.io.git
+   0d51b60..3e8ea8c  master -> backup
+[32mINFO [39m Backup done: git
+MuyanGit博客备份
+结束运行备份命令——————————————
+Sun Jul 17 20:21:20 2022······备份结束中
