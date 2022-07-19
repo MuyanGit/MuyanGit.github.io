@@ -16,7 +16,7 @@ photos: https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-2022062120
 
 
 
-# SSL报错解决
+# 001-SSL报错解决
 
 ## 1·忽略SSL与证书
 
@@ -87,6 +87,83 @@ if __name__ == '__main__':
     case.test_webelement_prop()
 ```
 
+002-引入外部文件
+
+```python
+#加载本地from 表单
+from time import sleep
+from selenium import webdriver
+import os
+
+class TestCase(object):
+    def __init__(self):
+        self.driver = webdriver.Chrome()
+        #当前文件所在的路径
+        recent_path=os.path.abspath(__file__)
+        #当前文件-上级文件夹所在的路径
+        path_resource = os.path.dirname(recent_path)
+        #selenium引入外部网页的方法
+        file_path = 'file:///'+path_resource+'/forms.html'
+        print(recent_path+'\n',path_resource+'\n',file_path) 
+        self.driver.get(file_path)
+    def test_login(self):
+        username=self.driver.find_element_by_id('username')
+        username.send_keys('admin')
+        pwd=self.driver.find_element_by_id('pwd')
+        pwd.send_keys('123123')
+        
+        print(username.get_attribute('value'))
+        print(pwd.get_attribute('value'))
+        sleep(2)
+        self.driver.find_element_by_id('submit').click()
+        sleep(2)
+        # self.driver.find_element_by_id('submit').click()
+
+if __name__ == '__main__':
+    case=TestCase()
+    case.test_login()
+
+
+```
+
+
+
+
+
+```html
+<!-- 本地本地from 表单	-->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>自定义Title</title>
+</head>
+<body>
+<!-- <form> 标签的拼写需要注意-->
+<form action="javascript:alert('Hello')">
+	<!-- <input> 需要注意id之前不能加上逗号-->
+	username:<input type="text" name="username" id="username" placeholder="john"><br>
+	password:<input type="password" name="pwd" id="pwd" ><br>
+	<input type="submit" name="submit" id="submit">
+</form>
+
+</body>
+
+</html>
+
+
+```
+
+
+
+# 010-#请求头是一个字典格式的
+
+![image-20220714175320373](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220714175320373.png)
+
+
+
+
+
 # 知识梳理
 
 ## 1·webelement-常用属性
@@ -102,15 +179,6 @@ if __name__ == '__main__':
 
 
 
-
-#请求头是一个字典格式的
-
-![image-20220714175320373](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220714175320373.png)
-
-```
-
-
-```
 
 
 
