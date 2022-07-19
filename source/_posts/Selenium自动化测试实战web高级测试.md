@@ -97,7 +97,7 @@ if __name__ == '__main__':
 
 ## 2·  常用方法
 
-![image-20220717171849644](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717171849644.png)
+![image-20220717171849644](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717171849644.png) 
 
 
 
