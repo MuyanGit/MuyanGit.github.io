@@ -154,6 +154,10 @@ if __name__ == '__main__':
 
 ```
 
+# 002-导入文件与导入类
+
+![image-20220719150845012](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220719150845012.png)
+
 
 
 # 010-#请求头是一个字典格式的
