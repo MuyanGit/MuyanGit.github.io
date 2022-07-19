@@ -1,0 +1,40 @@
+2022-07-19 16:05:05 [PicGo INFO] detect second instance 
+2022-07-19 16:05:12 [PicGo INFO] detect second instance 
+2022-07-19 16:05:24 [PicGo INFO] [PicGo Server] is listening at 36677 
+2022-07-19 16:13:05 [PicGo INFO] Before transform 
+2022-07-19 16:13:05 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-19 16:13:05 [PicGo INFO] Before upload 
+2022-07-19 16:13:05 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-19 16:13:05 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-19 16:13:06 [PicGo WARN] failed 
+2022-07-19 16:13:06 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-19 16:13:06 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+
+http://127.0.0.1:1080
+
