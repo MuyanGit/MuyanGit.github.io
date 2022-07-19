@@ -22,16 +22,16 @@
         <Filter name="" />
         <Filter name="" />
         <Filter name="" />
+        <Find name="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" />
+        <Find name="Github" />
+        <Find name="git" />
+        <Find name="fit" />
         <Find name="Fri Jul 15 17:" />
         <Find name="&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#x5907;&#x4EFD;&#x547D;&#x4EE4;" />
         <Find name="https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master" />
         <Find name="100" />
         <Find name="100." />
         <Find name="100.0." />
-        <Find name="100.0.4896.20" />
-        <Find name="100.0.4896.20/" />
-        <Find name="\d.*?" />
-        <Find name="\d.*?/&lt;/a&gt;" />
         <Replace name="," />
         <Replace name="AccessKey" />
         <Replace name="IsEnabled" />
@@ -44,15 +44,13 @@
         <Replace name="." />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="G:\&#x865A;&#x62DF;&#x673A;\MyShare\&#x914D;&#x7F6E;&#x53C2;&#x6570;-&#x5BC6;&#x7801;.txt" />
-        <File filename="G:\&#x8FC5;&#x96F7;&#x4E0B;&#x8F7D;\office2010&#x6FC0;&#x6D3B;&#x7801;      GRPWH-7CDHQ-K3G3C-JH2KX-C88H8   .txt" />
-        <File filename="C:\Users\HI\Downloads\Compressed\typora_1.3.8_Crack\Typora.1.3.8\crack\Read.txt" />
         <File filename="D:\MyBackup\&#x7EFC;&#x5408;&#x5907;&#x4EFD;\&#x4FBF;&#x643A;&#x7248;&#x00B7;&#x8F6F;&#x4EF6;\&#x6587;&#x672C;&#x7F16;&#x8F91;\Notepad\Notepad++7.8.1_x64_Good\Notepad++7.8.1\notepad&#x7B14;&#x8BB0;\&#x5357;&#x745E;&#x89C4;&#x7EA6;.cs" />
         <File filename="D:\MyBackup\&#x7EFC;&#x5408;&#x5907;&#x4EFD;\&#x4FBF;&#x643A;&#x7248;&#x00B7;&#x8F6F;&#x4EF6;\&#x6587;&#x672C;&#x7F16;&#x8F91;\Notepad\Notepad++7.8.1_x64_Good\Notepad++7.8.1\notepad&#x7B14;&#x8BB0;\CDT&#x8C03;&#x8BD5;.cs" />
         <File filename="D:\MySoftware\DEV\WebSite\WinSCP\&#x540C;&#x6B65;&#x76EE;&#x5F55;\kvis\&#x8F6F;&#x4EF6;&#x8BF4;&#x660E;.txt" />
-        <File filename="C:\Users\HI\AppData\Roaming\picgo\data.json" />
-        <File filename="C:\Users\HI\AppData\Roaming\picgo\picgo.log" />
         <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;bat\&#x6E05;&#x7406;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;.bat" />
+        <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#x5907;&#x4EFD;&#x547D;&#x4EE4;\cloudpan189-go-v0.1.1-windows-x64\&#x5929;&#x7FFC;&#x4E91;&#x76D8;&#x7B7E;&#x5230;log.txt" />
+        <File filename="G:\MuyanGitBlog\PonyTown2020\&#x6742;&#x9879;\&#x535A;&#x5BA2;&#x5907;&#x4EFD;\2022-07-17log.txt&#xF03A;" />
+        <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x535A;&#x5BA2;&#x5907;&#x4EFD;\2022-07-17log.txt&#xF03A;" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -62,7 +60,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="49" y="110" width="1938" height="1017" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20220715">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20220801">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -94,7 +92,7 @@
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" newStyleSaveDlg="yes" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="2" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="9" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="200">
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />
