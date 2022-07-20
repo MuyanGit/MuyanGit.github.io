@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
 ## 2·  常用方法
 
-![image-20220717171849644](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220717171849644.png) 
+![image-20220717171849644](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220717171849644.png) 
 
 
 
@@ -186,6 +186,8 @@ if __name__ == '__main__':
 
 等待方法
 
-![image-20220720155453259](C:/Users/HI/AppData/Roaming/Typora/typora-user-images/image-20220720155526244.png)
+![image-20220720160330893](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720160330893.png)
 
-![](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220717171740294.png)
+
+
+![image-20220720160346045](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720160346045.png)
