@@ -178,16 +178,33 @@ if __name__ == '__main__':
 
 ## 2·  常用方法
 
+### 001-WebElement
+
 ![image-20220717171849644](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220717171849644.png) 
 
 
 
-
-
-等待方法
+### 002-显式等待方法
 
 ![image-20220720160330893](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720160330893.png)
 
 
 
 ![image-20220720160346045](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720160346045.png)
+
+
+
+### 003-鼠标与键盘事件
+
+![image-20220720173841603](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720173841603.png)
+
+
+
+
+
+
+
+
+
+
+
