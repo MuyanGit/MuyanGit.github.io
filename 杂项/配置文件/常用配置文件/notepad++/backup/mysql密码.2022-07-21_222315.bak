@@ -1,0 +1,8 @@
+mysql密码
+root@localhost: Id321cba
+
+
+mysql -u root -pId321cba
+
+
+alter user 'root'@'localhost' identified by 'Id321cba';

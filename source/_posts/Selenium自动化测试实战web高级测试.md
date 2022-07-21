@@ -202,7 +202,93 @@ if __name__ == '__main__':
 
 
 
+# 003-mysql安装
 
+
+
+一、官网下载安装包
+
+- 
+
+```
+https://dev.mysql.com/downloads/mysql/
+```
+
+
+
+![image-20220721222608315](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222608315.png)
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/UAU4UYFYBr64WMPlias4eno1tjAvryDJECqSWHrSxg4eeKe5dppSlEaxvpmvO2unecxyywLqwtNA3saxolXoOGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![image-20220721222629428](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222629428.png)
+
+四、初始化数据库
+
+- 
+
+```
+mysqld --initialize --console
+```
+
+五、将mysql安装为windows的服务
+
+- 
+
+```
+mysqld -install
+```
+
+![image-20220721222736396](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222736396.png)
+
+六、启动mysql服务
+
+- 
+
+```
+net start mysql
+```
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/UAU4UYFYBr64WMPlias4eno1tjAvryDJEIEfoBTtWQLmw9U1Dfnk3UcjehDsRv6FbSnj4zzlxibDYLGPRiaAhxiaaQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+
+七、登录数据库，使用之前记录的密码
+
+- 001-mysql密码明文登陆与修改密码
+
+  
+
+  ```bash
+  #登陆
+  mysql [-h 主机名] -u用户名 -p密码 [-P端口号] [-D数据库名]
+  
+  mysql -u root -p5tzpKJePM9:P
+  
+  #修改密码
+  alter user 'root'@'localhost' identified by 'Id213123bsdf';
+  alter user 'root'@'localhost' identified by '想要设置的密码';
+  
+  ```
+
+  
+
+  ![image-20220721221430327](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721221430327.png)
+
+  
+
+  九、连接测试
+
+![image-20220721223313047](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223313047.png)
+
+说明：用Navicat工具连接时，遇到以上报错信息，可根据以下代码解决
+
+```
+select host,user,plugin,authentication_string from mysql.user;ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';FLUSH PRIVILEGES;
+```
+
+![image-20220721223328803](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223328803.png)
+
+
+
+![image-20220721223340804](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223340804.png)
 
 
 
