@@ -12,7 +12,7 @@
 //*[text()='Google offered in']
 
 
-//span[contains(text(),"百度为您找到相关结果约100,000,000个")]
+//span[contains(text(),"百度为您找到相关结果约")]
 
 //span[re:test(text(),"\w")]
 
