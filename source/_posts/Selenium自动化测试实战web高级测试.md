@@ -204,6 +204,8 @@ if __name__ == '__main__':
 
 # 003-mysql安装
 
+## 001-安装
+
 
 
 一、官网下载安装包
@@ -315,3 +317,75 @@ select host,user,plugin,authentication_string from mysql.user;ALTER USER 'root'@
 ![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image024.jpg)
 
 ![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image026.png)
+
+
+
+
+
+
+
+## 002-web搭建-jpres
+
+创建数据库
+
+```bash
+mysql> create database  if not exists  se_db ;
+Query OK, 1 row affected, 1 warning (0.05 sec)
+
+mysql> create database se_db ;
+ERROR 1007 (HY000): Can't create database 'se_db'; database exists
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| se_db              |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql>
+```
+
+
+
+## 003-项目分析
+
+```
+需求分析极客本项目将要测试的是一个开源的Java项目,
+测试的功能包括:
+1. 用户注册: httg://localhost:8080/ jpress/user/register
+2. 用P登录: http://localhost:8080/jpress/user/login
+3.后台管理员登录: http://localhost:8080/jpress/admin/login
+4. 文章分类: http://localhost:8080/jpress/admin/article/category
+5. 添加文章: http://localhost:8080/jpress/admin/article/write
+本项目通过自动化测试的方法来验证,用户注册、用户登录、管理员登录、添加文章分类、添加文章、信息的完整性、正确性等。例如:必填项、电子邮件的格式、密码是否一致、识别验证码。其中验证码识别是本项目的难点。
+```
+
+
+
+### 001-测试用例设计
+
+
+
+#### 概况
+
+##### 非空、超短、超长、特殊符号、符合审查规则
+
+![image-20220722231101445](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222311780.png)
+
+### 002-分层设计
+
+```
+项目架构如下
+testcases测试用例
+data测试数据
+logs log日志
+config 配置文件
+reports测试报告
+screenshots截屏
+.lib第三方库
+```
+
