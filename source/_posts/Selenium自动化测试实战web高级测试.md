@@ -207,90 +207,111 @@ if __name__ == '__main__':
 
 
 一、官网下载安装包
+ 
 
-- 
+·    
 
-```
 https://dev.mysql.com/downloads/mysql/
-```
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image002.png)
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image004.png)
+
+二、解压安装包
+ 
+
+![图片](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+
+三、打开cmd窗口进入到bin目录
 
 
 
-![image-20220721222608315](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222608315.png)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/UAU4UYFYBr64WMPlias4eno1tjAvryDJECqSWHrSxg4eeKe5dppSlEaxvpmvO2unecxyywLqwtNA3saxolXoOGQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![image-20220721222629428](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222629428.png)
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image008.png)
 
 四、初始化数据库
+ 
 
-- 
+·    
 
-```
 mysqld --initialize --console
-```
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image010.png)
 
 五、将mysql安装为windows的服务
 
-- 
+·    
 
-```
 mysqld -install
-```
 
-![image-20220721222736396](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721222736396.png)
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image012.png)
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image014.png)
 
 六、启动mysql服务
+ 
 
-- 
+·    
 
-```
 net start mysql
-```
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/UAU4UYFYBr64WMPlias4eno1tjAvryDJEIEfoBTtWQLmw9U1Dfnk3UcjehDsRv6FbSnj4zzlxibDYLGPRiaAhxiaaQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image016.jpg)
 
 七、登录数据库，使用之前记录的密码
 
-- 001-mysql密码明文登陆与修改密码
+001-mysql密码明文登陆与修改密码
 
-  
 
-  ```bash
-  #登陆
-  mysql [-h 主机名] -u用户名 -p密码 [-P端口号] [-D数据库名]
-  
-  mysql -u root -p5tzpKJePM9:P
-  
-  #修改密码
-  alter user 'root'@'localhost' identified by 'Id213123bsdf';
-  alter user 'root'@'localhost' identified by '想要设置的密码';
-  
-  ```
 
-  
+```bash
+#登陆
+mysql [-h 主机名] -u用户名 -p密码 [-P端口号] [-D数据库名]
 
-  ![image-20220721221430327](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721221430327.png)
+mysql -u root -p5tzpKJePM9:P
 
-  
+#修改密码
+alter user 'root'@'localhost' identified by 'Id213123bsdf';
+alter user 'root'@'localhost' identified by '想要设置的密码';
 
-  九、连接测试
+```
 
-![image-20220721223313047](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223313047.png)
+
+
+![image-20220721221430327](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721221430327.png)
+
+·    
+
+mysql -u root -p
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image018.png)
+
+八、登录成功后修改密码
+
+·    
+
+alter user 'root'@'localhost' identified by '想要设置的密码';
+
+
+
+
+
+九、连接测试
+
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image020.png)
 
 说明：用Navicat工具连接时，遇到以上报错信息，可根据以下代码解决
 
-```
+·    
+
+·    
+
+·    
+
+·    
+
 select host,user,plugin,authentication_string from mysql.user;ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';FLUSH PRIVILEGES;
-```
 
-![image-20220721223328803](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223328803.png)
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image022.jpg)
 
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image024.jpg)
 
-
-![image-20220721223340804](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220721223340804.png)
-
-
-
-
-
+![图片](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image026.png)
