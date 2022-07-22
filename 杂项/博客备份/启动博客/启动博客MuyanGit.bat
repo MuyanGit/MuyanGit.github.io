@@ -1,2 +1,2 @@
 @echo OFF
-cmd /k "cd G:\MuyanGitBlog\PonyTown2020\"
+cmd /k "cd G:\MuyanGitBlog\MuyanGit\"
