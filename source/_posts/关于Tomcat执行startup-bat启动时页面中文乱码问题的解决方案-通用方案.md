@@ -7,6 +7,8 @@ tags:
 photos:
 ---
 
+
+
 **[关于Tomcat执行startup.bat启动时页面中文乱码问题的解决方案(通用方案)](https://www.cnblogs.com/Her4c/p/12671224.html)**
 
 **本文解决方案仅用于执行startup.bat启动时**
@@ -17,7 +19,7 @@ photos:
 
  ps： 你：这个不影响使用为什么要改它呢？(我：影响美观，其实就是强迫征)
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410085211686-1379648588.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410085211686-1379648588.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222140700.png)
 
 **2.****其次我们要找到Tomcat目录下的****.properties****配置文件**
 
@@ -25,13 +27,13 @@ photos:
 
 我这里用到是Sublime Text(其他编辑器也是大差不差的)，Ctrl+H 替换，Find：输入UTF-8 编辑器会高亮提醒，Replace：输入GBK，点击 Replace ALL即可完成替换
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410090757816-627684003.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410090757816-627684003.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222141869.png)
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410090812319-1256920844.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410090812319-1256920844.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222140890.png)
 
 **3.****最后，修改替换之前有必要****备份****一下原文件(****.properties****)****，替换完成记得保存文件，再次重启服务器即可**
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410091149567-542045342.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image008.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200410091149567-542045342.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222140912.png)
 
  
 
@@ -57,12 +59,15 @@ photos:
 
 ·    同理想要改回默认，勾掉 Beta版：使用Unicode UTF-8 提供全球语言支持 点击确定，重启系统即可回到默认状态
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200417203036899-310536633.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image010.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200417203036899-310536633.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222140886.png)
 
  **最终效果图**
 
-![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200417205839920-1496183287.png](C:/Users/HI/AppData/Local/Temp/msohtmlclip1/01/clip_image012.png)
+![https://img2020.cnblogs.com/blog/1937355/202004/1937355-20200417205839920-1496183287.png](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207222144047.png)
 
  
 
  
+
+
+

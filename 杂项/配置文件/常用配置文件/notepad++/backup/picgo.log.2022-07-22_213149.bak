@@ -1,0 +1,935 @@
+2022-07-22 21:17:55 [PicGo INFO] Before transform 
+2022-07-22 21:17:55 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:17:55 [PicGo INFO] Before upload 
+2022-07-22 21:17:55 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:17:55 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:17:57 [PicGo WARN] failed 
+2022-07-22 21:17:57 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:17:57 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:18:24 [PicGo INFO] Before transform 
+2022-07-22 21:18:24 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:18:24 [PicGo WARN] can't get C:\Users\HI\AppData\Local\Temp\msohtmlclip1\01\clip_themedata.thmx's image size 
+2022-07-22 21:18:24 [PicGo WARN] fallback to 200 * 200 
+2022-07-22 21:18:24 [PicGo INFO] Before upload 
+2022-07-22 21:18:24 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:18:24 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:18:26 [PicGo SUCCESS] 
+https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_themedata.thmx 
+2022-07-22 21:18:42 [PicGo INFO] Before transform 
+2022-07-22 21:18:42 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:18:42 [PicGo WARN] can't get C:\Users\HI\AppData\Local\Temp\msohtmlclip1\01\clip_themedata.thmx's image size 
+2022-07-22 21:18:42 [PicGo WARN] fallback to 200 * 200 
+2022-07-22 21:18:42 [PicGo INFO] Before upload 
+2022-07-22 21:18:42 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:18:42 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:18:45 [PicGo WARN] failed 
+2022-07-22 21:18:45 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:18:45 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:20:04 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Local\\Temp\\msohtmlclip1\\01\\clip_image012.png"]} 
+2022-07-22 21:20:04 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:20:04 [PicGo INFO] Before transform 
+2022-07-22 21:20:04 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:20:04 [PicGo INFO] Before upload 
+2022-07-22 21:20:04 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:20:04 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:20:08 [PicGo WARN] failed 
+2022-07-22 21:20:08 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:20:08 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 422 - {"message":"Invalid request.\n\n\"sha\" wasn't supplied.","documentation_url":"https://docs.github.com/rest/reference/repos#create-or-update-file-contents"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:20:08 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:20:59 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212059139.png"]} 
+2022-07-22 21:20:59 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:20:59 [PicGo INFO] Before transform 
+2022-07-22 21:20:59 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:20:59 [PicGo INFO] Before upload 
+2022-07-22 21:20:59 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:20:59 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:21:02 [PicGo WARN] failed 
+2022-07-22 21:21:02 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:02 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:02 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:21:09 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212109428.png"]} 
+2022-07-22 21:21:09 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:21:09 [PicGo INFO] Before transform 
+2022-07-22 21:21:09 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:21:09 [PicGo INFO] Before upload 
+2022-07-22 21:21:09 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:21:09 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:21:12 [PicGo WARN] failed 
+2022-07-22 21:21:12 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:12 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:12 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:21:40 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212140124.png"]} 
+2022-07-22 21:21:40 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:21:40 [PicGo INFO] Before transform 
+2022-07-22 21:21:40 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:21:40 [PicGo INFO] Before upload 
+2022-07-22 21:21:40 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:21:40 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:21:42 [PicGo WARN] failed 
+2022-07-22 21:21:42 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:42 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:42 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:21:49 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212149063.png"]} 
+2022-07-22 21:21:49 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:21:49 [PicGo INFO] Before transform 
+2022-07-22 21:21:49 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:21:49 [PicGo INFO] Before upload 
+2022-07-22 21:21:49 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:21:49 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:21:51 [PicGo WARN] failed 
+2022-07-22 21:21:51 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:51 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:51 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:21:53 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212140124.png"]} 
+2022-07-22 21:21:53 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:21:53 [PicGo INFO] Before transform 
+2022-07-22 21:21:53 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:21:53 [PicGo INFO] Before upload 
+2022-07-22 21:21:53 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:21:53 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:21:55 [PicGo WARN] failed 
+2022-07-22 21:21:55 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:55 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:21:55 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:22:04 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722212059139.png"]} 
+2022-07-22 21:22:04 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:22:04 [PicGo INFO] Before transform 
+2022-07-22 21:22:04 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:22:04 [PicGo INFO] Before upload 
+2022-07-22 21:22:04 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:22:04 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:22:06 [PicGo WARN] failed 
+2022-07-22 21:22:06 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:22:06 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:22:06 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:22:25 [PicGo INFO] [PicGo Server] get the request {"list":["G:\\MuyanGitBlog\\MuyanGit\\source\\_posts\\![](https:\\cdn.jsdelivr.net\\gh\\MuyanGit\\pic_url@master\\img\\clip_image009.png)"]} 
+2022-07-22 21:22:25 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:22:25 [PicGo INFO] Before transform 
+2022-07-22 21:22:25 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:22:25 [PicGo WARN] failed 
+2022-07-22 21:22:25 [PicGo ERROR] 
+------Error Stack Begin------
+Error: read file G:\MuyanGitBlog\MuyanGit\source\_posts\![](https:\cdn.jsdelivr.net\gh\MuyanGit\pic_url@master\img\clip_image009.png) error
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:25 [PicGo ERROR] 
+------Error Stack Begin------
+Error: read file G:\MuyanGitBlog\MuyanGit\source\_posts\![](https:\cdn.jsdelivr.net\gh\MuyanGit\pic_url@master\img\clip_image009.png) error
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:25 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:22:32 [PicGo INFO] [PicGo Server] get the request {"list":["G:\\MuyanGitBlog\\MuyanGit\\source\\_posts\\https:\\cdn.jsdelivr.net\\gh\\MuyanGit\\pic_url@master\\img\\clip_image009.png"]} 
+2022-07-22 21:22:32 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:22:32 [PicGo INFO] Before transform 
+2022-07-22 21:22:32 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:22:32 [PicGo WARN] failed 
+2022-07-22 21:22:32 [PicGo ERROR] 
+------Error Stack Begin------
+Error: read file G:\MuyanGitBlog\MuyanGit\source\_posts\https:\cdn.jsdelivr.net\gh\MuyanGit\pic_url@master\img\clip_image009.png error
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:32 [PicGo ERROR] 
+------Error Stack Begin------
+Error: read file G:\MuyanGitBlog\MuyanGit\source\_posts\https:\cdn.jsdelivr.net\gh\MuyanGit\pic_url@master\img\clip_image009.png error
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:32 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:22:49 [PicGo INFO] [PicGo Server] get the request {"list":["https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image009.png"]} 
+2022-07-22 21:22:49 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:22:49 [PicGo INFO] Before transform 
+2022-07-22 21:22:49 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:22:59 [PicGo WARN] failed 
+2022-07-22 21:22:59 [PicGo ERROR] 
+------Error Stack Begin------
+Error: request https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image009.png timeout
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:59 [PicGo ERROR] 
+------Error Stack Begin------
+Error: request https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/clip_image009.png timeout
+    at D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:25:19
+    at async Promise.all (index 0)
+    at async Object.handle (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\plugins\transformer\path.js:6:5)
+    at async Lifecycle.doTransform (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:59:9)
+    at async Lifecycle.start (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\Lifecycle.js:24:13)
+    at async PicGo.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\src\core\PicGo.js:205:32)
+    at async Object.upload (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:29196)
+    at async Pt (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:31625)
+    at async D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\background.js:36:32625
+-------Error Stack End------- 
+2022-07-22 21:22:59 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:23:05 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Local\\Temp\\msohtmlclip1\\01\\clip_image008.png"]} 
+2022-07-22 21:23:05 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:23:05 [PicGo INFO] Before transform 
+2022-07-22 21:23:05 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:23:05 [PicGo INFO] Before upload 
+2022-07-22 21:23:05 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:23:05 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:23:10 [PicGo WARN] failed 
+2022-07-22 21:23:10 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:23:10 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:200:13)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:200:13)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:288:20)
+    at IncomingMessage.emit (events.js:205:15)
+-------Error Stack End------- 
+2022-07-22 21:23:10 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:28:53 [PicGo ERROR] 
+------Error Stack Begin------
+Error: Cannot find module 'C:\Users\HI\AppData\Roaming\picgo\node_modules\picgo-plugin-github-plus\dist\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (node:internal/modules/cjs/loader:360:19)
+    at Function.Module._findPath (node:internal/modules/cjs/loader:573:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:926:27)
+    at Function.n._resolveFilename (node:electron/js2c/browser_init:249:1128)
+    at Module._load (node:internal/modules/cjs/loader:785:27)
+    at Function.c._load (node:electron/js2c/asar_bundle:5:13331)
+    at Module.require (node:internal/modules/cjs/loader:1012:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at pt.getPlugin (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\index.cjs.js:1:34654)
+    at pt.registerPlugin (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\index.cjs.js:1:33804)
+-------Error Stack End------- 
+2022-07-22 21:28:54 [PicGo INFO] [PicGo Server] is listening at 36677 
+2022-07-22 21:29:00 [PicGo INFO] Before transform 
+2022-07-22 21:29:00 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:00 [PicGo INFO] Before upload 
+2022-07-22 21:29:00 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:00 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:00 [PicGo WARN] failed 
+2022-07-22 21:29:00 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:00 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:14 [PicGo INFO] Before transform 
+2022-07-22 21:29:14 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:14 [PicGo INFO] Before upload 
+2022-07-22 21:29:14 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:14 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:15 [PicGo WARN] failed 
+2022-07-22 21:29:15 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:15 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:20 [PicGo INFO] Before transform 
+2022-07-22 21:29:20 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:20 [PicGo INFO] Before upload 
+2022-07-22 21:29:20 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:20 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:21 [PicGo WARN] failed 
+2022-07-22 21:29:21 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:21 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:54 [PicGo INFO] Before transform 
+2022-07-22 21:29:54 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:54 [PicGo INFO] Before upload 
+2022-07-22 21:29:54 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:54 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:55 [PicGo WARN] failed 
+2022-07-22 21:29:55 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:55 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:57 [PicGo INFO] Before transform 
+2022-07-22 21:29:57 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:57 [PicGo INFO] Before upload 
+2022-07-22 21:29:57 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:57 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:57 [PicGo INFO] Before transform 
+2022-07-22 21:29:57 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:57 [PicGo INFO] Before upload 
+2022-07-22 21:29:57 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:57 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:57 [PicGo INFO] Before transform 
+2022-07-22 21:29:57 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:29:57 [PicGo INFO] Before upload 
+2022-07-22 21:29:57 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:29:57 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:29:58 [PicGo WARN] failed 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:58 [PicGo WARN] failed 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:58 [PicGo WARN] failed 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:29:58 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:30:31 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213031688.png"]} 
+2022-07-22 21:30:31 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:30:31 [PicGo INFO] Before transform 
+2022-07-22 21:30:31 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:30:31 [PicGo INFO] Before upload 
+2022-07-22 21:30:31 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:30:35 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:30:37 [PicGo WARN] failed 
+2022-07-22 21:30:37 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:30:37 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:30:37 [PicGo INFO] [PicGo Server] upload result  
+2022-07-22 21:30:37 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:30:39 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213031688.png"]} 
+2022-07-22 21:30:39 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:30:39 [PicGo INFO] Before transform 
+2022-07-22 21:30:39 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:30:39 [PicGo INFO] Before upload 
+2022-07-22 21:30:39 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:30:59 [PicGo ERROR] 
+------Error Stack Begin------
+Error: Cannot find module 'C:\Users\HI\AppData\Roaming\picgo\node_modules\picgo-plugin-github-plus\dist\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (node:internal/modules/cjs/loader:360:19)
+    at Function.Module._findPath (node:internal/modules/cjs/loader:573:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:926:27)
+    at Function.n._resolveFilename (node:electron/js2c/browser_init:249:1128)
+    at Module._load (node:internal/modules/cjs/loader:785:27)
+    at Function.c._load (node:electron/js2c/asar_bundle:5:13331)
+    at Module.require (node:internal/modules/cjs/loader:1012:19)
+    at require (node:internal/modules/cjs/helpers:94:18)
+    at pt.getPlugin (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\index.cjs.js:1:34654)
+    at pt.registerPlugin (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\picgo\dist\index.cjs.js:1:33804)
+-------Error Stack End------- 
+2022-07-22 21:30:59 [PicGo INFO] [PicGo Server] is listening at 36677 
+2022-07-22 21:30:59 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213031688.png"]} 
+2022-07-22 21:30:59 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:30:59 [PicGo INFO] Before transform 
+2022-07-22 21:30:59 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:30:59 [PicGo INFO] Before upload 
+2022-07-22 21:30:59 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:30:59 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:31:01 [PicGo WARN] failed 
+2022-07-22 21:31:01 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:01 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:01 [PicGo INFO] [PicGo Server] upload result  
+2022-07-22 21:31:01 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:31:08 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213031688.png"]} 
+2022-07-22 21:31:08 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:31:08 [PicGo INFO] Before transform 
+2022-07-22 21:31:08 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:31:08 [PicGo INFO] Before upload 
+2022-07-22 21:31:08 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:31:08 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:31:09 [PicGo WARN] failed 
+2022-07-22 21:31:09 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:09 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:09 [PicGo INFO] [PicGo Server] upload result  
+2022-07-22 21:31:09 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:31:13 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213031688.png"]} 
+2022-07-22 21:31:13 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:31:13 [PicGo INFO] Before transform 
+2022-07-22 21:31:13 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:31:13 [PicGo INFO] Before upload 
+2022-07-22 21:31:13 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:31:13 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:31:14 [PicGo WARN] failed 
+2022-07-22 21:31:14 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:14 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:14 [PicGo INFO] [PicGo Server] upload result  
+2022-07-22 21:31:14 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
+2022-07-22 21:31:29 [PicGo INFO] [PicGo Server] get the request {"list":["C:\\Users\\HI\\AppData\\Roaming\\Typora\\typora-user-images\\image-20220722213129401.png"]} 
+2022-07-22 21:31:29 [PicGo INFO] [PicGo Server] upload files in list 
+2022-07-22 21:31:29 [PicGo INFO] Before transform 
+2022-07-22 21:31:29 [PicGo INFO] Transforming... Current transformer is [path] 
+2022-07-22 21:31:29 [PicGo INFO] Before upload 
+2022-07-22 21:31:29 [PicGo INFO] beforeUploadPlugins: renameFn running 
+2022-07-22 21:31:29 [PicGo INFO] Uploading... Current uploader is [github] 
+2022-07-22 21:31:30 [PicGo WARN] failed 
+2022-07-22 21:31:30 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:30 [PicGo ERROR] 
+------Error Stack Begin------
+StatusCodeError: 401 - {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+    at new StatusCodeError (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\errors.js:32:15)
+    at Request.plumbing.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at Request.self.callback (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:394:28)
+    at Request.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:394:28)
+    at IncomingMessage.<anonymous> (D:\MySoftware\DEV\WebSite\PicGo\resources\app.asar\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:513:28)
+    at IncomingMessage.emit (node:events:406:35)
+-------Error Stack End------- 
+2022-07-22 21:31:30 [PicGo INFO] [PicGo Server] upload result  
+2022-07-22 21:31:30 [PicGo WARN] [PicGo Server] upload failed, see picgo.log for more detail ↑ 
