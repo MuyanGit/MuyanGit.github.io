@@ -393,17 +393,68 @@ screenshots截屏
 
 
 
+### 003-问题收集
 
 
 
-
-元素定位
+#### 001-元素无法点击
 
 无法被点击的元素-“同意”复选框
 
 ![image-20220723090806625](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207230908692.png)
 
 ![image-20220723090754342](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207230907912.png)
+
+```bash
+# 注意屏幕缩放比例-ActionChains可以忽略屏幕缩放
+ActionChains(driver).move_to_element(elem).click(elem).perform()
+
+# 可以使用 pyautogui -不推荐
+
+	driver=webdriver.Chrome()
+	driver.get('http://www.jpress.io/user/register')
+	driver.maximize_window()
+	sleep(1)
+	elem=driver.find_element_by_xpath('//*/input[@id="agree"]')
+	print('测试复选框是否被选中：',elem.get_attribute('class'))
+	# elem.click()#消息:元素点击被拦截:元素<input type="checkbox" class="custom-control-input" id="agree">在点(600,576)不可点击。其他元素会收到点击:
+	# actions = ActionChains(driver)
+	# actions.move_to_element(elem)
+	# actions.click(elem)
+	# actions.perform()
+	# rect=elem.rect
+	# pyautogui.click(300,500)
+	# sleep(3)
+	ActionChains(driver).move_to_element(elem).click(elem).perform()
+	# pyautogui.click(rect['x']+10,rect['y']+130)
+	print('测试复选框是否被选中：',elem.is_selected())
+	sleep(3)
+```
+
+
+
+
+
+
+
+#### 002-位置坐标---selenium使用location定位元素坐标偏差
+
+[selenium使用location定位元素坐标偏差](https://www.cnblogs.com/pythonClub/p/10498520.html)
+
+python+selenium+Chromedriver使用location定位元素坐标偏差
+使用xpath定位元素，用.location获取坐标值，截取网页截图的一部分出现偏差。
+
+之所以会出现这个坐标偏差是因为windows系统下电脑设置的显示缩放比例造成的，location获取的坐标是按显示100%时得到的坐标，而截图所使用的坐标却是需要根据显示缩放比例缩放后对应的图片所确定的，因此就出现了偏差。
+解决这个问题有三种方法：
+1.修改电脑显示设置为100%。这是最简单的方法；
+2.缩放截取到的页面图片，即将截图的size缩放为宽和高都除以缩放比例后的大小；
+3.修改Image.crop的参数，将参数元组的四个值都乘以缩放比例。
+
+
+
+
+
+https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata
 
 
 
