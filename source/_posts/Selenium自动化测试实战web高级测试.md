@@ -454,7 +454,68 @@ python+selenium+Chromedriver使用location定位元素坐标偏差
 
 
 
-https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata
+#### 003-关于Python验证码识别中异常tesseract is not installedor its not in your PATH
+
+https://blog.csdn.net/weixin_43493559/article/details/106529584#2IDEA_28)
+
+##### 一.异常
+
+```
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH
+·        1
+```
+
+##### 二.解决方法
+
+##### 1.下载文件
+
+链接：https://pan.baidu.com/s/1qfWTqdAjQSd6mj9t0FpjZQ 提取码：cxlg
+
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634682.png)
+
+##### 2.将文件chi_sim.traineddata放到解压的文件夹里面
+
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634006.png)
+
+##### 3.按照下图更改[源码](https://so.csdn.net/so/search?q=源码&spm=1001.2101.3001.7020)
+
+```py
+#"D:\MySoftware\DEV\Dev_env\Anaconda3\envs\p38\Lib\site-packages\pytesseract\pytesseract.py"
+
+#加上 r转义符
+tesseract_cmd = r"D:\MySoftware\DEV\tools\Tesseract-OCR\tesseract.exe"
+# tesseract_cmd = 'tesseract'
+
+numpy_installed = find_loader('numpy') is not None
+if numpy_installed:
+    from numpy import ndarray
+
+pandas_installed = find_loader('pandas') is not None
+if pandas_installed:
+```
+
+
+
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634222.png)
+
+##### 三.若再报异常
+
+```
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file \\Program Files (x86)\\Tesseract-OCR\\chi_sim.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your 　　"tessdata" directory. Failed loading language \'chi_sim\' Tesseract couldn\'t load any languages! Could not initialize tesseract.') 
+
+```
+
+##### 1.配置[环境变量](https://so.csdn.net/so/search?q=环境变量&spm=1001.2101.3001.7020)
+
+这里是解压文件的路径。
+
+ ![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634939.png)
+
+##### 2.重启IDEA，解决问题。
+
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634993.png)
+
+ 
 
 
 
