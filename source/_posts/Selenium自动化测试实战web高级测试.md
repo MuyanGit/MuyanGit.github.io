@@ -502,7 +502,6 @@ if pandas_installed:
 
 ```
 pytesseract.pytesseract.TesseractError: (1, 'Error opening data file \\Program Files (x86)\\Tesseract-OCR\\chi_sim.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to your 　　"tessdata" directory. Failed loading language \'chi_sim\' Tesseract couldn\'t load any languages! Could not initialize tesseract.') 
-
 ```
 
 ##### 1.配置[环境变量](https://so.csdn.net/so/search?q=环境变量&spm=1001.2101.3001.7020)
