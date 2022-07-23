@@ -397,7 +397,13 @@ screenshots截屏
 
 
 
+元素定位
 
+无法被点击的元素-“同意”复选框
+
+![image-20220723090806625](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207230908692.png)
+
+![image-20220723090754342](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207230907912.png)
 
 
 
