@@ -471,6 +471,10 @@ pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it
 
 链接：https://pan.baidu.com/s/1qfWTqdAjQSd6mj9t0FpjZQ 提取码：cxlg
 
+https://github.com/UB-Mannheim/tesseract/wiki
+
+![image-20220723205721242](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207232057058.png)
+
 ![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207231634682.png)
 
 ##### 2.将文件chi_sim.traineddata放到解压的文件夹里面
