@@ -186,6 +186,10 @@ if __name__ == '__main__':
 
 ### 002-显式等待方法
 
+```
+WebDriverWait(self.driver, 5).until(EC.alert_is_present())
+```
+
 ![image-20220720160330893](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/image-20220720160330893.png)
 
 
