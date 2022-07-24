@@ -6,7 +6,6 @@ start mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.c
 
 ::  注意 开发--playwright--
 taskkill /f /t /im  firefox.exe
-taskkill /f /t /im  chromedriver.exe
 ::  node.exe
 ::  ssh.exe
 
