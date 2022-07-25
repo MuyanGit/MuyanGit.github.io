@@ -6,7 +6,4 @@ mysql -u root -pId321cba
 
 
 alter user 'root'@'localhost' identified by 'Id321cba';
-
 mysql -h localhost -u root -proot
-
-
