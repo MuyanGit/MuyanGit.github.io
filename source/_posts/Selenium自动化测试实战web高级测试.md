@@ -528,7 +528,14 @@ pytesseract.pytesseract.TesseractError: (1, 'Error opening data file \\Program F
 
 
 
+#### 004-定位学习
 
+![image-20220725113343864](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207251135678.png)
+
+```
+//通过有唯一属性的父元素，向下定位到目标元素。注意"空格"和">"的区别
+@FindBy( css = "li[data-sku='13435315793'] .p-img>a")
+```
 
 
 
