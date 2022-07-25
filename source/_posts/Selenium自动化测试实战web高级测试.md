@@ -524,10 +524,6 @@ pytesseract.pytesseract.TesseractError: (1, 'Error opening data file \\Program F
 
  
 
-
-
-
-
 #### 004-定位学习
 
 ![image-20220725113343864](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207251135678.png)
@@ -537,9 +533,17 @@ pytesseract.pytesseract.TesseractError: (1, 'Error opening data file \\Program F
 @FindBy( css = "li[data-sku='13435315793'] .p-img>a")
 ```
 
+#### 005-pip install 临时使用代理···conda 使用代理安装
+
+```shell
+#这个不是scoks端口的代理
+pip install pynput --proxy=127.0.0.1:1081
+
+```
 
 
 
+![image-20220725151752562](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/202207251517131.png)
 
 
 
