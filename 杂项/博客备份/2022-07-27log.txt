@@ -920,3 +920,50 @@ To github.com:MuyanGit/MuyanGit.github.io.git
 [32mINFO [39m Generated: [35m2022/07/17/4.0.0/8.3-tutorial_py_kmeans_index/index.html[39m
 [32mINFO [39m Generated: [35m2022/07/17/4.0.0/8.2-tutorial_py_svm_index/index.html[39m
 [32mINFO [39m 225 files generated in [36m14 s[39m
+[32mINFO [39m Validating config
+[32mINFO [39m Start backup: git
+warning: LF will be replaced by CRLF in 杂项/博客备份/2022-07-26log.txt.
+The file will have its o[32mINFO [39m Copying files from extend dirs...
+warning: LF will be replaced by CRLF in 2021/09/16/MUyangit的Vscode设置/index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 2022/07/15/测试-霍格沃兹-初级/index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/fluid-extention.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/gitalk.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/hbe.style.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/highlight-dark.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/highlight.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/main.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/boot.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/code-unfold.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/color-schema.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/events.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/img-lazyload.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/leancloud.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/local-search.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/plugins.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in js/utils.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in lib/hbe.js.
+The file will have its original line endings in your working directory
+[master d890a34] MuyanGit 的网站“ 更新 ”中······2022-07-27 10:59:09【https://MuyanGit.github.io/ 】
+ 11 files changed, 13 insertions(+), 13 deletions(-)
+ rewrite "2021/11/10/\346\226\260\347\224\265\350\204\221\350\277\230\345\216\237hexo\345\215\232\345\256\242/index.html" (85%)
+Branch 'master' set up to track remote branch 'master' from 'git@github.com:MuyanGit/MuyanGit.github.io.git'.
+To github.com:MuyanGit/MuyanGit.github.io.git
+   44c7761..d890a34  HEAD -> master
+[32mINFO [39m Deploy done: [35mgit[39m
