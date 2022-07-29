@@ -963,3 +963,33 @@ Branch 'master' set up to track remote branch 'master' from 'git@github.com:Muya
 To github.com:MuyanGit/MuyanGit.github.io.git
    b7ac229..b14e318  HEAD -> master
 [32mINFO [39m Deploy done: [35mgit[39m
+[32mINFO [39m Validating config
+[32mINFO [39m Start backup: git
+warning: LF will be replaced by CRLF in 杂项/博客备份/2022-07-27log.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in 杂项/博客备份/2022-07-28log.txt.
+The file will have its original line endings in your working directory
+[master c63f566] MuyanGit 的网站“ 备份 ”中······2022-07-28 21:04:04【https://MuyanGit.github.io/ 】
+ 5 files changed, 1080 insertions(+), 71 deletions(-)
+ create mode 100644 "\346\235\202\351\241\271/\345\215\232\345\256\242\345\244\207\344\273\275/2022-07-28log.txt\357\200\272"
+ delete mode 100644 "\346\235\202\351\241\271/\351\205\215\347\275\256\346\226\207\344\273\266/\345\270\270\347\224\250\351\205\215\347\275\256\346\226\207\344\273\266/notepad++/notepad\347\254\224\350\256\260/backup/new 1@2022-07-27_113536"
+ create mode 100644 "\346\235\202\351\241\271/\351\205\215\347\275\256\346\226\207\344\273\266/\345\270\270\347\224\250\351\205\215\347\275\256\346\226\207\344\273\266/notepad++/notepad\347\254\224\350\256\260/\345\244\232\351\261\274\345\225\212"
+Branch 'master' set up to track remote branch 'backup' from 'github'.
+To github.com:MuyanGit/MuyanGit.github.io.git
+   5f85573..c63f566  master -> backup
+[32mINFO [39m Backup done: git
+MuyanGit博客备份
+结束运行备份命令——————————————
+Thu Jul 28 21:04:10 2022······备份结束中
+开始运行备份命令——————————————
+Thu Jul 28 22:53:16 2022······备份进行中
+[32mINFO [39m Validating config
+[32mINFO [39m Deleted database.
+[41mFATAL[49m {
+  err: [Error: ENOENT: no such file or directory, unlink 'G:\MuyanGitBlog\MuyanGit\public\local-search.xml'] {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'unlink',
+    path: 'G:\\MuyanGitBlog\\MuyanGit\\public\\local-search.xml'
+  }
+} Something's wrong. Maybe you can find the solution here: %s [4mhttps://hexo.io/docs/troubleshooting.html[24m
