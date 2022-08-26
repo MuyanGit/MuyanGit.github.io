@@ -1,0 +1,48 @@
+from playwright.sync_api import Playwright, sync_playwright
+
+
+def run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+
+    # Open new page
+    page = context.new_page()
+
+    # Go to https://www.bilibili.com/
+    page.goto("https://www.bilibili.com/")
+
+    # Click span:has-text("登录")
+    page.locator("span:has-text(\"登录\")").click()
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Close page
+    page.close()
+
+    # Open new page
+    page = context.new_page()
+
+    # Go to https://www.bilibili.com/
+    page.goto("https://www.bilibili.com/")
+
+    # Go to https://s1.hdslb.com/
+    page.goto("https://s1.hdslb.com/")
+
+    # Go to https://message.bilibili.com/
+    page.goto("https://message.bilibili.com/")
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Close page
+    page.close()
+
+    # ---------------------
+    context.storage_state(path="G:\\Demo_Git\\哔哩哔哩\\上传\\playwright使用\\youtubeUpload\\Douyincookie")
+    context.close()
+    browser.close()
+
+
+with sync_playwright() as playwright:
+    run(playwright)

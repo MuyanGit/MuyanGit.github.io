@@ -1,0 +1,12 @@
+{
+  "repo": "MuyanGit/pic_url", // 仓库名，格式是 username/reponame
+  "token": "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", // github token
+  "path": "img/", // 自定义存储路径，比如 img/
+  "customUrl": "https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master", // 自定义域名，注意要加 http://或者 https://
+  "branch": "master" // 分支名，默认是 main
+  ,
+  "picBed": {
+    "current": "smms"
+  },
+  "picgoPlugins": {}
+}

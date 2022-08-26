@@ -1,0 +1,11 @@
+Host MuyanGit
+    HostName github.com
+    user crper
+    IdentityFile "~/.ssh/MuyanGit"
+    
+
+Host PonyTown2020
+    HostName github.com
+    user linqunhe
+    IdentityFile "~/.ssh/PonyTown2020"
+    

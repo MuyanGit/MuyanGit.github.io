@@ -1,0 +1,247 @@
+2	总体设计详述
+	四方通信规约主要是通过 嵌入 到卓越系统客户端运行起来的，
+	它主要由
+	帧类（ SFFrame  ）
+	协议类（ ProtocolSF ）
+	业务类（ SFCase ）
+	和 配置窗体等构成。
+
+2.1	 帧类（ SFFrame  ）
+	这个类主要是负责创建与 监控 之间通信的 数据帧。
+	整个数据帧主要由帧头、长度、源站号、目标站号、标志位、有效数据长度、数据段和奇偶效验位组成。
+	开发员可以通过调用 构造函数 可以创建通信的帧类对象了。
+2.2	 协议类（ ProtocolSF ）
+协议类主要是处理应用层传过来的task，
+以及是否向监控发送 虚遥信 和启动遥控。 
+最后还要负责处理 监控 发过来的 遥信 与 遥测报文。
+它主要有以下几个函数：
+2.2.1	Initialize
+2.2.2	()
+这个函数是协议在启动时就会运行。
+	它主要用来实例化了两个业务类
+ Initialize => WFCaseSendLocal			   => 用来五防向监控发 虚遥信 用的
+ Initialize => WFRespondPermitOrNoPermit => 是五防用来处理监控发送 操作请求 用的
+	
+
+2.2.3	ProcessFrame(FrameBse frame)
+这个函数主要是协议类用来处理 监控 发送过的 数据帧。
+当监控 => 五防发送 遥信变位 和 遥测数据报文 时，
+	协议类会通过这个函数从数据报文中提取 变位信息和 遥测值，
+并通过调用 SetWFDeviceState 和 SetDecimalValue 函数，
+	把这些数据传给五防主机。	达到五防主机与监控的同步。
+2.2.4	 ProcessTask(ProtocolTask newTask)
+这个函数是用来处理 五防主机传 过来的任务，
+通信 newTask.Opertaion 来判断某个设备是否可以操作，
+并通过一个可操作设备列表（ canOperateDeviceList ）来把这个可操作的设备保存下来。
+	如果这个设备是不能操作的 => 则从可操作设备列表中 删除 这个设备。 
+2.3	业务类（ SFCase ）, WFRespondPermitOrNoPermit，WFCaseSendLocal
+
+1·父类· SFCase => 子类·业务类· WFRespondPermitOrNoPermit 
+Initialize => WFRespondPermitOrNoPermit => 是 五防 用来处理 监控 发送的 操作请求 用的
+									=> 回应 监控请求的设备操作 可行与否
+
+2·父类· SFCase => 子类·业务类· WFCaseSendLocal
+Initialize => WFCaseSendLocal	业务类	   => 用来五防向监控发 虚遥信 用的
+
+
+2.3.1 函数·	   CreateFrame () 创建发送的 帧
+这个函主要是 业务类 用来创建要发送的帧数据。
+2.3.2 函数·　　 ProcessFrame （）
+protected override void ProcessFrame(FrameBase frame)
+这个主要是 WFRespondPermitOrNoPermit 业务类用来 判断监控请求 可行与否
+2.4	窗体· SFConfigForm(配置参数窗口)
+该窗体主要是为让调试员可以配置遥信表、遥控表、遥测表及是否向监控发表虚遥信等参数。
+
+
+
+
+
+
+using System ; interface IInteger {
+void Add(int i) ;
+}
+interface IDouble {
+void Add(double d) ;
+}
+interface INumber: IInteger, IDouble {
+} 
+class CMyTest {
+void Test(INumber n)
+ {
+// Num.Add(1) ; 错误
+n.Add(1.0) ; // 正确
+((IInteger)n).Add(1) ; // 正确
+((IDouble)n).Add(1) ; // 正确
+}
+}
+
+
+interface IBase { void FWay(int i) ;
+}
+interface ILeft: IBase { new void FWay (int i) ;
+}
+interface IRight: IBase
+{ void G( ) ; }
+interface IDerived: ILeft, IRight { }
+
+class CTest {
+void Test(IDerived d) {
+d. FWay (1) ; // 调 用 ILeft. FWay 
+((IBase)d). FWay (1) ; // 调 用 IBase. FWay 
+((ILeft)d). FWay (1) ; // 调 用 ILeft. FWay 
+((IRight)d). FWay (1) ; // 调用 IBase. FWay
+}
+}
+
+访问显示接口的实现
+
+class MyClass : IIfc1
+{
+void IIfc1.PrintOut(string s)	// Explicit interface implementation
+{
+Console.WriteLine("IIfc1");
+}
+public void Method1()
+{
+PrintOut("...");	// Compile error
+this.PrintOut("...");	// Compile error
+((IIfc1)this).PrintOut("..."); // OK, call method.//强制转换为对接口的引用
+}
+}
+
+
+
+strBdr.Append(string.Format("<{0}>{1}</{0}>", SourceStationNumber, configedParam.SourceStationNumber));
+
+
+<ProtocolParameters>
+<SourceStationNumberSF>0</SourceStationNumberSF>
+<DestinationStationNumberSF>0</DestinationStationNumberSF>
+<JKOrDdFlagSF>0</JKOrDdFlagSF>
+<IsSendYXSF>True</IsSendYXSF>
+<IsRecYCSF>False</IsRecYCSF>
+<IsApplyOld>True</IsApplyOld>
+<SendIntervalSF>10000</SendIntervalSF>
+<ReceiveTableSF>ReceiveTableSF_LVYOUSEN_000</ReceiveTableSF>
+<SendTableSF>SendTableSF_LVYOUSEN_000</SendTableSF>
+<YCTableSF>YCTableSF_LVYOUSEN_000</YCTableSF>
+<SequenceNameSF>顺序号</SequenceNameSF>
+<StationNameSF>站名</StationNameSF>
+<DeviceNumberNameSF>点名</DeviceNumberNameSF>
+<DeviceDescriptionNameSF>点描述</DeviceDescriptionNameSF>
+<ReverseNameSF>取反</ReverseNameSF>
+<RatioNameSF>变比</RatioNameSF>
+<PageSendHeadTextSF>发送顺序表</PageSendHeadTextSF>
+<PageReceiveHeadTextSF>接收顺序表</PageReceiveHeadTextSF>
+<PageYCHeadTextSF>遥测配置表</PageYCHeadTextSF>
+<DualPointStatusStringSF>0213</DualPointStatusStringSF>
+<JudgeChannelState>False</JudgeChannelState>
+<JudgeStateInterval>12</JudgeStateInterval>
+<SeqControlFunction>False</SeqControlFunction>
+</ProtocolParameters>
+
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ProtocolParameters>
+<SourceStationNumberSF>0</SourceStationNumberSF>
+<DestinationStationNumberSF>0</DestinationStationNumberSF>
+<JKOrDdFlagSF>0</JKOrDdFlagSF>
+<IsSendYXSF>True</IsSendYXSF>
+<IsRecYCSF>False</IsRecYCSF>
+<IsApplyOld>True</IsApplyOld>
+<SendIntervalSF>10000</SendIntervalSF>
+<ReceiveTableSF>ReceiveTableSF_LVYOUSEN_000</ReceiveTableSF>
+<SendTableSF>SendTableSF_LVYOUSEN_000</SendTableSF>
+<YCTableSF>YCTableSF_LVYOUSEN_000</YCTableSF>
+<SequenceNameSF>顺序号</SequenceNameSF>
+<StationNameSF>站名</StationNameSF>
+<DeviceNumberNameSF>点名</DeviceNumberNameSF>
+<DeviceDescriptionNameSF>点描述</DeviceDescriptionNameSF>
+<ReverseNameSF>取反</ReverseNameSF>
+<RatioNameSF>变比</RatioNameSF>
+<PageSendHeadTextSF>发送顺序表</PageSendHeadTextSF>
+<PageReceiveHeadTextSF>接收顺序表</PageReceiveHeadTextSF>
+<PageYCHeadTextSF>遥测配置表</PageYCHeadTextSF>
+<DualPointStatusStringSF>0213</DualPointStatusStringSF>
+<JudgeChannelState>False</JudgeChannelState>
+<JudgeStateInterval>12</JudgeStateInterval>
+<SeqControlFunction>False</SeqControlFunction>
+</ProtocolParameters>
+
+
+
+
+
+abstract
+virtual
+		protected override FrameBase GetANewFrameToReceiveData()
+        {
+            return new SFFrame();
+        }
+		
+		public override bool Config(ProtocolConfigurationParameterFormat paramFormat, object param, object param1)
+
+
+
+        public override object GetConfigurationParameter(ProtocolConfigurationParameterFormat paramFormat)
+
+
+        protected override void OnPolling()
+        protected override void ProcessTask(ProtocolTask task)
+        protected override void ProcessFrame(FrameBase frame)
+		
+		
+E:\项目控制\ScadaIV\JOYOJ6\五防平台\数据库表单\UTDBCopyData
+
+
+
+严重性	代码	说明	项目	文件	行	禁止显示状态
+警告		未能解析此引用。未能找到程序集“UTCommonDlg”。请检查磁盘上是否存在该程序集。 如果您的代码需要此引用，则可能出现编译错误。	JoyoClientForm			
+
+
+严重性	代码	说明	项目	文件	行	禁止显示状态
+警告	CS0169	从不使用字段“ToolsTemporaryAuthorForm.userTable”	WFInterfaceWinForm	E:\项目控制\ScadaIV\JOYOJ6\五防平台\人机交互\WFInterfaceWinForm\ToolsTemporaryAuthorForm.cs	30	活动的
+
+
+Initialize
+static
+override
+main
+构造函数
+
+
+
+
+    public class SFMainEntry : MainEntryBase, IProtocolsInfo
+
+       1 public static string xmlParam = "";
+	4 public override List<OSFamily> SupportedOperationSystem()
+	调用该函数的事件
+	
+
+    class ProtocolSFCommunication : ProtocolBase, IProtocol
+    {
+        
+       2 internal static string ProtocolName = UTLanguage.Translate("四方五防规约");
+
+       3 public SFMainEntry()
+
+	   
+
+
+
+
+	   
+
+
+
+
+
+
+
+
+
+
+
