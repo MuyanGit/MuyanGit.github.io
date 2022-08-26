@@ -119,8 +119,8 @@ backup:
   repository:
     #项目文件夹若是有 .git 目录则.git对应的就是backup备份的远程仓库-github的origin
     #项目文件夹若是有 .git 目录则.git对应的就是backup备份的远程仓库-github,不需要origin
-    #origin: https://github.com/MuyanGit/MuyanGit.github.io.git,backup
-    github: git@github.com:MuyanGit/MuyanGit.github.io.git,backup
+    origin: https://github.com/MuyanGit/MuyanGit.github.io.git,backup
+    # github: git@github.com:MuyanGit/MuyanGit.github.io.git,backup
     # coding: https://git.coding.net/hojun/hojun.git,backup
 
 # # Deployment
