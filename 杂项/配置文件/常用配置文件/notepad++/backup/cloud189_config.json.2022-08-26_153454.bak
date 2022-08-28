@@ -1,0 +1,90 @@
+{
+ "configVer": "1.0",
+ "activeUID": 434145065,
+ "userList": [
+  {
+   "uid": 434145065,
+   "nickname": "??",
+   "accountName": "15370092919@189.cn",
+   "sex": "U",
+   "workdir": "/",
+   "workdirFileEntity": {
+    "FileId": "-11",
+    "ParentId": "",
+    "FileMd5": "",
+    "FileName": "/",
+    "FileSize": 0,
+    "LastOpTime": "",
+    "CreateTime": "",
+    "Path": "",
+    "MediaType": 0,
+    "IsFolder": true,
+    "SubFileCount": 0,
+    "StartLabel": 0,
+    "FavoriteLabel": 0,
+    "Orientation": 0,
+    "Rev": "",
+    "FileCata": 0
+   },
+   "familyWorkdir": "/",
+   "familyWorkdirFileEntity": {
+    "FileId": "-11",
+    "ParentId": "",
+    "FileMd5": "",
+    "FileName": "/",
+    "FileSize": 0,
+    "LastOpTime": "",
+    "CreateTime": "",
+    "Path": "",
+    "MediaType": 0,
+    "IsFolder": true,
+    "SubFileCount": 0,
+    "StartLabel": 0,
+    "FavoriteLabel": 0,
+    "Orientation": 0,
+    "Rev": "",
+    "FileCata": 0
+   },
+   "activeFamilyId": 0,
+   "activeFamilyInfo": {
+    "Count": 0,
+    "type": 0,
+    "userRole": 0,
+    "createTime": "",
+    "familyId": 0,
+    "remarkName": "",
+    "useFlag": 0
+   },
+   "loginUserName": "c583698ba5867a2ab62c786ff07a2abe",
+   "loginUserPassword": "04aab01310e1c7a3e268737beec356aa",
+   "webToken": {
+    "cookieLoginUser": "73EF3F7B44579963FAE9E9F0635AA6F82151BE2F706A751960D80CEB89BCF0BB3331AE488C141F2CD196C598BBC7A901"
+   },
+   "appToken": {
+    "sessionKey": "f14b7541-975c-43e8-aa2e-d57902dcec3d",
+    "sessionSecret": "7B7F726E9305A1CCAB59B22A9DF05376",
+    "familySessionKey": "22b8cb88-c128-4b2d-9267-34a18e13fce4_family",
+    "familySessionSecret": "7B7F726E9305A1CCAB59B22A9DF05376",
+    "accessToken": "b8ac6072a86b44069e4a88556f071ea1",
+    "refreshToken": "3cd77379c72b4d6caf639f65f2399e9f",
+    "sskAccessToken": "9AB23FDFD73C87B8A13786C42D4266C5",
+    "sskAccessTokenExpiresIn": 1660926033000,
+    "rsaPublicKey": "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDY7mpaUysvgQkbp0iIn2ezoUyhi1zPFn0HCXloLFWT7uoNkqtrphpQ/63LEcPz1VYzmDuDIf3iGxQKzeoHTiVMSmW6FlhDeqVOG094hFJvZeK4OzA6HVwzwnEW5vIZ7d+u61RV1bsFxmB68+8JXs3ycGcE4anY+YzZJcyOcEGKVQIDAQAB\n-----END PUBLIC KEY-----"
+   }
+  }
+ ],
+ "cacheSize": 0,
+ "maxDownloadParallel": 0,
+ "maxUploadParallel": 0,
+ "maxDownloadLoad": 0,
+ "maxDownloadRate": 0,
+ "maxUploadRate": 0,
+ "saveDir": "C:\\Users\\HI\\Downloads\\Compressed\\cloudpan189-go-v0.1.1-windows-x64\\cloudpan189-go-v0.1.1-windows-x64\\Downloads",
+ "proxy": "",
+ "localAddrs": "",
+ "updateCheckInfo": {
+  "preferUpdateSrv": "",
+  "latestVer": "v0.1.2",
+  "checkTime": 1661498073
+ }
+}

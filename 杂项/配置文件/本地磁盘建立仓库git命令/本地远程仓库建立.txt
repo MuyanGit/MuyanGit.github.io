@@ -1,0 +1,27 @@
+选择一个文件夹作为远程仓库
+
+1·本地仓库创建
+cd F:\本地仓库
+#git init --bare “仓库名”--> 仓库名是随意的
+# --bare是初始化仓库  
+git init --bare 抖音下载
+
+#2·打开所需上传的本地代码
+
+cd H:\douyinVideo\抖音快手\抖音时间池下载无水印视频
+git status
+git add .
+git commit -m '抖音时间池下载无水印视频'
+
+#3·连接到本地仓库，
+#注意路径尾部 以及路径的单引号
+git remote add douyinVideoDown 'F:/本地仓库/抖音下载/抖音下载repos'
+#推送到仓库
+git push douyinVideoDown master
+
+#4本地换个地方测试一下提交的仓库-
+#验证一下是否会覆盖  bare “仓库名”--> 仓库名是随意的
+
+
+
+

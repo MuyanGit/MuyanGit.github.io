@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "github"]
+	url = git@github.com:MuyanGit/MuyanGit.github.io.git
+	fetch = +refs/heads/backup:refs/remotes/github/backup
+[branch "master"]
+	remote = github
+	merge = refs/heads/backup

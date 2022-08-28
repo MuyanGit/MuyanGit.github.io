@@ -1,0 +1,5 @@
+SET PATH="G:\CloudBackup\TianYi\本地博客"
+Takeown /F %PATH% /r /d y
+cacls %PATH% /t /e /g Administrators:F
+rd /s /q %PATH%
+@pause

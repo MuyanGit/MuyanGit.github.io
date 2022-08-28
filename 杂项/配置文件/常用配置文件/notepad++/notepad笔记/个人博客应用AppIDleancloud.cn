@@ -1,0 +1,41 @@
+Credentials
+AppID
+cTsG8HS24eCEUKzvnoqg7Hiu-gzGzoHsz 
+AppID 是该项目的唯一标识符。此 ID 不可变更。
+AppKey
+GIpuAYauPIm9YFkLEme5MwXq 
+AppKey 是公开的访问密钥，适用于在公开的客户端中使用。使用 AppKey 进行的访问受到 ACL 的限制。
+MasterKey
+TuI6DwKVRivoztPQfgcABwRz  
+MasterKey 是私密的访问密钥，适用于在服务器等受信任的客户端环境中使用。使用 MasterKey 进行的访问拥有最高权限，不受任何 ACL 限制。
+服务器地址
+REST API 服务器地址
+https://ctsg8hs2.lc-cn-n1-shared.com 
+客户端使用的 REST API 服务器地址。客户端的具体配置方法请参考 指定客户端的服务器地址 。
+这是一个共享域名，没有可用性保证。
+您可临时使用该地址进行开发。请在正式发布前为当前应用绑定 API 访问域名。
+
+域名白名单
+某些平台（如微信小程序）要求应用开发者在后台配置域名白名单才能正常访问，以下是客户端可能用到的域名列表：
+
+Request 域名
+ctsg8hs2.lc-cn-n1-shared.com 
+使用任何服务都需要配置。
+Socket 域名
+cn-n1-cell1.leancloud.cn 
+cn-n1-cell2.leancloud.cn 
+cn-n1-cell5.leancloud.cn 
+cn-n1-cell7.leancloud.cn 
+ctsg8hs2.im.cn-n1.lncld.net 
+使用即时通讯或结构化数据存储的 LiveQuery 功能时需要配置上述域名。
+Socket 域名后续会有变动，请根据控制台显示的最新域名列表进行添加，并关注后续变更通知。
+ctsg8hs2.lc-cn-n1-shared.com 
+使用多人在线对战功能时需要配置上述域名。
+文件上传域名
+无法获取文件域名，文件服务尚未初始化。
+
+使用文件上传功能时需要配置。
+文件访问域名
+无法获取文件域名，文件服务尚未初始化。
+
+使用文件访问功能时需要配置。

@@ -1,0 +1,87 @@
+{
+  "picBed": {
+    "current": "gitee",
+    "uploader": "gitee",
+    "smms": {
+      "token": ""
+    },
+    "list": [
+      {
+        "name": "SM.MS图床",
+        "type": "smms",
+        "visible": false
+      },
+      {
+        "name": "腾讯云COS",
+        "type": "tcyun",
+        "visible": false
+      },
+      {
+        "name": "GitHub图床",
+        "type": "github",
+        "visible": false
+      },
+      {
+        "name": "七牛图床",
+        "type": "qiniu",
+        "visible": false
+      },
+      {
+        "name": "Imgur图床",
+        "type": "imgur",
+        "visible": false
+      },
+      {
+        "name": "阿里云OSS",
+        "type": "aliyun",
+        "visible": false
+      },
+      {
+        "name": "又拍云图床",
+        "type": "upyun",
+        "visible": false
+      },
+      {
+        "name": "gitee",
+        "type": "gitee",
+        "visible": true
+      }
+    ],
+    "gitee": {
+      "branch": "master",
+      "customPath": "",
+      "customUrl": "",
+      "path": "img",
+      "repo": "muyangit/blog-img",
+      "token": "7a256a5699d4e73cded44f1d83e2fbf8"
+    }
+  },
+  "settings": {
+    "shortKey": {
+      "picgo:upload": {
+        "enable": true,
+        "key": "CommandOrControl+Shift+P",
+        "name": "upload",
+        "label": "快捷上传"
+      }
+    },
+    "server": {
+      "enable": true,
+      "host": "127.0.0.1",
+      "port": 36677
+    },
+    "privacyEnsure": true,
+    "showUpdateTip": false,
+    "checkBetaUpdate": false,
+    "autoCopy": false
+  },
+  "picgoPlugins": {
+    "picgo-plugin-gitee-uploader": true
+  },
+  "debug": true,
+  "PICGO_ENV": "GUI",
+  "needReload": false,
+  "picgo-plugin-gitee-uploader": {
+    "lastSync": "2021-11-06 11:31:23"
+  }
+}

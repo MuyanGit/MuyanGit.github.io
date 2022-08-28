@@ -1,0 +1,19 @@
+{
+ "configVer": "1.0",
+ "activeUID": 0,
+ "userList": null,
+ "cacheSize": 0,
+ "maxDownloadParallel": 0,
+ "maxUploadParallel": 0,
+ "maxDownloadLoad": 0,
+ "maxDownloadRate": 0,
+ "maxUploadRate": 0,
+ "saveDir": "G:\\MuyanGitBlog\\MuyanGit\\杂项\\配置文件\\常用配置文件\\本地仓库代码备份命令\\cloudpan189-go-v0.1.1-windows-x64\\Downloads",
+ "proxy": "",
+ "localAddrs": "",
+ "updateCheckInfo": {
+  "preferUpdateSrv": "",
+  "latestVer": "v0.1.2",
+  "checkTime": 1661528574
+ }
+}

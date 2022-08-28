@@ -1,0 +1,25 @@
+mysql密码
+root@localhost: Id321cba
+
+
+mysql -u root -pId321cba
+
+
+alter user 'root'@'localhost' identified by 'Id321cba';
+
+
+
+吸引力定律
+
+工作学习-信心
+我是学霸，学霸模式开启
+
+生活-自来熟
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+Host MuyanGit			#　主机别名
+    HostName github.com	#　服务器真实地址
+    user MuyanGit		#　用户名
+    IdentityFile "~/.ssh/MuyanGit"
+    #PreferredAuthentications publickey　#　认证方式
+	
+Host PonyTown2020
+    HostName github.com
+    user PonyTown2020
+    IdentityFile "~/.ssh/PonyTown2020"
+    
+
+Host    　    #　主机别名
+HostName　    #　服务器真实地址
+IdentityFile　#　私钥文件路径
+PreferredAuthentications　#　认证方式
+User　        #　用户名

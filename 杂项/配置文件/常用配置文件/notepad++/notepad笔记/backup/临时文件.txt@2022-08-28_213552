@@ -1,0 +1,27 @@
+《不谓侠》遥远的东方有个_渺渺_yy直播7038
+https://www.yy.com/u/videos/9825488
+
+https://www.mediafire.com/file/nrakuh8t8p993y8/UVR_v5.4.0_setup.exe
+
+
+
+git config --global user.name "muyangit"
+
+git config --global user.email "muyangit@outlook.com"
+
+git config --list
+
+
+#查看用户名配置
+git config user.name 
+
+# 查看当前邮件配置
+git config user.email
+
+
+git config user.name "PonyTown2020"
+
+git config user.email "2183227837@qq.com"
+
+git config --list
+

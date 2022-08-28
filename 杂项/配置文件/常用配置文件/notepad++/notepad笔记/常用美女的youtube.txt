@@ -1,0 +1,162 @@
+https://www.youtube.com/watch?v=ArtCbqr9qoI
+https://www.youtube.com/watch?v=kR71t29QcVE&list=PLc3ZDsV8yEnkGvSxZ_Hl56e8d3z6carM0
+https://www.youtube.com/watch?v=PLfn7x51Wx8
+
+
+https://www.youtube.com/watch?v=l0NCIRs7oeI
+https://www.youtube.com/watch?v=CpR3frqlp8U
+
+4k
+https://www.youtube.com/watch?v=N4RTiCZN6VU
+https://www.youtube.com/watch?v=tXx0J7g7Z5I
+https://www.youtube.com/watch?v=rUcBf4-YvBo
+https://www.youtube.com/watch?v=rG9uawp6I6k
+
+
+新商盟
+https://sx.xinshangmeng.com/eciop/orderForCC/cgtListForCC.htm?zone=11140801&v=1656977427525
+
+https://sx.xinshangmeng.com/eciop/orderForCC/cgtListForCC.htm?zone=11140801&v=1656980970909
+
+https://sx.xinshangmeng.com/eciop/onlinepay/showBank.htm?v=1656981018804
+https://sx.xinshangmeng.com/eciop/onlinepay/showBank.htm?v=1656981081724
+
+
+MuyanGit/pic_url
+master
+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
+img/
+https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master
+
+![](https://raw.githubusercontent.com/MuyanGit/pic_url/master/img/20220715163505.png)
+
+![](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/20220715163532.png)
+
+https://github.com/PonyTown2020/PonyTown2020.github.io
+
+
+PonyTown2020.github.io
+
+git@github.com:PonyTown2020/PonyTown2020.github.io.git
+
+git@PonyTown2020:/PonyTown2020.github.io.git
+git remote add origin git@MuyanGit:github-user2/text.git
+
+git@PonyTown2020:/PonyTown2020.github.io.git
+
+ssh -T git@PonyTown2020
+
+
+打开命令行工具，执行以下两句操作： 
+npm config set prefix "D:\MySoftware\DEV\Dev_env\nodejs\node_global"
+npm config set cache "D:\MySoftware\DEV\Dev_env\nodejs\node_cache"
+D:\MySoftware\DEV\Dev_env\nodejs\node_global\node_modules
+
+
+pnpm config set store-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\.pnpm-store" # pnpm全局仓库路径(类似 .git 仓库)
+pnpm config set global-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\pnpm-global" # pnpm全局安装路径
+pnpm config set global-bin-dir "D:\MySoftware\DEV\Dev_env\nodejs" # pnpm全局bin路径
+pnpm config set state-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm" # pnpm创建pnpm-state.json文件的目录
+pnpm config set cache-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\cache" # pnpm全局缓存路径
+
+
+pnpm install & pnpm install hexo-deployer-git --save & pnpm install hexo-git-backup --save & pnpm remove hexo-renderer-stylus & pnpm add hexo-renderer-stylus & pnpm i hexo-deployer-git & pnpm i hexo-blog-encrypt
+
+npm i hexo-deployer-git@3.0.0
+pnpm install --save hexo-theme-fluid@1.9.0
+
+pnpm --version # pnpm版本
+pnpm config set store-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\.pnpm-store" # pnpm全局仓库路径(类似 .git 仓库)
+pnpm config set global-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\pnpm-global" # pnpm全局安装路径
+pnpm config set global-bin-dir "D:\MySoftware\DEV\Dev_env\nodejs" # pnpm全局bin路径
+pnpm config set state-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm" # pnpm创建pnpm-state.json文件的目录
+pnpm config set cache-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\cache" # pnpm全局缓存路径
+
+2022年8月28日·星期0·20·22·48图床
+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
+
+
+mysql密码
+root@localhost: Id321cba
+
+
+mysql -u root -pId321cba
+
+
+alter user 'root'@'localhost' identified by 'Id321cba';
+
+
+
+吸引力定律
+
+工作学习-信心
+我是学霸，学霸模式开启
+
+生活-自来熟
+
+
+
+
+
+
+
+
+git config --global user.email "muyangit@outlook.com@example.com"
+git config --global user.name "muyangit"
+
+设置本项目代理
+git config user.name "MuyanGit"
+git config user.email “MuyanGit@outlook.com”
+git config --list
+
+
+
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+
+
+ssh-keygen -t rsa -f ~/.ssh/id_rsa_github_pony -C "2183227837@qq.com"
+ssh -T git@github.com -i ~/.ssh/id_rsa_github_pony
+
+
+
+
+mklink /j "云盘路径" "G:\学习\学习文档整理【备份目标文件路径】"
+mklink /j "G:\CloudBackup\TianYi\demo\笔记\学习文档整理" "G:\学习\学习文档整理"
+
+
+cloudpan189-go login -username=15370092919 -password=Id321cba
+
+
+git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+git config --global http.https://github.com.proxy http://127.0.0.1:1080
+
+
+git config --global --unset http.proxy 
+git config --global --unset https.proxy
+
+#使用http代理 
+git config --global http.proxy http://127.0.0.1:1081
+git config --global https.proxy https://127.0.0.1:1081
+
+#使用socks5代理
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+
+
+
+
+
+
+
+你已经成功开通Server酱，SendKey如下。以后可以在顶部SendKey菜单中查看和重置。
+
+SCT167603TLSXLupMwKY1BwA8ktraGdTbu
+
+
+
+
+
+
+
+

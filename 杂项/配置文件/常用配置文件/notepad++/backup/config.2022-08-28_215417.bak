@@ -1,0 +1,12 @@
+# ~/.ssh/config 配置多个git的ssh-key
+# 第一个默认的SSH Key
+Host github.com
+    HostName github.com
+    IdentityFile C:\\Users\\HI\\.ssh\\id_rsa
+    PreferredAuthentications publickey
+
+# 第二个SSH Key
+Host pony.github.com
+    HostName github.com
+    IdentityFile C:\\Users\\HI\\.ssh\\id_rsa_github_pony
+    PreferredAuthentications publickey

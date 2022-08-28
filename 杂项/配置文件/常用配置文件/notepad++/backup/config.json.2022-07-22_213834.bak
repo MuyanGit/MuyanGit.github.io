@@ -1,0 +1,13 @@
+{
+  "picBed": {
+    "uploader": "github",
+    "github": {      
+	  "repo": "MuyanGit/pic_url", 
+	  "token": "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",
+	  "path": "img/",
+	  "customUrl": "https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master",
+	  "branch": "master"
+    }
+  },
+  "picgoPlugins": {} // 为插件预留
+}

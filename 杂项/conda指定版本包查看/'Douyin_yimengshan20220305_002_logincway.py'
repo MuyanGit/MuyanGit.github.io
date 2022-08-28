@@ -1,0 +1,170 @@
+from playwright.sync_api import Playwright, sync_playwright
+
+
+def run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+
+    # Open new page
+    page = context.new_page()
+
+    # Go to https://www.baidu.com/
+    page.goto("https://www.baidu.com/")
+
+    # Click #s-top-loginbtn
+    page.locator("#s-top-loginbtn").click()
+
+    # Go to https://www.baidu.com/
+    page.goto("https://www.baidu.com/")
+
+    # Click input[name="wd"]
+    page.locator("input[name=\"wd\"]").click()
+
+    # Fill input[name="wd"]
+    page.locator("input[name=\"wd\"]").fill("bilibili")
+
+    # Click .bdsug-overflow >> nth=0
+    # with page.expect_navigation(url="https://www.baidu.com/s?wd=%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9&rsv_spt=1&rsv_iqid=0xffcf87d2000354dd&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=ts_0&rsv_sug3=2&rsv_sug1=1&rsv_sug7=100&rsv_sug2=1&rsv_btype=i&prefixsug=bilibili&rsp=0&inputT=2616&rsv_sug4=2664&rsv_jmp=fail"):
+    with page.expect_navigation():
+        page.locator(".bdsug-overflow").first.click()
+    # assert page.url == "https://www.baidu.com/s?wd=%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9&rsv_spt=1&rsv_iqid=0xffcf87d2000354dd&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=ts_0&rsv_sug3=2&rsv_sug1=1&rsv_sug7=100&rsv_sug2=1&rsv_btype=i&prefixsug=bilibili&rsp=0&inputT=2616&rsv_sug4=2664"
+
+    # Click text=哔哩哔哩 (゜-゜)つロ 干杯~-bilibili >> em
+    # with page.expect_navigation(url="https://www.bilibili.com/"):
+    with page.expect_navigation():
+        with page.expect_popup() as popup_info:
+            page.locator("text=哔哩哔哩 (゜-゜)つロ 干杯~-bilibili >> em").click()
+        page1 = popup_info.value
+
+    # Go to https://member.bilibili.com/v2
+    page2.goto("https://member.bilibili.com/v2")
+
+    # Go to https://member.bilibili.com/platform
+    page2.goto("https://member.bilibili.com/platform")
+
+    # Go to https://member.bilibili.com/platform/home
+    page2.goto("https://member.bilibili.com/platform/home")
+
+    # Click input[name="wd"]
+    page.locator("input[name=\"wd\"]").click()
+
+    # Press a with modifiers
+    page.locator("input[name=\"wd\"]").press("Control+a")
+
+    # Fill input[name="wd"]
+    # with page.expect_navigation(url="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&tn=baiduhome_pg&wd=douyin&rsv_spt=1&oq=%25E5%2593%2594%25E5%2593%25A9%25E5%2593%2594%25E5%2593%25A9&rsv_pq=e3537048000e5879&rsv_t=99e7gkufAnLH%2BeWnYQ4uFC9V9gu29tqZ%2BbXeQDGJuxcmo3qmMuGg4%2Bbl9S6sJDbUWHiD&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=6&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&rsv_btype=t&inputT=6735&rsv_sug4=6992&bs=%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9&rsv_jmp=fail"):
+    with page.expect_navigation():
+        page.locator("input[name=\"wd\"]").fill("douyin")
+
+    # Click text=抖音-记录美好生活
+    # with page.expect_navigation(url="https://www.douyin.com/"):
+    with page.expect_navigation():
+        with page.expect_popup() as popup_info:
+            page.locator("text=抖音-记录美好生活").click()
+        page3 = popup_info.value
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Go to https://www.bilibili.com/
+    page.goto("https://www.bilibili.com/")
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Click button:has-text("登录")
+    page.locator("button:has-text(\"登录\")").click()
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Go to https://www.douyin.com/discover
+    page.goto("https://www.douyin.com/discover")
+
+    # Go to https://www.douyin.com/follow
+    page.goto("https://www.douyin.com/follow")
+
+    # Click button:has-text("开始体验")
+    page4.locator("button:has-text(\"开始体验\")").click()
+
+    # Click button:has-text("下一步")
+    page4.locator("button:has-text(\"下一步\")").click()
+
+    # Click button:has-text("完成")
+    page4.locator("button:has-text(\"完成\")").click()
+
+    # Click text=735
+    page4.locator("text=735").click()
+
+    # Click text=735关注
+    page4.locator("text=735关注").click()
+
+    # Click text=关注管理
+    page4.locator("text=关注管理").click()
+    # assert page4.url == "https://creator.douyin.com/creator-micro/data/following/following"
+
+    # Click button >> nth=2
+    page4.locator("button").nth(2).click()
+
+    # Click button >> nth=1
+    page4.locator("button").nth(1).click()
+
+    # Close page
+    page2.close()
+
+    # Close page
+    page1.close()
+
+    # Close page
+    page3.close()
+
+    # Close page
+    page4.close()
+
+    # Close page
+    page.close()
+
+    # Open new page
+    page = context.new_page()
+
+    # Go to https://www.baidu.com/
+    page.goto("https://www.baidu.com/")
+
+    # Go to https://passport.baidu.com/
+    page.goto("https://passport.baidu.com/")
+
+    # Go to https://www.bilibili.com/
+    page.goto("https://www.bilibili.com/")
+
+    # Go to https://s1.hdslb.com/
+    page.goto("https://s1.hdslb.com/")
+
+    # Go to https://member.bilibili.com/
+    page.goto("https://member.bilibili.com/")
+
+    # Go to https://passport.bilibili.com/
+    page.goto("https://passport.bilibili.com/")
+
+    # Go to https://message.bilibili.com/
+    page.goto("https://message.bilibili.com/")
+
+    # Go to https://www.douyin.com/
+    page.goto("https://www.douyin.com/")
+
+    # Go to https://creator.douyin.com/
+    page.goto("https://creator.douyin.com/")
+
+    # Go to https://summon.bytedance.com/
+    page.goto("https://summon.bytedance.com/")
+
+    # Close page
+    page.close()
+
+    # ---------------------
+    context.storage_state(path="G:\\Demo_Git\\哔哩哔哩\\上传\\playwright使用\\youtubeUpload\\Douyin_yimengshan20220305_002_logincway")
+    context.close()
+    browser.close()
+
+
+with sync_playwright() as playwright:
+    run(playwright)
