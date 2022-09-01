@@ -72,7 +72,7 @@ pnpm config set global-bin-dir "D:\MySoftware\DEV\Dev_env\nodejs" # pnpm全局bi
 pnpm config set state-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm" # pnpm创建pnpm-state.json文件的目录
 pnpm config set cache-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\cache" # pnpm全局缓存路径
 
-2022年8月28日·星期0·20·22·48图床 github-api
+2022年8月28日·星期0·20·22·48图床 github
 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
 
 
@@ -95,10 +95,6 @@ alter user 'root'@'localhost' identified by 'Id321cba';
 生活-自来熟
 
 
-token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
-
-
-  -H "Authorization: token <TOKEN>" \
 
 
 

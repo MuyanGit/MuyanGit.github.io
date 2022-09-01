@@ -11,3 +11,6 @@ mklink /d "G:\CloudBackup\TianYi\demo\笔记\学习文档整理" "G:\学习\学�
 创建两个副本
 mklink /j "G:\CloudBackup\TianYi\demo\笔记\学习文档整理" "G:\学习\学习文档整理"
 
+
+
+

@@ -72,8 +72,8 @@ pnpm config set global-bin-dir "D:\MySoftware\DEV\Dev_env\nodejs" # pnpm全局bi
 pnpm config set state-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm" # pnpm创建pnpm-state.json文件的目录
 pnpm config set cache-dir "D:\MySoftware\DEV\Dev_env\nodejs\pnpm\cache" # pnpm全局缓存路径
 
-2022年8月28日·星期0·20·22·48图床 github-api
-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
+2022年8月28日·星期0·20·22·48图床
+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
 
 
 mysql密码
@@ -95,10 +95,6 @@ alter user 'root'@'localhost' identified by 'Id321cba';
 生活-自来熟
 
 
-token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
-
-
-  -H "Authorization: token <TOKEN>" \
 
 
 
@@ -121,32 +117,6 @@ git config --global --unset https.proxy
 
 ssh-keygen -t rsa -f ~/.ssh/id_rsa_github_pony -C "2183227837@qq.com"
 ssh -T git@github.com -i ~/.ssh/id_rsa_github_pony
-
-ssh -T git@github.com
-ssh -T git@pony.github.com
-
-
-
-
-
-[core]
-	repositoryformatversion = 0
-	filemode = false
-	bare = false
-	logallrefupdates = true
-	symlinks = false
-	ignorecase = true
-[remote "github"]
-	url = git@github.com:MuyanGit/MuyanGit.github.io.git
-	fetch = +refs/heads/backup:refs/remotes/github/backup
-[branch "master"]
-	remote = github
-	merge = refs/heads/backup
-	
-	
-
-
-
 
 
 

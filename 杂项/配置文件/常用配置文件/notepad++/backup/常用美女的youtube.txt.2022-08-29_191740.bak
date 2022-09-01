@@ -95,10 +95,6 @@ alter user 'root'@'localhost' identified by 'Id321cba';
 生活-自来熟
 
 
-token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
-
-
-  -H "Authorization: token <TOKEN>" \
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="no" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no">
         <Filter name="" />
         <Filter name="" />
         <Filter name="" />
@@ -21,17 +21,19 @@
         <Filter name="" />
         <Filter name="" />
         <Filter name="" />
-        <Filter name="" />
+        <Find name="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" />
+        <Find name="((http(s?))|(ftp))://.*" />
+        <Find name="http(s?" />
+        <Find name="(http(s?)" />
+        <Find name="git@PonyTown2020" />
+        <Find name="git@PonyTown2020:" />
+        <Find name="D:\MySoftware\DEV\Dev_env\Anaconda3" />
+        <Find name="%Anaconda3_PATH%" />
         <Find name="C:\Program Files\Google\Chrome" />
         <Find name="C:\Program Files\Google\Chrome\Application" />
-        <Find name="hexo-blog-encrypt" />
-        <Find name="D:\nodejs" />
-        <Find name="D:\soft\nodejs" />
-        <Find name="&#x4E0D;&#x8C13;&#x4FA0;" />
-        <Find name="prefix -g" />
-        <Find name="flags" />
-        <Find name="C:\\Users\\Administrator\\.ssh" />
-        <Find name="npnm" />
+        <Replace name="git@pony.github.com" />
+        <Replace name="it@pony.github.com" />
+        <Replace name="%Anaconda3_PATH%" />
         <Replace name="D:\MySoftware\DEV\Dev_env\nodejs" />
         <Replace name="prefix --location=global" />
         <Replace name="C:\\Users\\HI\\.ssh" />
@@ -39,13 +41,8 @@
         <Replace name="npnm" />
         <Replace name="," />
         <Replace name="AccessKey" />
-        <Replace name="IsEnabled" />
-        <Replace name="LocalizedControlType" />
-        <Replace name="ControlType" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;\notepad++\notepad&#x7B14;&#x8BB0;\mysql&#x5BC6;&#x7801;" />
-        <File filename="G:\MuyanGitBlog\MuyanGit\.git\config" />
         <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#x5907;&#x4EFD;&#x547D;&#x4EE4;\cloudpan189-go-v0.1.1-windows-x64\cloud189_config.json" />
         <File filename="G:\MuyanGitBlog\test\MuyanGit.github.io\&#x6742;&#x9879;\&#x535A;&#x5BA2;&#x5907;&#x4EFD;\&#x6062;&#x590D;&#x535A;&#x5BA2;\&#x65B0;&#x5EFA;&#x6587;&#x672C;&#x6587;&#x6863;.txt" />
         <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4EE3;&#x7801;&#x5907;&#x4EFD;&#x547D;&#x4EE4;\cloudpan189-go-v0.1.1-windows-x64\&#x7B7E;&#x5230;.txt" />
@@ -54,6 +51,8 @@
         <File filename="G:\MuyanGitBlog\&#x5F3A;&#x5236;&#x5220;&#x9664;&#x547D;&#x4EE4;bat.txt" />
         <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;bat\&#x6E05;&#x7406;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;.bat" />
         <File filename="D:\MySoftware\Browsers\selenium_chrome\chrome_shutdown_ms.txt" />
+        <File filename="G:\MuyanGitBlog\MuyanGit\_config.yml" />
+        <File filename="G:\MuyanGitBlog\PonyTown2020\_config.yml" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -63,7 +62,7 @@
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
         <GUIConfig name="AppPosition" x="-11" y="41" width="875" height="685" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20220830">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20220915">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -95,7 +94,7 @@
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" newStyleSaveDlg="yes" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="0" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-4" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="200">
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />

@@ -72,281 +72,672 @@ Set-PoshPrompt -Theme Paradox
 
 修改后的配置文件：
 
+![image-20220829093631859](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url/img202208290939047.png)
+
 ```cmd
-/* 
- * Author: 刘鹏
- * Email: littleNewton6@gmail.com
- * Date: 2020, Nov. 30
- * <Alt> + Settings，打开默认设置
- * 参考文档：https://aka.ms/terminal-documentation
- * DESCRIPTION: 配置 Windows Terminal 的选项文件
- * TAB_SIZE = 8
- *字体空格，已经修改
- *显示cmd，方便cmd的管理员操作--> 该p7终端会多线程并发执行 命令&命令
- */
-
- {
-	"$schema": "https://aka.ms/terminal-profiles-schema",
-	"defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-
-	// 全局主题
-	"theme": "system",
-	"alwaysShowTabs": true,
-	"tabWidthMode": "equal",
-	"confirmCloseAllTabs": false,
-
-	// 位置
-	// (1) 1920x1080 - (320, 65)
-	// (2) 5120x2880 - (1275,692)
-	"initialPosition": "135,140",
-	"initialCols": 135,
-	"initialRows": 45,
-
-	// 禁止自动生成
-	"disabledProfileSources": [
-		"Windows.Terminal.Azure"
-	],
-
-
-
-
-
-	// ======================== PROFILES 配置 BEGIN ========================
-	"profiles": [
-
-
-		// ======================== PWSH7 配置 BEGIN ========================
-		{
-			// 键标记
-			"guid":			"{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-			"name":			"PowerShell Core 7.1.0",
-			"source":		"Windows.Terminal.PowershellCore",
-			// 行为
-			"closeOnExit":		true,
-			"commandline":		"C:/Program Files/PowerShell/7/pwsh.exe -nologo",
-			"hidden":		false,
-			"historySize":		9001,
-			"snapOnInput":		true,
-			"startingDirectory": ".",
-			// 外观
-			"icon":			"D:/Users/newton/Software/develop/shell/pwsh-7.1.ico",
-			"acrylicOpacity":	0.5,
-			"cursorColor":		"#FFFFFF",
-			"cursorShape":		"bar",
-			"fontFace":		"FiraCode NF",
-			"fontSize":		11,
-			"padding":		"5, 5, 20, 25",
-			"useAcrylic":		false,
-			// 颜色主题
-			"colorScheme":		"Homebrew"
-		},
-		// ======================== PWSH7 配置 END   ========================
-
-
-		// ======================== WSL 配置 BEGIN ========================
-		{
-			// 键标记
-			"guid":			"{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-			"name":			"Ubuntu-20.04",
-			"source":		"Windows.Terminal.Wsl",
-			// 行为
-			"closeOnExit":		true,
-			"commandline":		"wsl.exe -d Ubuntu-20.04",
-			"hidden":		false,
-			"historySize":		9001,
-			"snapOnInput":		true,
-			"startingDirectory":	".",
-			// 外观
-			"acrylicOpacity":	0.5,
-			"cursorColor":		"#FFFFFF",
-			"cursorShape":		"bar",
-			"fontFace":		"FiraCode NF",
-			"fontSize":		11,
-			"padding":		"5, 5, 20, 25",
-			"useAcrylic":		false,
-			// 颜色主题
-			"colorScheme":		"Homebrew"
-		},
-		// ======================== WSL 配置 END   ========================
-
-
-		// ======================== PWSH5 配置 BEGIN ========================
-		{
-			// 键标记
-			"guid":			"{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-			"name":			"Windows PowerShell",
-			// 行为
-			"closeOnExit":		true,
-			"commandline":		"powershell.exe",
-			"hidden": true,
-			"historySize":		9001,
-			"snapOnInput":		true,
-			"startingDirectory":	".",
-			// 外观
-			"acrylicOpacity":	0.5,
-			"cursorColor":		"#FFFFFF",
-			"cursorShape":		"bar",
-			"fontFace":		"FiraCode NF",
-			"fontSize":		11,
-			"padding":		"5, 5, 20, 25",
-			"useAcrylic":		false,
-			// 颜色主题
-			"colorScheme":		"Homebrew"
-		},
-		// ======================== PWSH5 配置 END   ========================
-
-
-		// ======================== CMD 配置 BEGIN ========================
-		{
-			// 键标记
-			"guid":		"{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-			"name":		"cmd",
-			// 行为
-			"commandline":	"cmd.exe",
-			//不隐藏CMD
-			"hidden":	false,
-			// 字体
-			"fontFace":	"FiraCode NF",
-			"fontSize":	11
-		},
-		// ======================== CMD 配置 END   ========================
-
-
-		// ======================== AZURE 配置 BEGIN ========================
-		{
-			"guid":		"{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-			"name":		"Azure Cloud Shell",
-			"hidden":	true,
-			"source":	"Windows.Terminal.Azure"
-		}
-		// ======================== AZURE 配置 END   ========================
-
-
-	],
-	// ======================== PROFILES 配置 END   ========================
-
-
-
-
-
-	// ======================== COLOR SCHEME 配置 BEGIN ========================
-	"schemes": [
-		{
-			"name":		"Homebrew",
-			"black":	"#000000",
-			"red":		"#FC5275",
-			"green":	"#00a600",
-			"yellow":	"#ffff00",
-			"blue":		"#6666e9",
-			"purple":	"#ff00ff",
-			"cyan":		"#00a6b2",
-			"white":	"#bfbfbf",
-			"brightBlack":	"#666666",
-			"brightRed":	"#ff6060",
-			"brightGreen":	"#00d900",
-			"brightYellow":	"#fdff73",
-			"brightBlue":	"#00a2ff",
-			"brightPurple":	"#ff08ff",
-			"brightCyan":	"#53ffff",
-			"brightWhite":	"#e5e5e5",
-			"background":	"#283033",
-			"foreground":	"#00ff00"
-		}
-	],
-	// ======================== COLOR SCHEME 配置 END   ========================
-
-
-
-
-
-	// ======================== HOTKEY 配置 BEGIN ========================
-	"keybindings": [
-
-
-		// ======================== 1. 界面视图 配置 BEGIN ========================
-		// 1.1 调节字体大小
-		{ "command": { "action": "adjustFontSize", "delta":  1 }, "keys": "ctrl+=" },
-		{ "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+-" },
-		{ "command":             "resetFontSize",                 "keys": "ctrl+0" },
-		// ======================== 1. 界面视图 配置 END   ========================
-
-
-		// ======================== 2. PANE 分割 配置 BEGIN ========================
-		// 2.1 水平、竖直分割
-		{ "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-"    },
-		{ "command": { "action": "splitPane", "split": "vertical"   }, "keys": "alt+shift+plus" },
-		{ "command": { "action": "splitPane", "split": "auto"       }, "keys": "alt+shift+|"    },
-		{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-		{ "command": { "action": "splitPane", "split": "horizontal", "profile": "Ubuntu-20.04" }, "keys": "alt+shift+u" },
-		// 2.2 按下 Alt 键，同时按下方向键，在多个 pane 之间切换
-		{ "command": { "action": "moveFocus",  "direction": "down"  }, "keys": "alt+down"  },
-		{ "command": { "action": "moveFocus",  "direction": "left"  }, "keys": "alt+left"  },
-		{ "command": { "action": "moveFocus",  "direction": "right" }, "keys": "alt+right" },
-		{ "command": { "action": "moveFocus",  "direction": "up"    }, "keys": "alt+up"    },
-		// 2.3 按下 Alt + Shift，同时按下方向键，调整当前 pane 的大小
-		{ "command": { "action": "resizePane", "direction": "down"  }, "keys": "alt+shift+down"  },
-		{ "command": { "action": "resizePane", "direction": "left"  }, "keys": "alt+shift+left"  },
-		{ "command": { "action": "resizePane", "direction": "right" }, "keys": "alt+shift+right" },
-		{ "command": { "action": "resizePane", "direction": "up"    }, "keys": "alt+shift+up"    },
-		// 2.4 关闭 pane
-		{ "command": "closePane", "keys": "alt+shift+w" },
-		// ======================== 2. PANE 分割 配置 BEGIN ========================
-
-
-		// ======================== 3. 关于标签 配置 BEGIN ========================
-		// 3.1 新建默认标签页
-		{ "command": "newTab", "keys": ["ctrl+n"]},
-		// 3.2 新建 N 号 profile 的标签
-		{ "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+shift+1" },
-		{ "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+shift+2" },
-		{ "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+shift+3" },
-		{ "command": { "action": "newTab", "index": 3 }, "keys": "ctrl+shift+4" },
-		{ "command": { "action": "newTab", "index": 4 }, "keys": "ctrl+shift+5" },
-		{ "command": { "action": "newTab", "index": 5 }, "keys": "ctrl+shift+6" },
-		{ "command": { "action": "newTab", "index": 6 }, "keys": "ctrl+shift+7" },
-		{ "command": { "action": "newTab", "index": 7 }, "keys": "ctrl+shift+8" },
-		{ "command": { "action": "newTab", "index": 8 }, "keys": "ctrl+shift+9" },
-		// 3.3 切换到第 N 个标签页
-		{ "command": { "action": "switchToTab", "index": 0 }, "keys": "ctrl+alt+1" },
-		{ "command": { "action": "switchToTab", "index": 1 }, "keys": "ctrl+alt+2" },
-		{ "command": { "action": "switchToTab", "index": 2 }, "keys": "ctrl+alt+3" },
-		{ "command": { "action": "switchToTab", "index": 3 }, "keys": "ctrl+alt+4" },
-		{ "command": { "action": "switchToTab", "index": 4 }, "keys": "ctrl+alt+5" },
-		{ "command": { "action": "switchToTab", "index": 5 }, "keys": "ctrl+alt+6" },
-		{ "command": { "action": "switchToTab", "index": 6 }, "keys": "ctrl+alt+7" },
-		{ "command": { "action": "switchToTab", "index": 7 }, "keys": "ctrl+alt+8" },
-		{ "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+alt+9" },
-		// 3.4 -> <- 标签页间切换
-		{ "command": "nextTab",      "keys": "ctrl+tab"       },
-		{ "command": "prevTab",      "keys": "ctrl+shift+tab" },
-		{ "command": "duplicateTab", "keys": "ctrl+shift+d"   },
-		// 3.5 关闭标签页
-		{ "command": "closeTab", "keys": "ctrl+w"},
-		// ======================== 3. 关于标签 配置 END   ========================
-
-
-		// ======================== 4. 杂项热键 配置 BEGIN ========================
-		// 4.1 搜索
-		{ "command": "find", "keys": "ctrl+f" },
-		// 4.2 打开 settings.json 
-		{ "command": "openSettings", "keys": "ctrl+;" },
-		// 4.3 复制、粘贴
-		{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+shift+c" },
-		{ "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert"  },
-		{ "command": "paste", "keys": "ctrl+shift+v" },
-		{ "command": "paste", "keys": "shift+insert" },
-		// 4.4 上下滚动、上下整页滚动
-		{ "command": "scrollDown",     "keys": "ctrl+shift+down" },
-		{ "command": "scrollUp"  ,     "keys": "ctrl+shift+up"   },
-		{ "command": "scrollDownPage", "keys": "ctrl+shift+pgdn" },
-		{ "command": "scrollUpPage",   "keys": "ctrl+shift+pgup" }
-		// ======================== 4. 杂项热键 配置 END   ========================
-
-
-	]
-	// ======================== HOTKEY 配置 END   ========================
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": 1
+            },
+            "keys": "ctrl+plus"
+        },
+        {
+            "command": 
+            {
+                "action": "nextTab"
+            },
+            "keys": "ctrl+tab"
+        },
+        {
+            "command": 
+            {
+                // 分屏
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "ctrl+alt+shift+d"
+        },
+        {
+            "command": 
+            {
+                // 切换窗口
+                "action": "switchToTab",
+                "index": 8
+            },
+            "keys": "ctrl+alt+9"
+        },
+        {
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "keys": "ctrl+minus"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 8
+            },
+            "keys": "ctrl+shift+9"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab"
+            },
+            "keys": "ctrl+n"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "keys": "alt+shift+plus"
+        },
+        {
+            "command": 
+            {
+                "action": "scrollUp"
+            },
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "alt+shift+minus"
+        },
+        {
+            "command": "scrollUpPage",
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 5
+            },
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "command": "resetFontSize",
+            "keys": "ctrl+0"
+        },
+        {
+            "command": "scrollDownPage",
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto"
+            },
+            "keys": "alt+shift+\\"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+right"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+left"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "profile": "Ubuntu-20.04",
+                "split": "down"
+            },
+            "keys": "alt+shift+u"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+down"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+up"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+left"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "alt+shift+down"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "right"
+            },
+            "keys": "alt+shift+right"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 3
+            },
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "alt+shift+up"
+        },
+        {
+            "command": "closePane",
+            "keys": "alt+shift+w"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 1
+            },
+            "keys": "ctrl+shift+2"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 6
+            },
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 2
+            },
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 3
+            },
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 4
+            },
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 5
+            },
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 7
+            },
+            "keys": "ctrl+shift+8"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 6
+            },
+            "keys": "ctrl+shift+7"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 4
+            },
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 1
+            },
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 2
+            },
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+insert"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "ctrl+alt+8"
+        },
+        {
+            "command": 
+            {
+                "action": "prevTab"
+            },
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "command": "duplicateTab",
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "command": 
+            {
+                "action": "closeTab"
+            },
+            "keys": "alt+w"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+f"
+        },
+        {
+            "command": 
+            {
+                "action": "openSettings"
+            },
+            "keys": "ctrl+;"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "command": "paste",
+            "keys": "shift+insert"
+        },
+        {
+            "command": 
+            {
+                "action": "scrollDown"
+            },
+            "keys": "ctrl+shift+down"
+        }
+    ],
+    "alwaysShowTabs": true,
+    "confirmCloseAllTabs": false,
+    "copyFormatting": "none",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disabledProfileSources": 
+    [
+        "Windows.Terminal.Azure"
+    ],
+    "focusFollowMouse": false,
+    "initialCols": 135,
+    "initialPosition": "179,197",
+    "initialRows": 45,
+    "profiles": 
+    {
+        "defaults": {},
+        "list": 
+        [
+            {
+                // 行为
+                "closeOnExit": "graceful",
+                // 颜色主题
+                "colorScheme": "Homebrew",
+                "commandline": "C:/Program Files/PowerShell/7/pwsh.exe -nologo",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "FiraCode NF",
+                    "size": 11
+                },
+                // 键标记
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "C:/Program Files/PowerShell/7/assets/Powershell_av_colors.ico",
+                "name": "PowerShell 7.2.0",
+                "opacity": 100,
+                "padding": "5, 5, 20, 25",
+                "snapOnInput": true,
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": ".",
+                "tabTitle": "PowerShell",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#0C0C0C",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell Powershell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#283033",
+            "black": "#000000",
+            "blue": "#6666E9",
+            "brightBlack": "#666666",
+            "brightBlue": "#00A2FF",
+            "brightCyan": "#53FFFF",
+            "brightGreen": "#00D900",
+            "brightPurple": "#FF08FF",
+            "brightRed": "#FF6060",
+            "brightWhite": "#E5E5E5",
+            "brightYellow": "#FDFF73",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#00A6B2",
+            "foreground": "#00FF00",
+            "green": "#00A600",
+            "name": "Homebrew",
+            "purple": "#FF00FF",
+            "red": "#FC5275",
+            "selectionBackground": "#FFFFFF",
+            "white": "#BFBFBF",
+            "yellow": "#FFFF00"
+        },
+        {
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#E5C07B",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "name": "One Half Dark",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+        },
+        {
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#0184BC",
+            "brightBlack": "#4F525D",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B5C1",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C577DD",
+            "brightRed": "#DF6C75",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E4C07A",
+            "cursorColor": "#4F525D",
+            "cyan": "#0997B3",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "name": "One Half Light",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FAFAFA",
+            "yellow": "#C18301"
+        },
+        {
+            "background": "#002B36",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA198",
+            "foreground": "#839496",
+            "green": "#859900",
+            "name": "Solarized Dark",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#FDF6E3",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#002B36",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Light",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#D3D7CF",
+            "green": "#4E9A06",
+            "name": "Tango Dark",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#FFFFFF",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#000000",
+            "cyan": "#06989A",
+            "foreground": "#555753",
+            "green": "#4E9A06",
+            "name": "Tango Light",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#000080",
+            "brightBlack": "#808080",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#00FF00",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#008080",
+            "foreground": "#C0C0C0",
+            "green": "#008000",
+            "name": "Vintage",
+            "purple": "#800080",
+            "red": "#800000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C0C0C0",
+            "yellow": "#808000"
+        }
+    ],
+    "tabWidthMode": "equal",
+    "theme": "system"
 }
-
 ```
 
 
@@ -439,12 +830,17 @@ code $Profile
 
 ## 
 
+**注意路径需要修改一下**
+
+
+
 ```powershell
 <#
- * FileName: Microsoft.PowerShell_profile.ps1
+ * FileName: Microsoft.PowerShell_profile.ps1 / PowerShell configuration file.
  * Author: 刘 鹏
- * Email: littleNewton6@outlook.com
- * Date: 2021, Aug. 21
+ * Email: littleNewton6@gmail.com
+ * Created Date: 2021, Aug. 21
+ * Updated Date: 2022, Jun. 5
  * Copyright: No copyright. You can use this code for anything with no warranty.
 #>
 
@@ -453,15 +849,12 @@ code $Profile
 # 引入 posh-git
 Import-Module posh-git
 
-# 引入 oh-my-posh
-Import-Module oh-my-posh
-
 # 引入 ps-read-line
 Import-Module PSReadLine
 
-# 设置 PowerShell 主题
-# Set-PoshPrompt ys
-Set-PoshPrompt paradox
+# 在 powerShell 命令行中输入 Get-PoshThemes 来获取所有的已安装主题，它现在版本会将主题和效果都逐一显示出来，供用户参考
+# 设置 PowerShell 主题	  "C:\Users\{电脑用户名}\AppData\Local\Programs\oh-my-posh\themes\{可以自定义主题名字}.omp.json"
+oh-my-posh init pwsh --config C:\Users\HI\AppData\Local\Programs\oh-my-posh\themes\paradox.omp.json | Invoke-Expression
 #------------------------------- Import Modules END   -------------------------------
 
 
@@ -475,8 +868,22 @@ Set-PSReadLineOption -PredictionSource History
 # 每次回溯输入历史，光标定位于输入内容末尾
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 
+# 设置向上键为后向搜索历史记录
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+
+# 设置向下键为前向搜索历史纪录
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
 # 设置 Tab 为菜单补全和 Intellisense
 Set-PSReadLineKeyHandler -Key "Tab" -Function MenuComplete
+
+# 回到行首/行尾
+Set-PSReadlineKeyHandler -Key "Ctrl+a" -Function BeginningOfLine
+Set-PSReadlineKeyHandler -Key "Ctrl+e" -Function EndOfLine
+
+# 前进/后退一个单词
+Set-PSReadlineKeyHandler -Key 'Alt+f' -Function ShellForwardWord
+Set-PSReadlineKeyHandler -Key 'Alt+b' -Function ShellBackwardWord
 
 # 设置 Ctrl+d 为退出 PowerShell
 Set-PSReadlineKeyHandler -Key "Ctrl+d" -Function ViExit
@@ -484,11 +891,8 @@ Set-PSReadlineKeyHandler -Key "Ctrl+d" -Function ViExit
 # 设置 Ctrl+z 为撤销
 Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo
 
-# 设置向上键为后向搜索历史记录
-Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-
-# 设置向下键为前向搜索历史纪录
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+# 启用预测性 IntelliSense
+Set-PSReadLineOption -PredictionSource History
 #-------------------------------  Set Hot-keys END    -------------------------------
 
 
@@ -502,13 +906,18 @@ $env:PATHEXT += ";.py"
 # 更新系统组件
 function Update-Packages {
 	# update pip
-	Write-Host "Step 1: 更新 pip" -ForegroundColor Magenta -BackgroundColor Cyan
-	$a = pip list --outdated
-	$num_package = $a.Length - 2
-	for ($i = 0; $i -lt $num_package; $i++) {
-		$tmp = ($a[2 + $i].Split(" "))[0]
-		pip install -U $tmp
-	}
+	# Write-Host "Step 1: 更新 pip" -ForegroundColor Magenta -BackgroundColor Cyan
+	# $a = pip list --outdated
+	# $num_package = $a.Length - 2
+	# for ($i = 0; $i -lt $num_package; $i++) {
+	# 	$tmp = ($a[2 + $i].Split(" "))[0]
+	# 	pip install -U $tmp
+	# }
+
+	# update conda
+	Write-Host "Step 1: 更新 Anaconda base 虚拟环境" -ForegroundColor Magenta -BackgroundColor Cyan
+	conda activate base
+	conda upgrade python
 
 	# update TeX Live
 	$CurrentYear = Get-Date -Format yyyy
@@ -516,9 +925,11 @@ function Update-Packages {
 	tlmgr update --self
 	tlmgr update --all
 
-	# update Chocolotey
-	Write-Host "Step 3: 更新 Chocolatey" -ForegroundColor Magenta -BackgroundColor Cyan
-	choco outdated
+	# update Apps using winget
+	Write-Host "Step 3: 通过 winget 更新 Windows 应用程序" -ForegroundColor Magenta -BackgroundColor Cyan
+	winget upgrade
+	# winget upgrade --all
+	
 }
 #-------------------------------    Functions END     -------------------------------
 
@@ -556,6 +967,18 @@ function OpenCurrentFolder {
 	Invoke-Item $Path
 }
 Set-Alias -Name open -Value OpenCurrentFolder
+
+# 5. 更改工作目录
+function Change-Directory {
+	param (
+		# 输入要切换到的路径
+		# 用法示例：cd C:/
+		# 默认路径：D 盘的桌面
+		$Path = 'D:\Users\newton\Desktop\'
+	)
+	Set-Location $Path
+}
+Set-Alias -Name cd -Value Change-Directory -Option AllScope
 #-------------------------------    Set Alias END     -------------------------------
 
 
@@ -581,6 +1004,10 @@ function Get-IPv6Routes {
 }
 Set-Alias -Name getip6 -Value Get-IPv6Routes
 #-------------------------------    Set Network END     -------------------------------
+
+
+Clear-Host
+
 ```
 
 另外，如果你喜欢我的主题，可以用 Everything.exe 搜索 paradox.omp.json 这个文件，把它替换为这个[链接](https://gist.github.com/LittleNewton/e60df543481d495af65ede37734c69e4)里的文件。
