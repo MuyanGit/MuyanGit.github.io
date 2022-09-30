@@ -10,12 +10,6 @@ taskkill /f /t /im  chromedriver.exe
 ::  node.exe
 ::  ssh.exe
 
-::  注意 开发--VMware--
-taskkill /f /t /im  vmware-authd.exe
-taskkill /f /t /im  vmnat.exe
-taskkill /f /t /im  vmware-usbarbitrator64.exe
-taskkill /f /t /im  vmnetdhcp.exe
-
 ::  注意 文档--wpsoffice--
 taskkill /f /t /im  wpsoffice.exe
 
