@@ -1,0 +1,315 @@
+无障碍
+写文章
+登录/注册
+Zabbix安装还不会？看完这篇就够了！
+Zabbix安装还不会？看完这篇就够了！
+运维酱尼古拉斯
+运维酱尼古拉斯
+运维背锅人/网工段子手/技术爱好者/公众号：Linux实战训练营
+
+
+zabbix安装教程
+
+
+1.准备机器，环境初始化
+
+
+
+yum -y install net-tools
+
+ifconfig ens33 | awk ‘NR==2{print $2}’
+
+
+关闭防火墙：
+
+sed -i ‘s/SELINUX=enforcing/SELINUX=disabled/’ /etc/selinux/config
+
+
+systemctl disable --now firewalld
+
+
+2.zabbix-server内存尽量更大点，4G以上为好
+
+
+
+3.获取zabbix的下载源
+
+
+
+rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm
+
+
+4.清空缓存，下载zabbix服务器
+
+
+
+yum clean all
+
+yum makecache
+
+
+5.安装 Zabbix server 和 agent等插件
+
+
+
+yum install -y zabbix-server-mysql zabbix-agent
+
+
+6.安装 Zabbix工具，可以在机器上，下载多个版本的软件，并且不会影响到整个系统的依赖环境
+
+
+
+yum install centos-release-scl -y
+
+
+7.编辑配置文件
+
+
+
+/etc/yum.repos.d/zabbix.repo 并且开启 zabbix-frontend
+vim /etc/yum.repos.d/zabbix.repo
+
+
+[zabbix-frontend]
+…
+enabled=1
+…
+
+
+8.安装zabbix前段环境 ,且安装到scl环境下
+
+
+
+yum install zabbix-web-mysql-scl zabbix-apache-conf-scl -y
+
+
+9.安装zabbix所需的数据库-mariadb
+
+
+
+yum install mariadb-server -y
+
+
+10.配置数据库，开机自启动
+
+
+
+systemctl enable --now mariadb
+
+使用命令：
+
+systemctl status mariadb查看是否启动成功
+
+netstat -tunlp 查看端口3306是否开启
+
+
+11.初始化数据库，使用mariadb命令进行初始化,并根据提示进行配置
+
+
+
+mysql_secure_installation
+
+
+设置root密码：
+
+
+是否移除匿名用户：
+
+
+是否禁止root远程登录：
+
+
+是否移除测试数据库，并立即执行：
+
+
+是否刷新授权表：
+
+
+设置完成，感谢你使用mariadb：
+
+
+
+
+12.进入数据库
+
+
+
+mysql -u root -p
+
+
+13.创建一个zabbix数据库
+
+
+
+create database zabbix character set utf8 collate utf8_bin;
+
+
+创建一个zabbix用户：
+
+create user zabbix@localhost identified by ‘123’;
+
+
+给zabbix授权所有：
+
+grant all privileges on zabbix.* to zabbix@localhost;
+
+
+刷新：
+
+flush privileges;
+
+exit/quit
+
+
+14.使用zabbix-mysql命令，导入数据库信息
+
+
+
+#mysql -u用户名 -p空格后面是数据库名
+
+
+zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p zabbix
+
+
+现在可以登录数据库查看是否导入成功！
+
+
+
+mysql -uzabbix -p123
+
+show databases; //查看列表
+
+use zabbix; //进入zabbix数据库
+
+show tables; //查看库中的表
+
+
+15.修改zabbix server 配置文件，修改数据库密码。
+
+
+
+vim /etc/zabbix/zabbix_server.conf
+
+:/DBPassword
+
+DBpassword=密码
+
+
+16.修改zabbix的php配置文件修改时区
+
+
+
+vim /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+
+:/timezone
+
+php_value[date.timezone] = Asia/Shanghai //去掉前面的分号修改时区到上海
+
+
+17.启动Zabbix server和agent服务
+
+
+
+systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
+
+systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+
+
+18.打开浏览器登录zabbix客户端。
+
+
+
+http://IP真实服务器地址/zabbix。
+
+
+
+
+
+
+
+
+
+
+
+19.安装成功后默认密码是
+
+
+
+username:Admin
+
+
+password:zabbix
+
+
+20.登录成功
+
+
+
+
+
+
+
+
+
+
+
+推荐观看
+
+>>>新手必备-Linux入门之云计算是什么
+
+>>>红帽认证入门-Linux系统介绍及企业版本选型
+
+>>>新手必备-Linux系统安装配置+Xshell远程连接
+
+>>>Linux常用命令行合集之绝对路径和相对路径
+
+>>>软连接与硬连接
+
+
+
+运维界升职加薪必备的云计算技术，你学了吗？
+
+学完高级运维云计算课程之后，你可以：
+
+跨越90%企业的招聘硬门槛
+增加70%就业机会
+拿下BAT全国TOP100大厂敲门砖
+体系化得到运维技术硬实力
+技术大佬年薪可达30w+
+最后再附上一些学习资料吧，非常适合刚开始接触学习Linux运维的朋友，里面更多的是一些基础的内容。
+
+如果对未来的发展，或者行业的前景不是很明确的话，可以听听看，会对你有很大的帮助。
+
+发布于 2022-06-06 19:55
+Zabbix
+Linux 运维
+​赞同​
+​添加评论
+​分享
+​喜欢
+​收藏
+​申请转载
+​
+写下你的评论...
+
+还没有评论，发表第一个评论吧
+推荐阅读
+zabbix-基础系列(三)-zabbix安装[完整版]
+这个安装版本是安装官方的来的，结果发现有小伙伴部署过程频繁出现问题，特修改了一版，重新发布 云计算-Tigerfive：zabbix-基础系列(三)-zabbix安装 Zabbix 监控系统部署1、实验准备 cento…
+
+云计算-T...
+发表于聊聊-运维...
+zabbix搭建教程
+搭建环境：zabbix 5.4；liunx 8.0官方安装教程： www.zabbix.com一、基本安装ZABBIX1.关闭nftables / selinux[root@zabbix ~]# systemctl disable --now firewalld.serviceRemoved symlink…
+
+在线东
+Zabbix安装（离线一键安装部署）（一）
+一、环境准备我试验部署的环境是在Vmware Workstation上安装了Centos7，主要用于监控安全设备（华三，启明星辰）。 虚拟机：VMware Workstation Pro 15.5.2 build-15785246 系统：Centos7 z…
+
+enriclee
+zabbix的介绍和安装
+zabbix的介绍和安装
+碧波
+
+
+选择语言

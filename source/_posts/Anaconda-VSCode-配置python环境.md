@@ -134,9 +134,9 @@ Anaconda新建环境
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200604174750956.png)
 **安装步骤图示不再给出，直接勾选下一步，下一步即可**
 
-配置VSCode
+# 配置VSCode
 
-**安装完VSCode后，开始是纯英文的，如果有喜欢中文的朋友，可以下载插件，设置成中文**
+### **安装完VSCode后，开始是纯英文的，如果有喜欢中文的朋友，可以下载插件，设置成中文**
 
 **点击左边图标，在搜索框里面搜索Chinese**
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200604183429692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjEzMzIxNg==,size_16,color_FFFFFF,t_70)
@@ -1354,7 +1354,226 @@ pip install -r requirements.txt
 
 
 
+copy
+
+# 001		‘pkgs_dirs‘·		spyder/conda安装包报错：
+
+## conda info could not be constructed. KeyError: ‘pkgs_dirs‘
+
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/a699acab572a4dc192a7dea3e1a021ad.png)
+打开powershell，输入conda info一通报错。
+
+```
+(base) PS C:\Users\Administrator> conda info
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\exceptions.py", line 1082, in __call__
+        return func(*args, **kwargs)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main.py", line 87, in _main
+        exit_code = do_call(args, p)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\conda_argparse.py", line 84, in do_call
+        return getattr(module, func_name)(args, parser)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main_info.py", line 317, in execute
+        info_dict = get_info_dict(args.system)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main_info.py", line 163, in get_info_dict
+        pkgs_dirs=context.pkgs_dirs,
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\base\context.py", line 530, in pkgs_dirs
+        fixed_dirs += user_data_dir(APP_NAME, APP_NAME),
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 67, in user_data_dir
+        path = os.path.join(_get_win_folder(const), appauthor, appname)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 284, in _get_win_folder_with_pywin32
+        from win32com.shell import shellcon, shell
+    ImportError: DLL load failed while importing shell: 找不到指定的程序。
+
+`$ C:\ProgramData\anaconda3\Scripts\conda-script.py info`
+
+
+An unexpected error has occurred. Conda has prepared the above report.
+
+If submitted, this report will be used by core maintainers to improve
+future releases of conda.
+Would you like conda to send this report to the core maintainers?
+
+[y/N]: n
+
+No report sent. To permanently opt-out, use
+
+    $ conda config --set report_errors false
+12345678910111213141516171819202122232425262728293031323334353637
+```
+
+安装任意包同样报错。。。。
+
+```
+(base) PS C:\Users\Administrator> conda install pybindll
+Collecting package metadata (current_repodata.json): failed
+WARNING conda.exceptions:print_unexpected_error_report(1216): KeyError('pkgs_dirs')
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\exceptions.py", line 1082, in __call__
+    return func(*args, **kwargs)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main.py", line 87, in _main
+    exit_code = do_call(args, p)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\conda_argparse.py", line 84, in do_call
+    return getattr(module, func_name)(args, parser)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main_install.py", line 20, in execute
+    install(args, parser, 'install')
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\install.py", line 260, in install
+    unlink_link_transaction = solver.solve_for_transaction(
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 152, in solve_for_transaction
+    unlink_precs, link_precs = self.solve_for_diff(update_modifier, deps_modifier,
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 195, in solve_for_diff
+    final_precs = self.solve_final_state(update_modifier, deps_modifier, prune, ignore_pinned,
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 300, in solve_final_state
+    ssc = self._collect_all_metadata(ssc)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\common\io.py", line 88, in decorated
+    return f(*args, **kwds)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 463, in _collect_all_metadata
+    index, r = self._prepare(prepared_specs)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 1058, in _prepare
+    reduced_index = get_reduced_index(self.prefix, self.channels,
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\index.py", line 288, in get_reduced_index
+    new_records = SubdirData.query_all(spec, channels=channels, subdirs=subdirs,
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\subdir_data.py", line 118, in query_all
+    create_cache_dir()
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\subdir_data.py", line 876, in create_cache_dir
+    cache_dir = join(PackageCacheData.first_writable().pkgs_dir, 'cache')
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\package_cache_data.py", line 151, in first_writable
+    pkgs_dirs = context.pkgs_dirs
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\base\context.py", line 530, in pkgs_dirs
+    fixed_dirs += user_data_dir(APP_NAME, APP_NAME),
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 67, in user_data_dir
+    path = os.path.join(_get_win_folder(const), appauthor, appname)
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 284, in _get_win_folder_with_pywin32
+    from win32com.shell import shellcon, shell
+ImportError: DLL load failed while importing shell: 找不到指定的程序。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\exceptions.py", line 1214, in print_unexpected_error_report
+    message_builder.append(get_main_info_str(error_report['conda_info']))
+  File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main_info.py", line 237, in get_main_info_str
+    info_dict['_' + key] = ('\n' + 26 * ' ').join(info_dict[key])
+KeyError: 'pkgs_dirs'
+
+# >>>>>>>>>>>>>>>>>>>>>> ERROR REPORT <<<<<<<<<<<<<<<<<<<<<<
+
+    Traceback (most recent call last):
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\exceptions.py", line 1082, in __call__
+        return func(*args, **kwargs)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main.py", line 87, in _main
+        exit_code = do_call(args, p)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\conda_argparse.py", line 84, in do_call
+        return getattr(module, func_name)(args, parser)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\main_install.py", line 20, in execute
+        install(args, parser, 'install')
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\cli\install.py", line 260, in install
+        unlink_link_transaction = solver.solve_for_transaction(
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 152, in solve_for_transaction
+        unlink_precs, link_precs = self.solve_for_diff(update_modifier, deps_modifier,
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 195, in solve_for_diff
+        final_precs = self.solve_final_state(update_modifier, deps_modifier, prune, ignore_pinned,
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 300, in solve_final_state
+        ssc = self._collect_all_metadata(ssc)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\common\io.py", line 88, in decorated
+        return f(*args, **kwds)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 463, in _collect_all_metadata
+        index, r = self._prepare(prepared_specs)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\solve.py", line 1058, in _prepare
+        reduced_index = get_reduced_index(self.prefix, self.channels,
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\index.py", line 288, in get_reduced_index
+        new_records = SubdirData.query_all(spec, channels=channels, subdirs=subdirs,
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\subdir_data.py", line 118, in query_all
+        create_cache_dir()
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\subdir_data.py", line 876, in create_cache_dir
+        cache_dir = join(PackageCacheData.first_writable().pkgs_dir, 'cache')
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\core\package_cache_data.py", line 151, in first_writable
+        pkgs_dirs = context.pkgs_dirs
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\base\context.py", line 530, in pkgs_dirs
+        fixed_dirs += user_data_dir(APP_NAME, APP_NAME),
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 67, in user_data_dir
+        path = os.path.join(_get_win_folder(const), appauthor, appname)
+      File "C:\ProgramData\anaconda3\lib\site-packages\conda\_vendor\appdirs.py", line 284, in _get_win_folder_with_pywin32
+        from win32com.shell import shellcon, shell
+    ImportError: DLL load failed while importing shell: 找不到指定的程序。
+
+`$ C:\ProgramData\anaconda3\Scripts\conda-script.py install pybindll`
+
+  environment variables:
+conda info could not be constructed.
+KeyError('pkgs_dirs')
+
+An unexpected error has occurred. Conda has prepared the above report.
+
+If submitted, this report will be used by core maintainers to improve
+future releases of conda.
+Would you like conda to send this report to the core maintainers?
+
+[y/N]: n
+
+No report sent. To permanently opt-out, use
+
+    $ conda config --set report_errors false
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110
+```
+
+尝试了很多网上的方法都不行，环境变量也没问题，最后conda重新安装还是不行，最终找到的办法如下：
+
+# **解决办法：**
+
+找到`C:\Users\{用户名}\AppData\Roaming\Python\Python{version}\site-packages`这个路径，删除`site-packages`这个文件夹，conda报错便消失。
+
+输入`conda info`验证：
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/5024f897dc9c43439976d389dcfc9aa8.png)
+没有问题，说明问题解决。
+
+# 问题分析：
+
+conda安装后，从上面可以看到，`conda install`自动下载的脚本和安装包是在`C:\ProgramData\anaconda3\pkgs; C:\Users\Administrator\.conda\pkgs; C:\Users\Administrator\AppData\Local\conda\conda\pkgs`
+
+而pip安装各种包的默认安装地址是`C:\Users\{用户名}\AppData\Roaming\Python\Python{version}\site-packages； C:\Users\{用户名}\AppData\Roaming\Python\Python{version}\scripts`；这里可以通过`python -m site`命令查看：
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/e504fbcd6fed4d19bbb750dd7962e58b.png)
+其中USER_BASE和USER_SITE就是python默认通过pip自动下载的脚本和依赖安装包的基础路径。（我这里doesn’t exist是因为我已经删掉这个文件夹了）
+然后使用命令`python -m site -help`，可以看到
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/e57d77f92858456293125c856b0b4985.png)
+说明这个路径配置是在anaconda3\lib\site.py这个文件中。可以对这个进行修改换成自己脚本和包的安装路径。
+可以再次使用`python -m site`来查看是否替换成功
+
+PS： 多说一句，看conda官方issue中提到，尽量不要使用pip和conda混合安装，因为两种安装方法的二进制编译存在差异，暂时还不清楚和这个有没有关系，但pip和conda最好是常常只用一种方式。
+
+# 参考资料
 
 
 
 
+
+# python中四种获取文件后缀名的方法
+
+[![Python 学习者](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/v2-d9b31c9ce987226e33777c85e97150ff_l.jpg)](https://www.zhihu.com/people/python-xue-xi-zhe)
+
+[Python 学习者](https://www.zhihu.com/people/python-xue-xi-zhe)
+
+3 人赞同了该文章
+
+获取文件的后缀名有好几种方法：
+
+**第一种：splittext()方法**
+
+![img](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/v2-dc76a33681e156bda58c686653936911_720w.webp)
+
+**第二种：endswith()方法**
+
+![img](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/v2-f870b1ec0707e76b216d707708dd348c_720w.webp)
+
+**第三种：判断后缀名是否在字符串中（这种会存在误判，若是.pyx后缀，一样会打印True，前面两种不会）**
+
+![img](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/v2-cd35ac47d2cc72b88e597e9f1595b638_720w.webp)
+
+**第四种：用split方法切割，但是吧这种只是拿到了py没有点，所以再加上点也是可以的**
+
+![img](https://cdn.jsdelivr.net/gh/MuyanGit/pic_url@master/img/v2-220f4781e7debf18338a1baa3ffe462a_720w.webp)
+
+转自：[python中四种获取文件后缀名的方法-侵删](https://link.zhihu.com/?target=https%3A//blog.csdn.net/sinat_38682860/article/details/115351782)

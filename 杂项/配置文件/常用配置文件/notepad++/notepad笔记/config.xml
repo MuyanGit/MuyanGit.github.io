@@ -44,15 +44,16 @@
         <Replace name="AccessKey" />
     </FindHistory>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\HI\AppData\Local\Temp\Rar$DIa14968.37095\2022&#x5E74;9&#x6708;02&#x65E5;&#x00B7;&#x661F;&#x671F;5&#x00B7;12&#x00B7;51&#x00B7;59---2021.3.3&#x6FC0;&#x6D3B;&#x7801;.txt" />
-        <File filename="C:\Users\HI\.conda\environments.txt" />
-        <File filename="C:\Users\HI\.condarc" />
-        <File filename="G:\&#x865A;&#x62DF;&#x673A;\MyShare\&#x914D;&#x7F6E;&#x53C2;&#x6570;-&#x5BC6;&#x7801;.txt" />
-        <File filename="G:\&#x865A;&#x62DF;&#x673A;\&#x865A;&#x62DF;&#x673A;VMware-workstation-full-15.5.0-14665864vmware&#x79D8;&#x94A5;.txt" />
-        <File filename="C:\Users\HI\AppData\Local\Temp\scp21282\data\data\com.termux\files\home\downloads\r2ay" />
-        <File filename="C:\Users\HI\AppData\Local\Temp\scp37580\data\data\com.termux\files\home\downloads\r2ay.txt" />
         <File filename="C:\Users\HI\AppData\Local\Temp\scp12190\&#x811A;&#x672C;\.%2E\Download\phone_notepad\notepad.txt" />
         <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;bat\&#x6E05;&#x7406;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;\&#x4E34;&#x65F6;&#x7EC8;&#x7ED3;.bat" />
+        <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x535A;&#x5BA2;&#x5907;&#x4EFD;\bolg_backup.sh" />
+        <File filename="G:\MuyanGitBlog\PonyTown2020\&#x6742;&#x9879;\&#x535A;&#x5BA2;&#x5907;&#x4EFD;\bolg_backup.sh" />
+        <File filename="D:\MyBackup\&#x7EFC;&#x5408;&#x5907;&#x4EFD;\&#x4FBF;&#x643A;&#x7248;&#x00B7;&#x8F6F;&#x4EF6;\&#x7F51;&#x7EDC;\v2rayN-Core\config.json" />
+        <File filename="G:\Demo_Git\pic_url\2022-09-30log.txt&#xF03A;" />
+        <File filename="G:\Demo_Git\pic_url\backup_log\pic_url_backup.sh" />
+        <File filename="G:\Demo_Git\pic_url\&#x4E00;&#x952E;&#x4E0A;&#x4F20;&#x56FE;&#x5E8A;.bat" />
+        <File filename="C:\Users\HI\Desktop\autojs&#x5FAE;&#x4FE1;&#x7EA2;&#x5305;&#x52A9;&#x624B;&#x4EE3;&#x7801;.js" />
+        <File filename="G:\MuyanGitBlog\MuyanGit\&#x6742;&#x9879;\&#x914D;&#x7F6E;&#x6587;&#x4EF6;\&#x5E38;&#x7528;bat\&#x4FEE;&#x6539;IP\&#x9759;&#x6001;IP&#x914D;&#x7F6E;.bat" />
     </History>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
@@ -61,8 +62,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="4" />
-        <GUIConfig name="AppPosition" x="-11" y="43" width="875" height="685" isMaximized="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20221004">no</GUIConfig>
+        <GUIConfig name="AppPosition" x="940" y="536" width="875" height="685" isMaximized="yes" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20221030">no</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">no</GUIConfig>
@@ -94,7 +95,7 @@
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" backSlashIsEscapeCharacterForSql="yes" monospacedFontFindDlg="no" newStyleSaveDlg="yes" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="3" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="box" lineWrapMethod="aligned" currentLineHilitingShow="show" scrollBeyondLastLine="no" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" edge="no" edgeNbColumn="80" zoom="-1" zoom2="0" whiteSpaceShow="hide" eolShow="hide" borderWidth="2" smoothFont="no" />
         <GUIConfig name="DockingManager" leftWidth="200" rightWidth="200" topHeight="200" bottomHeight="200">
             <ActiveTabs cont="0" activeTab="-1" />
             <ActiveTabs cont="1" activeTab="-1" />

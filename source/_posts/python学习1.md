@@ -11,6 +11,23 @@ photos:
 
 
 
+# 复习知识点
+
+```
+#!/usr/bin/python
+#https://c.runoob.com/compile/9/
+# Write Python 3 code in this online editor and run it.
+
+print(round(8.99,0));
+运行结果为   9.0
+
+
+```
+
+
+
+
+
 
 
 # python基础和语法
@@ -78,5 +95,48 @@ yum安装时候不要卸载python--> yum基于python安装，否则死循环；�
 
 
 
+基本数据类型
+
+整、长、浮、字符串
+
+列、元、字、集合、布
 
 
+
+进制转换
+
+![image-20221014112908483](G:/Demo_Git/pic_url/img/image-20221014112908483.png)
+
+
+
+
+
+
+
+linux python脚本编写
+
+![image-20221014181728315](G:/Demo_Git/pic_url/img/image-20221014181728315.png)
+
+99乘法表格
+
+![image-20221014183021210](G:/Demo_Git/pic_url/img/image-20221014183021210.png)
+
+
+
+每行一个*号
+
+![image-20221014183318359](G:/Demo_Git/pic_url/img/image-20221014183318359.png)
+
+
+
+
+
+sys.path打印环境变量
+
+
+
+简洁写法
+
+![image-20221014193641724](G:/Demo_Git/pic_url/img/image-20221014193641724.png)
+
+![image-20221014193619721](G:/Demo_Git/pic_url/img/image-20221014193619721.png)

@@ -25,3 +25,44 @@ git config user.email "2183227837@qq.com"
 
 git config --list
 
+
+
+商务英语
+自动化办公
+10级
+底薪+绩效+夜班+补助+绩效+年终奖
+5500+
+350
+20元一天
+2000
+312
+8072
+5设备952
+300
+
+5800
+
+nmcli c add type ethernet con-name ethX ifname ethX ipv4.addr 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.method manual
+
+
+vi /etc/sysconfig/network-scripts/ifcfg-ens33 
+
+nmclit device show ###查看硬件设备 
+nmcli connection delete ens33 ###删除网卡配置 
+nmcli connection add type ethernet con-name enss33 ifname ens33 connection.autoconnect yes 创建网卡类型为以太网，名字叫enss33，匹配硬件网卡ens33，并自动连接 配置DNS：
+vi /etc/resolv.conf 假如nameserver 202.96.104.17 修改主机名：hostnamectl set-hostname JT-XX-040
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
